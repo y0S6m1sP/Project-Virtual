@@ -28,7 +28,7 @@ abstract public class Entity : MonoBehaviour
 
     public void SetZeroVelocity()
     {
-        Rb.velocity = new Vector2(0, 0);
+        Rb.velocity = Vector2.zero;
     }
 
     public void SetVelocity(float _xVelocity, float _yVelocity)

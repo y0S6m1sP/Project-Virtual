@@ -2,32 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState 
+public class PlayerState
 {
     protected PlayerStateMachine stateMachine;
     protected Player player;
-
     protected Rigidbody2D rb;
 
     protected float xInput;
     protected float yInput;
-    private string animBoolName;
-
+    private readonly string animParamName;
     protected float stateTimer;
-    protected bool triggerCalled;
+    protected bool isTriggerCalled;
+    protected bool isAllowCancelAnim;
 
-    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
+    public PlayerState(Player _player, PlayerStateMachine _stateMachine, string _animParamName)
     {
         player = _player;
         stateMachine = _stateMachine;
-        animBoolName= _animBoolName;
+        animParamName = _animParamName;
     }
 
     public virtual void Enter()
     {
-        player.Anim.SetBool(animBoolName, true);
+        player.Anim.SetBool(animParamName, true);
         rb = player.Rb;
-        triggerCalled = false;
+        isTriggerCalled = false;
+        isAllowCancelAnim = false;
     }
 
     public virtual void Update()
@@ -42,12 +42,17 @@ public class PlayerState
 
     public virtual void Exit()
     {
-        player.Anim.SetBool(animBoolName, false);
+        player.Anim.SetBool(animParamName, false);
     }
 
-    public virtual void AnimationFinishTrigger()
+    public virtual void AnimFinishTrigger()
     {
-        triggerCalled = true;
+        isTriggerCalled = true;
     }
-    
+
+    public virtual void AnimAllowCancel()
+    {
+        isAllowCancelAnim = true;
+    }
+
 }
