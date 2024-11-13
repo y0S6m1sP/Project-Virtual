@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerJumpState : PlayerState
+public class PlayerJumpState : PlayerAirState
 {
     public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -25,9 +25,6 @@ public class PlayerJumpState : PlayerState
         base.Update();
 
         if (rb.velocity.y < 0)
-            stateMachine.ChangeState(player.Air);
-
-        if (xInput != 0)
-            player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);
+            stateMachine.ChangeState(player.Fall);
     }
 }

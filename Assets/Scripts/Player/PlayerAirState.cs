@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAirState : PlayerState
+public abstract class PlayerAirState : PlayerState
 {
     public PlayerAirState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -22,13 +22,10 @@ public class PlayerAirState : PlayerState
     {
         base.Update();
 
-        // if (player.IsWallDetected())
-        //     stateMachine.ChangeState(player.wallSlide);
-
-        if(player.IsGroundDetected())
-            stateMachine.ChangeState(player.Idle);
-
         if (xInput != 0)
             player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            stateMachine.ChangeState(player.Roll);
     }
 }
