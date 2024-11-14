@@ -10,6 +10,8 @@ public class Player : Entity
     [Header("Player Movement Stats")]
     public float moveSpeed;
     public float jumpForce;
+    public float wallJumpForce;
+    public float jumpCantMoveDuration;
     public float rollDuration;
     public float rollSpeed;
 
@@ -22,6 +24,8 @@ public class Player : Entity
     public PlayerJumpState Jump { get; private set; }
     public PlayerFallState Fall { get; private set; }
     public PlayerRollState Roll { get; private set; }
+    public PlayerWallSlideState WallSlide { get; private set; }
+    public PlayerWallJumpState WallJump { get; private set; }
 
     protected override void Awake()
     {
@@ -34,6 +38,8 @@ public class Player : Entity
         Jump = new PlayerJumpState(this, StateMachine, "Jump");
         Fall = new PlayerFallState(this, StateMachine, "Jump");
         Roll = new PlayerRollState(this, StateMachine, "Roll");
+        WallSlide = new PlayerWallSlideState(this, StateMachine, "WallSlide");
+        WallJump = new PlayerWallJumpState(this, StateMachine, "Jump");
     }
 
     protected override void Start()

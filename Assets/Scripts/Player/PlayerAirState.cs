@@ -11,6 +11,7 @@ public abstract class PlayerAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        stateTimer = player.jumpCantMoveDuration;
     }
 
     public override void Exit()
@@ -22,7 +23,7 @@ public abstract class PlayerAirState : PlayerState
     {
         base.Update();
 
-        if (xInput != 0)
+        if (xInput != 0 && stateTimer < 0)
             player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
