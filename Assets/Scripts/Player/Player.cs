@@ -7,13 +7,14 @@ public class Player : Entity
 
     public bool IsBusy { get; private set; }
 
-    [Header("Player Movement Stats")]
+    [Header("Player Basic Stats")]
     public float moveSpeed;
     public float jumpForce;
     public float wallJumpForce;
     public float jumpCantMoveDuration;
     public float rollDuration;
     public float rollSpeed;
+    public float parryDuration;
 
     public PlayerStateMachine StateMachine { get; private set; }
 
@@ -27,6 +28,7 @@ public class Player : Entity
     public PlayerWallSlideState WallSlide { get; private set; }
     public PlayerWallJumpState WallJump { get; private set; }
     public PlayerAirAttackState AirAttack { get; private set; }
+    public PlayerParryState Parry { get; private set; }
 
     protected override void Awake()
     {
@@ -42,6 +44,7 @@ public class Player : Entity
         WallSlide = new PlayerWallSlideState(this, StateMachine, "WallSlide");
         WallJump = new PlayerWallJumpState(this, StateMachine, "Jump");
         AirAttack = new PlayerAirAttackState(this, StateMachine, "AirAttack");
+        Parry = new PlayerParryState(this, StateMachine, "Parry");
     }
 
     protected override void Start()

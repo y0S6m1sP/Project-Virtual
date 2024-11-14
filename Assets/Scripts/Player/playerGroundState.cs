@@ -25,13 +25,16 @@ public class PlayerGroundState : PlayerState
         if (Input.GetKeyDown(KeyCode.Mouse0))
             stateMachine.ChangeState(player.Attack1);
 
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+            stateMachine.ChangeState(player.Parry);
+
         if (!player.IsGroundDetected())
             stateMachine.ChangeState(player.Fall);
 
         if (Input.GetKeyDown(KeyCode.Space) && player.IsGroundDetected())
             stateMachine.ChangeState(player.Jump);
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
             stateMachine.ChangeState(player.Roll);
     }
 
