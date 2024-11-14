@@ -26,6 +26,7 @@ public class Player : Entity
     public PlayerRollState Roll { get; private set; }
     public PlayerWallSlideState WallSlide { get; private set; }
     public PlayerWallJumpState WallJump { get; private set; }
+    public PlayerAirAttackState AirAttack { get; private set; }
 
     protected override void Awake()
     {
@@ -40,6 +41,7 @@ public class Player : Entity
         Roll = new PlayerRollState(this, StateMachine, "Roll");
         WallSlide = new PlayerWallSlideState(this, StateMachine, "WallSlide");
         WallJump = new PlayerWallJumpState(this, StateMachine, "Jump");
+        AirAttack = new PlayerAirAttackState(this, StateMachine, "AirAttack");
     }
 
     protected override void Start()

@@ -28,5 +28,8 @@ public abstract class PlayerAirState : PlayerState
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             stateMachine.ChangeState(player.Roll);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            stateMachine.ChangeState(player.AirAttack);
     }
 }
