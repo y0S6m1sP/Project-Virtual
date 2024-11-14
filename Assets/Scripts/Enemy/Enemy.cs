@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Enemy : Entity
 {
+
+    public float moveSpeed;
+    public float idleTime;
+    public float moveTime;
+
     public EnemyStateMachine StateMachine { get; private set; }
 
     protected override void Awake()
