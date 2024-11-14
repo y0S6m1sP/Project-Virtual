@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class SamuraiSpearMoveState : SamuraiSpearGroundState
 {
-
-    private readonly SamuraiSpear enemy;
-
-    public SamuraiSpearMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, SamuraiSpear _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public SamuraiSpearMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, SamuraiSpear _enemy) : base(_enemyBase, _stateMachine, _animBoolName, _enemy)
     {
-        enemy = _enemy;
+
     }
 
     override public void Enter()
@@ -25,9 +22,7 @@ public class SamuraiSpearMoveState : SamuraiSpearGroundState
         enemy.SetVelocity(enemy.moveSpeed * enemy.FacingDir, rb.velocity.y);
 
         if (enemy.IsWallDetected() || !enemy.IsGroundDetected())
-        {
             enemy.Flip();
-        }
 
         if (stateTimer < 0)
             stateMachine.ChangeState(enemy.Idle);

@@ -8,12 +8,18 @@ public class SamuraiSpear : Enemy
 
     public SamuraiSpearIdleState Idle { get; private set; }
     public SamuraiSpearMoveState Move { get; private set; }
+    public SamuraiSpearChaseState Chase { get; private set; }
+    public SamuraiSpearChaseIdleState ChaseIdle { get; private set; }
+    public SamuraiSpearAttackState Attack { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
         Idle = new SamuraiSpearIdleState(this, StateMachine, "Idle", this);
         Move = new SamuraiSpearMoveState(this, StateMachine, "Move", this);
+        Attack = new SamuraiSpearAttackState(this, StateMachine, "Attack", this);
+        Chase = new SamuraiSpearChaseState(this, StateMachine, "Move", this);
+        ChaseIdle = new SamuraiSpearChaseIdleState(this, StateMachine, "Idle", this);
     }
 
     protected override void Start()
