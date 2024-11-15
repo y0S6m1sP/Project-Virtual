@@ -15,4 +15,18 @@ public class PlayerAnimationTriggers : MonoBehaviour
     {
         Player.AnimAllowCancel();
     }
+
+    private void AttackTrigger()
+    {
+        Hitbox hitbox = Player.GetComponentInChildren<Hitbox>();
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(hitbox.transform.position, hitbox.attackCheckSize, 0);
+
+        foreach (var hit in colliders)
+        {
+            if (hit.GetComponent<Enemy>() != null)
+            {
+                Debug.Log("Hit: " + hit.name);
+            }
+        }
+    }
 }
