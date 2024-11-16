@@ -7,6 +7,7 @@ abstract public class Entity : MonoBehaviour
 
     public Animator Anim { private set; get; }
     public Rigidbody2D Rb { private set; get; }
+    public EntityStats Stats { get; private set; }
 
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected float groundCheckDistance;
@@ -25,6 +26,7 @@ abstract public class Entity : MonoBehaviour
     {
         Anim = GetComponentInChildren<Animator>();
         Rb = GetComponent<Rigidbody2D>();
+        Stats = GetComponent<EntityStats>();
     }
 
     protected virtual void Update()

@@ -92,4 +92,9 @@ public class Player : Entity
         StateMachine.CurrentState.AnimAllowCancel();
     }
 
+    public void Die()
+    {
+        Debug.Log("Player Died");
+    }
+
 }

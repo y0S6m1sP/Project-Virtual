@@ -20,13 +20,13 @@ public class SamuraiSpearAnimationTriggers : MonoBehaviour
         {
             if (hit.TryGetComponent<Player>(out var player))
             {
-                if(player.isParryActive && Enemy.canBeParrried)
+                if (player.isParryActive && Enemy.canBeParrried)
                 {
                     player.ParrySuccess();
-                    Debug.Log("Parry Success");
                     return;
                 }
-                Debug.Log("Hit: " + hit.name);
+
+                Enemy.Stats.DoDamage(player.Stats);
             }
         }
     }
@@ -34,5 +34,5 @@ public class SamuraiSpearAnimationTriggers : MonoBehaviour
     private void OpenParryWindow() => Enemy.OpenParryWindow();
 
     private void CloseParryWindow() => Enemy.CloseParryWindow();
-    
+
 }
