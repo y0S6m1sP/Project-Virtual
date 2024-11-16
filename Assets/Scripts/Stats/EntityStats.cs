@@ -8,6 +8,9 @@ public class EntityStats : MonoBehaviour
     public Stat armor;
     public int currentHealth;
     public int currentArmor;
+
+    public System.Action onHealthChanged;
+    public System.Action onArmorChanged;
     public bool IsDead { get; private set; }
 
     protected virtual void Start()
@@ -25,14 +28,39 @@ public class EntityStats : MonoBehaviour
     {
         if (currentArmor > 0)
         {
-            currentArmor--;
+            DecreaseArmorBy(_damage);
             return;
         }
-        
-        currentHealth -= _damage;
+
+        DecreaseHealthBy(_damage);
 
         if (currentHealth <= 0 && !IsDead) Die();
     }
+
+    protected virtual void IncreaseHealthBy(int _amount)
+    {
+        currentHealth += _amount;
+        onHealthChanged?.Invoke();
+    }
+
+    protected virtual void DecreaseHealthBy(int _damage)
+    {
+        currentHealth -= _damage;
+        onHealthChanged?.Invoke();
+    }
+
+    protected virtual void IncreaseArmorBy(int _amount)
+    {
+        currentArmor += _amount;
+        onArmorChanged?.Invoke();
+    }
+
+    protected virtual void DecreaseArmorBy(int _damage)
+    {
+        currentArmor -= _damage;
+        onArmorChanged?.Invoke();
+    }
+
 
     protected virtual void Die()
     {
