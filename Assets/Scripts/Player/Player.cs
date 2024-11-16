@@ -7,14 +7,15 @@ public class Player : Entity
 
     public bool IsBusy { get; private set; }
 
-    [Header("Player Basic Stats")]
+    [Header("Basic Stats")]
     public float moveSpeed;
     public float jumpForce;
     public float wallJumpForce;
     public float jumpCantMoveDuration;
     public float rollDuration;
     public float rollSpeed;
-    public float parryDuration;
+    public bool isParryActive;
+
 
     public PlayerStateMachine StateMachine { get; private set; }
 
@@ -64,6 +65,21 @@ public class Player : Entity
         IsBusy = true;
         yield return new WaitForSeconds(_seconds);
         IsBusy = false;
+    }
+
+    public void OpenParryWindow()
+    {
+        isParryActive = true;
+    }
+
+    public void CloseParryWindow()
+    {
+        isParryActive = false;
+    }
+
+    public void ParrySuccess()
+    {
+        StateMachine.ChangeState(Idle);
     }
 
     public void AnimFinishTrigger()

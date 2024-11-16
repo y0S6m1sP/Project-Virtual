@@ -19,7 +19,7 @@ public class SamuraiSpearIdleState : SamuraiSpearGroundState
     {
         base.Update();
 
-        // if (stateTimer < 0)
-        //     stateMachine.ChangeState(enemy.Move);
+        if (stateTimer < 0)
+            stateMachine.ChangeState(enemy.Move);
     }
 }

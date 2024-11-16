@@ -29,4 +29,8 @@ public class PlayerAnimationTriggers : MonoBehaviour
             }
         }
     }
+
+    private void OpenParryWindow() => Player.OpenParryWindow();
+
+    private void CloseParryWindow() => Player.CloseParryWindow();
 }

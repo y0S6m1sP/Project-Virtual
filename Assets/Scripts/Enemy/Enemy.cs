@@ -5,16 +5,20 @@ public class Enemy : Entity
 {
     [SerializeField] protected LayerMask whatIsPlayer;
 
-    [Header("Enemy Basic Stats")]
+    [Header("Basic Stats")]
     public float moveSpeed;
     public float idleTime;
     public float moveTime;
     public float chaseTime;
 
-    [Header("Enemy Attack Stats")]
+    [Header("Attack Stats")]
     public float attackDistance;
     public float attackCooldown;
     [HideInInspector] public float lastTimeAttacked;
+
+    [Header("Parry Info")]
+    [SerializeField] protected GameObject parryImage;
+    [HideInInspector] public bool canBeParrried;
 
     public EnemyStateMachine StateMachine { get; private set; }
 
@@ -41,6 +45,18 @@ public class Enemy : Entity
         return false;
     }
 
+    public void OpenParryWindow()
+    {
+        canBeParrried = true;
+        parryImage.SetActive(true);
+    }
+
+    public void CloseParryWindow()
+    {
+        canBeParrried = false;
+        parryImage.SetActive(false);
+    }
+
     public virtual void AnimationFinishTrigger()
     {
         StateMachine.CurrentState.AnimationFinishTrigger();
@@ -48,7 +64,8 @@ public class Enemy : Entity
 
     public virtual RaycastHit2D IsPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDir, 50, whatIsPlayer);
 
-    public bool IsPlayerInAttackDistance() {
+    public bool IsPlayerInAttackDistance()
+    {
         return IsPlayerDetected() && IsPlayerDetected().distance < attackDistance;
     }
 
