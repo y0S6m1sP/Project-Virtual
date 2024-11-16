@@ -14,6 +14,8 @@ public class PlayerRollState : PlayerState
         base.Enter();
 
         stateTimer = player.rollDuration;
+
+        player.Skill.Dodge.UseSkill(); // this is an example, if not used, remove this line
     }
 
     override public void Exit()

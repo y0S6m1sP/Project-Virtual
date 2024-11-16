@@ -23,6 +23,9 @@ public class SamuraiSpearAnimationTriggers : MonoBehaviour
                 if (player.isParryActive && Enemy.canBeParrried)
                 {
                     player.ParrySuccess();
+
+                    player.Skill.Parry.UseSkill(); // this is an example, if not used, remove this line
+
                     return;
                 }
 

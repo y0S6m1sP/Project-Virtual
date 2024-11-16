@@ -16,9 +16,7 @@ public class Player : Entity
     public float rollSpeed;
     public bool isParryActive;
 
-
     public PlayerStateMachine StateMachine { get; private set; }
-
     public PlayerIdleState Idle { get; private set; }
     public PlayerMoveState Move { get; private set; }
     public PlayerAttack1State Attack1 { get; private set; }
@@ -31,6 +29,8 @@ public class Player : Entity
     public PlayerAirAttackState AirAttack { get; private set; }
     public PlayerParryState Parry { get; private set; }
     public PlayerDeadState Dead { get; private set; }
+
+    public SkillManager Skill { get; private set; }
 
     protected override void Awake()
     {
@@ -53,6 +53,7 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
+        Skill = SkillManager.instance;
         StateMachine.Initialize(Idle);
     }
 
