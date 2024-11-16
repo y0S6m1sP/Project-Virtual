@@ -30,6 +30,7 @@ public class Player : Entity
     public PlayerWallJumpState WallJump { get; private set; }
     public PlayerAirAttackState AirAttack { get; private set; }
     public PlayerParryState Parry { get; private set; }
+    public PlayerDeadState Dead { get; private set; }
 
     protected override void Awake()
     {
@@ -46,6 +47,7 @@ public class Player : Entity
         WallJump = new PlayerWallJumpState(this, StateMachine, "Jump");
         AirAttack = new PlayerAirAttackState(this, StateMachine, "AirAttack");
         Parry = new PlayerParryState(this, StateMachine, "Parry");
+        Dead = new PlayerDeadState(this, StateMachine, "Dead");
     }
 
     protected override void Start()
@@ -94,7 +96,7 @@ public class Player : Entity
 
     public void Die()
     {
-        Debug.Log("Player Died");
+        StateMachine.ChangeState(Dead);
     }
 
 }

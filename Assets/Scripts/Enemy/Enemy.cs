@@ -77,9 +77,8 @@ public class Enemy : Entity
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * FacingDir, transform.position.y));
     }
 
-    public void Die()
+    public virtual void Die()
     {
-        Debug.Log("Enemy died");
     }
 
 }

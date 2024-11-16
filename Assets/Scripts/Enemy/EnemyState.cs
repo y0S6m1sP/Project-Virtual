@@ -43,4 +43,10 @@ public class EnemyState
     {
         triggerCalled = true;
     }
+
+    public IEnumerator DestroyAfter(float _seconds)
+    {
+        yield return new WaitForSeconds(_seconds);
+        Object.Destroy(enemyBase.gameObject);
+    }
 }

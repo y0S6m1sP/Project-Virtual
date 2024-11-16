@@ -11,6 +11,7 @@ public class SamuraiSpear : Enemy
     public SamuraiSpearChaseState Chase { get; private set; }
     public SamuraiSpearChaseIdleState ChaseIdle { get; private set; }
     public SamuraiSpearAttackState Attack { get; private set; }
+    public SamuraiSpearDeadState Dead { get; private set; }
 
     protected override void Awake()
     {
@@ -20,6 +21,7 @@ public class SamuraiSpear : Enemy
         Attack = new SamuraiSpearAttackState(this, StateMachine, "Attack", this);
         Chase = new SamuraiSpearChaseState(this, StateMachine, "Move", this);
         ChaseIdle = new SamuraiSpearChaseIdleState(this, StateMachine, "Idle", this);
+        Dead = new SamuraiSpearDeadState(this, StateMachine, "Dead", this);
     }
 
     protected override void Start()
@@ -31,5 +33,11 @@ public class SamuraiSpear : Enemy
     protected override void Update()
     {
         base.Update();
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        StateMachine.ChangeState(Dead);
     }
 }
