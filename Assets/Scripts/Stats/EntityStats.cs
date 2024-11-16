@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
+    private EntityFX Fx => GetComponent<EntityFX>();
+
     public Stat maxHealth;
     public Stat damage;
     public Stat armor;
@@ -46,6 +48,7 @@ public class EntityStats : MonoBehaviour
     protected virtual void DecreaseHealthBy(int _damage)
     {
         currentHealth -= _damage;
+        Fx.CreatePopupText(_damage.ToString());
         onHealthChanged?.Invoke();
     }
 
