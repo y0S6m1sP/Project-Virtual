@@ -17,6 +17,7 @@ public class UI_PlayerHealthBar : MonoBehaviour
     private void UpdateHealthBar()
     {
         int currentHearts = healthBar.transform.childCount;
+        if(playerStats.currentHealth == 0)  return;
 
         while (currentHearts < playerStats.currentHealth)
         {
