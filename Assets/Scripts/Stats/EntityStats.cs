@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
-    private EntityFX Fx => GetComponent<EntityFX>();
+    protected EntityFX Fx => GetComponent<EntityFX>();
 
     public Stat maxHealth;
     public Stat damage;

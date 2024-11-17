@@ -11,6 +11,12 @@ public class PlayerStats : EntityStats
         player = GetComponent<Player>();
     }
 
+    public override void DoDamage(EntityStats _entityStats)
+    {
+        base.DoDamage(_entityStats);
+        Fx.CreateHitFX(_entityStats.transform);
+    }
+
     protected override void Die()
     {
         base.Die();
