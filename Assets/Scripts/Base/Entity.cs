@@ -41,6 +41,8 @@ abstract public class Entity : MonoBehaviour
 
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
+        if (Rb.bodyType == RigidbodyType2D.Static) return;
+
         Rb.velocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
