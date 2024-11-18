@@ -18,6 +18,8 @@ public class EnemyStats : EntityStats
     public override void TakeDamage(int _damage)
     {
         base.TakeDamage(_damage);
+        
+        AudioManager.instance.PlaySFX(Random.Range(3, 5));
 
         CameraShakeManager.Instance.CameraShake(impulseSource);
     }

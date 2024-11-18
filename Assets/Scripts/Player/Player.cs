@@ -80,8 +80,10 @@ public class Player : Entity
         isParryActive = false;
     }
 
-    public void ParrySuccess()
+    public IEnumerator ParrySuccess()
     {
+        AudioManager.instance.PlaySFX(Random.Range(0, 2));
+        yield return new WaitForSeconds(0.2f);
         StateMachine.ChangeState(Idle);
     }
 
