@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class UI_PlayerHealthBar : MonoBehaviour
 {
     [SerializeField] private GameObject healthPrefab;
+    [SerializeField] private GameObject armorPrefab;
     [SerializeField] private EntityStats playerStats;
     private GridLayoutGroup healthBar;
 
@@ -11,24 +12,28 @@ public class UI_PlayerHealthBar : MonoBehaviour
     {
         healthBar = GetComponentInChildren<GridLayoutGroup>();
         playerStats.onHealthChanged += UpdateHealthBar;
+        playerStats.onArmorChanged += UpdateHealthBar;
         UpdateHealthBar();
     }
 
     private void UpdateHealthBar()
     {
-        int currentHearts = healthBar.transform.childCount;
-        if(playerStats.currentHealth == 0)  return;
+        int currentHearts = playerStats.currentHealth;
+        int currentArmor = playerStats.currentArmor;
 
-        while (currentHearts < playerStats.currentHealth)
+        foreach (Transform child in healthBar.transform)
         {
-            Instantiate(healthPrefab, healthBar.transform);
-            currentHearts++;
+            Destroy(child.gameObject);
         }
 
-        while (currentHearts > playerStats.currentHealth)
+        for (int i = 0; i < currentHearts; i++)
         {
-            Destroy(healthBar.transform.GetChild(currentHearts - 1).gameObject);
-            currentHearts--;
+            Instantiate(healthPrefab, healthBar.transform);
+        }
+
+        for (int i = 0; i < currentArmor; i++)
+        {
+            Instantiate(armorPrefab, healthBar.transform);
         }
     }
 }
