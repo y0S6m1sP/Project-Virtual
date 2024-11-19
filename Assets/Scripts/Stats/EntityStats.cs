@@ -5,6 +5,8 @@ public class EntityStats : MonoBehaviour
 {
     protected EntityFX Fx => GetComponent<EntityFX>();
 
+    public string entityName;
+
     public Stat maxHealth;
     public Stat damage;
     public Stat armor;

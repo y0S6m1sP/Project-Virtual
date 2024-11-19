@@ -17,6 +17,8 @@ abstract public class Entity : MonoBehaviour
 
     public int FacingDir { private set; get; } = 1;
 
+    public System.Action onFlipped;
+
     protected virtual void Awake()
     {
 
@@ -61,6 +63,8 @@ abstract public class Entity : MonoBehaviour
     {
         FacingDir *= -1;
         transform.Rotate(0f, 180f, 0f);
+
+        onFlipped?.Invoke();
     }
 
     public virtual void FlipController(float _xInput)
