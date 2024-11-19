@@ -9,14 +9,17 @@ public class UI_RelicSlot : MonoBehaviour
 
     private ItemData relic;
 
-    public void AddRelic(ItemData _relic) {
+    public void AddRelic(ItemData _relic)
+    {
         relic = _relic;
         icon.sprite = relic.itemIcon;
+        icon.color = Color.white;
     }
 
     public void CleanUpSlot()
     {
         relic = null;
         icon.sprite = null;
+        icon.color = Color.clear;
     }
 }
