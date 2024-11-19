@@ -7,6 +7,7 @@ abstract public class Entity : MonoBehaviour
 
     public Animator Anim { private set; get; }
     public Rigidbody2D Rb { private set; get; }
+    public SpriteRenderer Sr { private set; get; }
     public EntityStats Stats { get; private set; }
 
     [SerializeField] protected Transform groundCheck;
@@ -26,6 +27,7 @@ abstract public class Entity : MonoBehaviour
 
     protected virtual void Start()
     {
+        Sr = GetComponentInChildren<SpriteRenderer>();
         Anim = GetComponentInChildren<Animator>();
         Rb = GetComponent<Rigidbody2D>();
         Stats = GetComponent<EntityStats>();

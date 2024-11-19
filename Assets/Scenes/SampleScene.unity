@@ -10299,7 +10299,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 626b3683bf0199441804c8cba5f9b2d3, type: 3}
---- !u!1001 &5657536175036500173
+--- !u!1001 &7421588177150495146
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10307,69 +10307,69 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2779855927032746997, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2779855927032746997, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.77
+      value: 2.17
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.93
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4332714201613544629, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 2860864263052320678, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5417090556195524743, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
-      propertyPath: m_Name
-      value: Enemy_Samurai_Spear
+    - target: {fileID: 3335536288617825981, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: parryImage
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5417090556195524743, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4191334876390818981, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011254465435510167, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9011254465435510167, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+    - target: {fileID: 4191334876390818981, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298535491063731508, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298535491063731508, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7831572999167070968, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: m_Name
+      value: EnemySamuraiSpear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10386,4 +10386,4 @@ SceneRoots:
   - {fileID: 1882919972}
   - {fileID: 877574010}
   - {fileID: 288253037}
-  - {fileID: 5657536175036500173}
+  - {fileID: 7421588177150495146}

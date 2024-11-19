@@ -48,13 +48,19 @@ public class Enemy : Entity
     public void OpenParryWindow()
     {
         canBeParrried = true;
-        parryImage.SetActive(true);
+        StartCoroutine(ShowParryHint());
     }
 
     public void CloseParryWindow()
     {
         canBeParrried = false;
-        parryImage.SetActive(false);
+    }
+
+    private IEnumerator ShowParryHint()
+    {
+        Sr.material = Resources.Load<Material>("Outline");
+        yield return new WaitForSeconds(0.2f);
+        Sr.material = new Material(Shader.Find("Sprites/Default"));
     }
 
     public virtual void AnimationFinishTrigger()
