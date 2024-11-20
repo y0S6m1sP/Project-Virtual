@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2062442943891219203}
   - component: {fileID: 6618656093325380231}
+  - component: {fileID: 2951983458574158798}
   - component: {fileID: 3710065566058044462}
   - component: {fileID: 3790082832754808359}
   m_Layer: 0
@@ -151,9 +152,36 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.057760365, y: 0.009626338}
-  m_Size: {x: 0.691964, y: 0.3646643}
+  m_Offset: {x: 0.14625786, y: 0.009626328}
+  m_Size: {x: 0.86896163, y: 0.3646657}
   m_Direction: 1
+--- !u!50 &2951983458574158798
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4006378145350971357}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &3710065566058044462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,4 +212,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetStats: {fileID: 0}
   swordStats: {fileID: 3710065566058044462}
-  speed: 20
+  speed: 30
+  trackingStrength: 4

@@ -95,4 +95,10 @@ public class SwordManager : MonoBehaviour
             group.blocksRaycasts = isBlock;
         }
     }
+
+    public void GenerateSword(Transform player, EntityStats enemy)
+    {
+        GameObject sword = Instantiate(swordSlotDict[swordSlots1].swordPrefab, player.position, Quaternion.identity);
+        sword.GetComponent<SwordController>().Setup(enemy);
+    }
 }

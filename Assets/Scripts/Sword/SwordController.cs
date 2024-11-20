@@ -7,28 +7,49 @@ public class SwordController : MonoBehaviour
     [SerializeField] private EntityStats targetStats;
     [SerializeField] private SwordStats swordStats;
     [SerializeField] private float speed;
+    public float trackingStrength = 5f;
 
-    private bool triggered;
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     public void Setup(EntityStats _targetStats)
     {
         targetStats = _targetStats;
+
+        Vector2 initialVelocity = new Vector2(-4f * PlayerManager.instance.player.FacingDir, 4f).normalized * speed;
+
+        rb.velocity = initialVelocity;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+
         if (!targetStats) return;
-        if (triggered) return;
 
-        transform.position = Vector2.MoveTowards(transform.position, targetStats.transform.position, speed * Time.deltaTime);
-        transform.right = targetStats.transform.position - transform.position;
+        Vector2 directionToTarget = (targetStats.transform.position - transform.position).normalized;
 
-        if (Vector2.Distance(transform.position, targetStats.transform.position) < .1f)
+        Vector2 desiredVelocity = directionToTarget * speed;
+        Vector2 steeringForce = (desiredVelocity - rb.velocity) * trackingStrength;
+
+        rb.AddForce(steeringForce);
+
+        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    private void OnTriggerEnter2D(Collider2D hit)
+    {
+        if (hit.GetComponent<Enemy>() != null)
         {
-            triggered = true;
-            swordStats.DoDamage(targetStats);
-            Destroy(gameObject);
-
+            if (hit.TryGetComponent<EnemyStats>(out var _target))
+            {
+                swordStats.DoDamage(_target);
+                Destroy(gameObject);
+            }
         }
     }
 }

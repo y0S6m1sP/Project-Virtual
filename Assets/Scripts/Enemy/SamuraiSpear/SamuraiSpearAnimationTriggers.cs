@@ -26,6 +26,8 @@ public class SamuraiSpearAnimationTriggers : MonoBehaviour
 
                     player.Skill.Parry.UseSkill(); // this is an example, if not used, remove this line
 
+                    SwordManager.Instance.GenerateSword(player.transform, Enemy.Stats);
+
                     return;
                 }
 
