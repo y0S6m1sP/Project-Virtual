@@ -15,9 +15,6 @@ public class Enemy : Entity
     public float attackDistance;
     public float attackCooldown;
     [HideInInspector] public float lastTimeAttacked;
-
-    [Header("Parry Info")]
-    [SerializeField] protected GameObject parryImage;
     [HideInInspector] public bool canBeParrried;
 
     public EnemyStateMachine StateMachine { get; private set; }

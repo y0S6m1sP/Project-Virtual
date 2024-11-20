@@ -668,7 +668,6 @@ MonoBehaviour:
   attackDistance: 2
   attackCooldown: 3
   lastTimeAttacked: 0
-  parryImage: {fileID: 0}
   canBeParrried: 0
 --- !u!114 &8769387997751151485
 MonoBehaviour:
