@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 abstract public class Entity : MonoBehaviour
@@ -9,6 +10,7 @@ abstract public class Entity : MonoBehaviour
     public Rigidbody2D Rb { private set; get; }
     public SpriteRenderer Sr { private set; get; }
     public EntityStats Stats { get; private set; }
+    public CinemachineImpulseSource impulseSource { get; private set; }
 
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected float groundCheckDistance;
@@ -31,6 +33,7 @@ abstract public class Entity : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         Rb = GetComponent<Rigidbody2D>();
         Stats = GetComponent<EntityStats>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     protected virtual void Update()

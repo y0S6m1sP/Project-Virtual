@@ -20,7 +20,7 @@ public class SwordController : MonoBehaviour
     {
         targetStats = _targetStats;
 
-        Vector2 initialVelocity = new Vector2(-4f * PlayerManager.instance.player.FacingDir, 4f).normalized * speed;
+        Vector2 initialVelocity = new Vector2(-5f * PlayerManager.instance.player.FacingDir, Random.Range(0f, 10f)).normalized * speed;
 
         rb.velocity = initialVelocity;
     }

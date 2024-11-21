@@ -98,7 +98,13 @@ public class SwordManager : MonoBehaviour
 
     public void GenerateSword(Transform player, EntityStats enemy)
     {
-        GameObject sword = Instantiate(swordSlotDict[swordSlots1].swordPrefab, player.position, Quaternion.identity);
-        sword.GetComponent<SwordController>().Setup(enemy);
+        foreach (var slot in swordSlotDict)
+        {
+            if (slot.Value != null)
+            {
+                GameObject sword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
+                sword.GetComponent<SwordController>().Setup(enemy);
+            }
+        }
     }
 }

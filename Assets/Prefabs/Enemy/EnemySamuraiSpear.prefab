@@ -550,7 +550,6 @@ GameObject:
   - component: {fileID: 3335536288617825981}
   - component: {fileID: 8769387997751151485}
   - component: {fileID: 619640248531370053}
-  - component: {fileID: 509565563739469650}
   m_Layer: 7
   m_Name: EnemySamuraiSpear
   m_TagString: Untagged
@@ -666,7 +665,7 @@ MonoBehaviour:
   moveTime: 3
   chaseTime: 5
   attackDistance: 2
-  attackCooldown: 3
+  attackCooldown: 1
   lastTimeAttacked: 0
   canBeParrried: 0
 --- !u!114 &8769387997751151485
@@ -683,7 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Dark Samurai
   maxHealth:
-    baseValue: 100
+    baseValue: 1000
     modifiers: 
   damage:
     baseValue: 1
@@ -707,59 +706,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpTextPrefab: {fileID: 5019047355205589866, guid: d6f8384dc728f9b4cb32ae494fbcfe96, type: 3}
   hitFXPrefab: {fileID: 3140538583296492161, guid: 3114b41649c524640a7ac811d257264e, type: 3}
---- !u!114 &509565563739469650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831572999167070968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_ImpulseShape: 3
-    m_CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_ImpulseDuration: 0.2
-    m_ImpulseType: 0
-    m_DissipationRate: 0.25
-    m_RawSignal: {fileID: 0}
-    m_AmplitudeGain: 1
-    m_FrequencyGain: 1
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 100
-    m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0.05, y: 0.025, z: 0}
 --- !u!1 &7976476129890839244
 GameObject:
   m_ObjectHideFlags: 0

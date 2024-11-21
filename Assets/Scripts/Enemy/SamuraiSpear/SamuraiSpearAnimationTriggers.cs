@@ -22,11 +22,9 @@ public class SamuraiSpearAnimationTriggers : MonoBehaviour
             {
                 if (player.isParryActive && Enemy.canBeParrried)
                 {
-                    StartCoroutine(player.ParrySuccess());
+                    StartCoroutine(player.ParrySuccess(Enemy.Stats));
 
                     player.Skill.Parry.UseSkill(); // this is an example, if not used, remove this line
-
-                    SwordManager.Instance.GenerateSword(player.transform, Enemy.Stats);
 
                     return;
                 }

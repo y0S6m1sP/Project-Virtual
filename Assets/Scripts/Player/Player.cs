@@ -80,9 +80,19 @@ public class Player : Entity
         isParryActive = false;
     }
 
-    public IEnumerator ParrySuccess()
+    public IEnumerator ParrySuccess(EntityStats _enemyStats)
     {
         AudioManager.instance.PlaySFX(Random.Range(0, 2));
+
+        if (impulseSource != null)
+            CameraShakeManager.Instance.CameraShake(impulseSource);
+
+        Time.timeScale = 0.5f;
+        yield return new WaitForSecondsRealtime(0.1f); 
+        Time.timeScale = 1f; 
+
+        SwordManager.Instance.GenerateSword(transform, _enemyStats);
+
         yield return new WaitForSeconds(0.2f);
         StateMachine.ChangeState(Idle);
     }

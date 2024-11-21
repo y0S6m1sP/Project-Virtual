@@ -6,13 +6,10 @@ public class EnemyStats : EntityStats
 {
     private Enemy enemy;
 
-    private CinemachineImpulseSource impulseSource;
-
     override protected void Start()
     {
         base.Start();
         enemy = GetComponent<Enemy>();
-        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     public override void TakeDamage(int _damage)
@@ -20,8 +17,6 @@ public class EnemyStats : EntityStats
         base.TakeDamage(_damage);
         
         AudioManager.instance.PlaySFX(Random.Range(3, 5));
-
-        CameraShakeManager.Instance.CameraShake(impulseSource);
     }
 
     protected override void Die()
