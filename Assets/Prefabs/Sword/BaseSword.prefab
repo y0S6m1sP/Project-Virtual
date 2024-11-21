@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordName: Normal Sword
   damage:
-    baseValue: 10
+    baseValue: 0
     modifiers: 
 --- !u!114 &3790082832754808359
 MonoBehaviour:

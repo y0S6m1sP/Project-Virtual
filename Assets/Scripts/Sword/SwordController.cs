@@ -16,10 +16,13 @@ public class SwordController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Setup(EntityStats _targetStats, Sprite _sprite)
+    public void Setup(EntityStats _targetStats, ItemDataSword _swordData)
     {
         var sr = GetComponentInChildren<SpriteRenderer>();
-        sr.sprite = _sprite;
+        sr.sprite = _swordData.itemIcon;
+
+        var swordStats = GetComponent<SwordStats>();
+        swordStats.damage.SetDefaultValue(_swordData.damage);
 
         targetStats = _targetStats;
 

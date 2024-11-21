@@ -117,11 +117,11 @@ public class SwordManager : MonoBehaviour
                 if (isDouble)
                 {
                     GameObject doubleSword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
-                    doubleSword.GetComponent<SwordController>().Setup(enemy, slot.Value.itemIcon);
+                    doubleSword.GetComponent<SwordController>().Setup(enemy, slot.Value);
                 }
 
                 GameObject sword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
-                    sword.GetComponent<SwordController>().Setup(enemy, slot.Value.itemIcon);
+                    sword.GetComponent<SwordController>().Setup(enemy, slot.Value);
             }
         }
     }

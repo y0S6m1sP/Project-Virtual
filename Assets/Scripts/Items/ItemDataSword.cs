@@ -7,4 +7,6 @@ public class ItemDataSword : ItemData
 {
     public GameObject swordPrefab;
 
+    public int damage;
+
 }
