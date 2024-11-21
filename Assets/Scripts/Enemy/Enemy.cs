@@ -82,6 +82,7 @@ public class Enemy : Entity
 
     public virtual void Die()
     {
+        GameLevelManager.instance.NextLevel();
     }
 
 }

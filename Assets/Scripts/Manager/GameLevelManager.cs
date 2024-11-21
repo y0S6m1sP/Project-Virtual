@@ -7,6 +7,8 @@ public class GameLevelManager : MonoBehaviour
     public static GameLevelManager instance;
     [SerializeField] private GameObject level0;
     [SerializeField] private GameObject[] level1;
+    [SerializeField] private GameObject[] level1Enemies;
+    [SerializeField] private GameObject spawnPoint;
     public int currentLevel = 0;
 
     private void Awake()
@@ -19,7 +21,7 @@ public class GameLevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        StartCoroutine(TransitionToNextLevel());       
+        StartCoroutine(TransitionToNextLevel());
     }
 
     private void ClearLevel()
@@ -37,18 +39,15 @@ public class GameLevelManager : MonoBehaviour
     private IEnumerator TransitionToNextLevel()
     {
         Player player = PlayerManager.instance.player;
-        
-        // Freeze player movement
+
         player.Rb.bodyType = RigidbodyType2D.Static;
 
-        // Initialize transition effect
         TransitionManager.instance.transition.StartTransition();
 
-        // Move player to center position
         const float MOVE_DURATION = 0.5f;
         Vector3 startPosition = player.transform.position;
         Vector3 centerPosition = Vector3.zero;
-        
+
         float elapsedTime = 0;
         while (elapsedTime < MOVE_DURATION)
         {
@@ -59,29 +58,49 @@ public class GameLevelManager : MonoBehaviour
         }
         player.transform.position = centerPosition;
 
-        // Wait before level change
         yield return new WaitForSeconds(0.5f);
-        
-        // Change level
+
         ClearLevel();
         currentLevel++;
         TransitionManager.instance.transition.EndTransition();
 
-        // Set up new level
-        if (currentLevel == 1)
+        if (currentLevel < 4)
         {
-            level1[0].SetActive(true);
+            int randomIndex = Random.Range(0, level1.Length);
+            level1[randomIndex].SetActive(true);
         }
-        else if (currentLevel == 2)
+        else if (currentLevel == 4)
         {
             level0.SetActive(true);
             currentLevel = 0;
         }
 
-        // Re-enable player movement
         yield return new WaitForSeconds(1f);
         player.Rb.bodyType = RigidbodyType2D.Dynamic;
+
+        yield return new WaitForSeconds(1f);
+        if (currentLevel != 0)
+        {
+            SpawnRandomEnemy();
+        }
     }
 
+    private void SpawnRandomEnemy()
+    {
+        int randomIndex = Random.Range(0, level1Enemies.Length);
+        Vector3 spawnPosition = spawnPoint.transform.position;
+        GameObject enemy = Instantiate(level1Enemies[randomIndex], spawnPosition, Quaternion.identity);
+        FacePlayer(enemy);
+    }
+
+    private void FacePlayer(GameObject enemy)
+    {
+        Vector3 playerPosition = PlayerManager.instance.player.transform.position;
+        Vector3 enemyPosition = enemy.transform.position;
+
+        if (playerPosition.x < enemyPosition.x)
+            enemy.GetComponent<Enemy>().Flip();
+
+    }
 
 }
