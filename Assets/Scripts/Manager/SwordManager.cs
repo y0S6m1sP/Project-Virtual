@@ -102,9 +102,42 @@ public class SwordManager : MonoBehaviour
         {
             if (slot.Value != null)
             {
+                var isDouble = false;
+                foreach (ItemEffect effect in slot.Value.itemEffects)
+                {
+                    if (effect is DoubleSwordEffect)
+                    {
+                        isDouble = true;
+                    }
+                }
+
+                if (isDouble)
+                {
+                    GameObject doubleSword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
+                    doubleSword.GetComponent<SwordController>().Setup(enemy);
+                }
+                
                 GameObject sword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
                 sword.GetComponent<SwordController>().Setup(enemy);
             }
         }
+    }
+
+    public List<ItemEffect> GetItemEffects(EffectType type)
+    {
+        List<ItemEffect> effects = new();
+
+        foreach (ItemDataSword sword in swordSlotDict.Values)
+        {
+            foreach (ItemEffect effect in sword.itemEffects)
+            {
+                if (effect.effectType == type)
+                {
+                    effects.Add(effect);
+                }
+            }
+        }
+
+        return effects;
     }
 }

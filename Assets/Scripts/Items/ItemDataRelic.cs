@@ -9,30 +9,18 @@ public enum RelicRarity
     Rare,
     Epic,
     Legendary,
-    Curse
 }
+
 
 [CreateAssetMenu(fileName = "New Relic Data", menuName = "Data/Relic")]
 public class ItemDataRelic : ItemData
 {
     public RelicRarity rarity;
 
-    [Header("Relic effect")]
-    public float itemCooldown;
-    public ItemEffect[] itemEffects;
-
     [Header("Relic stats")]
     public int maxHealth;
     public int damage;
     public int armor;
-
-    public void Effect(Transform transform)
-    {
-        foreach (ItemEffect effect in itemEffects)
-        {
-            effect.ExecuteEffect(transform);
-        }
-    }
 
     public void AddModifiers()
     {

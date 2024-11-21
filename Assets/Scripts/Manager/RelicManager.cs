@@ -54,4 +54,22 @@ public class RelicManager : MonoBehaviour
         _relic.RemoveModifiers();
         UpdateRelicSlots();
     }
+
+    public List<ItemEffect> GetItemEffects(EffectType type)
+    {
+        List<ItemEffect> effects = new();
+
+        foreach (ItemDataRelic relic in relics)
+        {
+            foreach(ItemEffect effect in relic.itemEffects)
+            {
+                if (effect.effectType == type)
+                {
+                    effects.Add(effect);
+                }
+            }
+        }
+
+        return effects;
+    }
 }

@@ -6,4 +6,5 @@ using UnityEngine;
 public class ItemDataSword : ItemData
 {
     public GameObject swordPrefab;
+
 }

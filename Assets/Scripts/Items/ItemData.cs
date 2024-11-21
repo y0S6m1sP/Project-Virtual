@@ -14,6 +14,10 @@ public class ItemData : ScriptableObject
     public Sprite itemIcon;
     public string itemId;
 
+    [Header("Item effects")]
+    public float itemCooldown;
+    public ItemEffect[] itemEffects;
+
     protected StringBuilder sb = new();
 
     private void OnValidate()
@@ -27,5 +31,13 @@ public class ItemData : ScriptableObject
     public virtual string GetDescription()
     {
         return "";
+    }
+
+    public virtual void Effect(EntityStats target)
+    {
+        foreach (ItemEffect effect in itemEffects)
+        {
+            effect.ExecuteEffect(target);
+        }
     }
 }

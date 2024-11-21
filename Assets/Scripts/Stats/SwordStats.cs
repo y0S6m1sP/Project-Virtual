@@ -10,6 +10,13 @@ public class SwordStats : MonoBehaviour
 
     public virtual void DoDamage(EntityStats _entityStats)
     {
+        var relicEffects = RelicManager.Instance.GetItemEffects(EffectType.Offensive);
+
+        foreach (ItemEffect effects in relicEffects)
+        {
+            effects.ExecuteEffect(_entityStats);
+        }
+
         _entityStats.TakeDamage(damage.GetValue());
     }
 
