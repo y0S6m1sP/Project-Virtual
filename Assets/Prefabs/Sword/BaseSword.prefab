@@ -27,8 +27,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.92387956, w: 0.38268343}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2062442943891219203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3710065566058044462}
   - component: {fileID: 3790082832754808359}
   m_Layer: 0
-  m_Name: NormalSword01
+  m_Name: BaseSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,8 +152,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.14625786, y: 0.009626328}
-  m_Size: {x: 0.86896163, y: 0.3646657}
+  m_Offset: {x: 0.07455299, y: 0.0024559784}
+  m_Size: {x: 0.725561, y: 0.15365821}
   m_Direction: 1
 --- !u!50 &2951983458574158798
 Rigidbody2D:

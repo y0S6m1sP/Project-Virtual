@@ -16,8 +16,11 @@ public class SwordController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Setup(EntityStats _targetStats)
+    public void Setup(EntityStats _targetStats, Sprite _sprite)
     {
+        var sr = GetComponentInChildren<SpriteRenderer>();
+        sr.sprite = _sprite;
+
         targetStats = _targetStats;
 
         Vector2 initialVelocity = new Vector2(-5f * PlayerManager.instance.player.FacingDir, Random.Range(0f, 10f)).normalized * speed;

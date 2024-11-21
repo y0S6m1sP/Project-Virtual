@@ -18,5 +18,5 @@ MonoBehaviour:
   itemId: b6245ecd3a0c4f84d89e4033f51298fa
   itemCooldown: 0
   itemEffects:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7e2eaa3eef0a13747bbc9430e6080845, type: 2}
   swordPrefab: {fileID: 4006378145350971357, guid: ea237cadceee34346abee28bb12f6b3a, type: 3}
