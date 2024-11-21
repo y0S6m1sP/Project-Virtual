@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -39,5 +40,15 @@ public class ItemData : ScriptableObject
         {
             effect.ExecuteEffect(target);
         }
+    }
+
+    public void AddEffect(ItemEffect newEffect)
+    {
+        var effectsList = new List<ItemEffect>(itemEffects)
+        {
+            newEffect
+        };
+
+        itemEffects = effectsList.ToArray();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,6 +56,8 @@ public class SwordManager : MonoBehaviour
                 string swordName = slot.Value != null ? slot.Value.name : "Empty";
                 Debug.Log($"Slot: {slot.Key.name}, Sword: {swordName}");
             }
+
+            AddSwordEffect(ScriptableObject.CreateInstance<DoubleSwordEffect>());
         }
     }
 
@@ -139,5 +142,10 @@ public class SwordManager : MonoBehaviour
         }
 
         return effects;
+    }
+
+    public void AddSwordEffect(ItemEffect effect)
+    {
+        swordSlotDict[swordSlots1].AddEffect(effect);
     }
 }

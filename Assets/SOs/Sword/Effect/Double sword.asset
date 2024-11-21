@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec27ac7a1d5984d8ea197c56bf44c5, type: 3}
   m_Name: Double sword
   m_EditorClassIdentifier: 
-  effectType: 0
+  effectType: 2
   effectDescription: 
