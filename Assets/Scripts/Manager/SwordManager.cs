@@ -116,7 +116,7 @@ public class SwordManager : MonoBehaviour
                     GameObject doubleSword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
                     doubleSword.GetComponent<SwordController>().Setup(enemy);
                 }
-                
+
                 GameObject sword = Instantiate(slot.Value.swordPrefab, player.position, Quaternion.identity);
                 sword.GetComponent<SwordController>().Setup(enemy);
             }

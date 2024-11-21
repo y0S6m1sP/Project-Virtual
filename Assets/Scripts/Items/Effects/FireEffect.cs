@@ -1,11 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Fire effect", menuName = "Data/Item effect/Fire")]
+[CreateAssetMenu(fileName = "Addition Fire Damage", menuName = "Data/Relic Effect/Addition Fire Damage")]
 public class FireEffect : ItemEffect
 {
     public override void ExecuteEffect(EntityStats target)
     {
-        Debug.Log("Fire effect executed!");
         target.TakeDamage(5);
     }
 }
