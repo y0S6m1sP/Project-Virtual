@@ -8,9 +8,18 @@ public enum ItemType
     Relic
 }
 
+public enum Rarity
+{
+    Common,
+    Rare,
+    Epic,
+    Legendary,
+}
+
 public class ItemData : ScriptableObject
 {
     public ItemType itemType;
+    public Rarity rarity;
     public string itemName;
     public Sprite itemIcon;
     public string itemId;

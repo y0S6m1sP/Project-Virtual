@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Canvas canvas;
     private RectTransform rectTransform;
@@ -20,7 +20,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         canvasGroup.alpha = .6f;
         SwordManager.Instance.BlocksAllRaycasts(false);
-        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -41,5 +40,18 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        SwordManager.Instance.BlocksAllRaycasts(true);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        SwordManager.Instance.swordSlotDict.TryGetValue(CurrentSlot, out var sword);
+        if (sword != null)
+            UIManager.instance.swordTooltip.ShowToolTip(sword);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UIManager.instance.swordTooltip.HideToolTip();
     }
 }

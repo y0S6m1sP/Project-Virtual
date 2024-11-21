@@ -7,12 +7,18 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject swordPanel;
 
+    public UI_SwordToolTip swordTooltip;
+
     private void Awake()
     {
         if (instance != null)
             Destroy(instance.gameObject);
         else
             instance = this;
+    }
+
+    private void Start() {
+        swordTooltip.gameObject.SetActive(false);
     }
 
     private void Update()

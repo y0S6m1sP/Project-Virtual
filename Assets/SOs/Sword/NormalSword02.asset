@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: NormalSword02
   m_EditorClassIdentifier: 
   itemType: 0
+  rarity: 0
   itemName: NormalSword02
   itemIcon: {fileID: -845805454, guid: 02bf9dd22d01e5644a32a8582a56379e, type: 3}
   itemId: 39e1523fce790ea4b9e0732b7da12877
   itemCooldown: 0
   itemEffects: []
   swordPrefab: {fileID: 4006378145350971357, guid: ea237cadceee34346abee28bb12f6b3a, type: 3}
+  damage: 1
