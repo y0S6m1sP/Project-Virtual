@@ -60,6 +60,10 @@ public class GameLevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        bool swordSelected = false;
+        UIManager.instance.swordSelect.ShowSwordSelect(() => swordSelected = true);
+        yield return new WaitUntil(() => swordSelected);
+        
         ClearLevel();
         currentLevel++;
         TransitionManager.instance.transition.EndTransition();

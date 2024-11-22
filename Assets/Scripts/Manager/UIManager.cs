@@ -30,11 +30,6 @@ public class UIManager : MonoBehaviour
         {
             swordPanel.SetActive(!swordPanel.activeSelf);
         }
-
-        if(Input.GetKeyDown(KeyCode.U))
-        {
-            swordSelect.ShowSwordSelect();
-        }
     }
 
 }
