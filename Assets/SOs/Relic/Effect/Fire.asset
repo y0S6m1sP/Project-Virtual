@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e90be4c49a22a2479227f14a6d8bd68, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
+  effectType: 0
   effectDescription: 
