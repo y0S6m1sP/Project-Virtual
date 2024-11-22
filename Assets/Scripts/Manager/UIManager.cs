@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject swordPanel;
 
     public UI_SwordToolTip swordTooltip;
+    public UI_RelicToolTip relicTooltip;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class UIManager : MonoBehaviour
 
     private void Start() {
         swordTooltip.gameObject.SetActive(false);
+        relicTooltip.gameObject.SetActive(false);
     }
 
     private void Update()

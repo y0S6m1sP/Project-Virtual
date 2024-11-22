@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_RelicSlot : MonoBehaviour
+public class UI_RelicSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Image icon;
 
@@ -21,5 +22,15 @@ public class UI_RelicSlot : MonoBehaviour
         relic = null;
         icon.sprite = null;
         icon.color = Color.clear;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        UIManager.instance.relicTooltip.ShowToolTip((ItemDataRelic)relic);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UIManager.instance.relicTooltip.HideToolTip();
     }
 }
