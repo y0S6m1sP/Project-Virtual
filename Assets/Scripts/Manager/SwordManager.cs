@@ -16,6 +16,7 @@ public class SwordManager : MonoBehaviour
 
     public static SwordManager Instance;
 
+    public List<ItemDataSword> swordPool = new();
     public List<ItemDataSword> startingSwords = new();
     public Dictionary<UI_SwordSlot, ItemDataSword> swordSlotDict = new();
     public Dictionary<UI_SwordSlot, DragDrop> dragDropDict = new();
@@ -147,5 +148,24 @@ public class SwordManager : MonoBehaviour
     public void AddSwordEffect(ItemEffect effect)
     {
         swordSlotDict[swordSlots1].AddEffect(effect);
+    }
+
+    public List<ItemDataSword> GetRandomSwords(int count)
+    {
+        List<ItemDataSword> randomSwords = new();
+        HashSet<int> usedIndices = new();
+        List<ItemDataSword> poolCopy = new(swordPool);
+
+        while (randomSwords.Count < count && usedIndices.Count < poolCopy.Count)
+        {
+            int randomIndex = Random.Range(0, poolCopy.Count);
+            if (!usedIndices.Contains(randomIndex))
+            {
+                randomSwords.Add(poolCopy[randomIndex]);
+                usedIndices.Add(randomIndex);
+            }
+        }
+
+        return randomSwords;
     }
 }

@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject swordPanel;
 
+    public UI_SwordSelect swordSelect;
     public UI_SwordToolTip swordTooltip;
     public UI_RelicToolTip relicTooltip;
 
@@ -28,6 +29,11 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             swordPanel.SetActive(!swordPanel.activeSelf);
+        }
+
+        if(Input.GetKeyDown(KeyCode.U))
+        {
+            swordSelect.ShowSwordSelect();
         }
     }
 
