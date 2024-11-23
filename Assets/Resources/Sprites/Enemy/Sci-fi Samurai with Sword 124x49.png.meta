@@ -100,12 +100,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_0
       rect:
         serializedVersion: 2
-        x: 36
+        x: 28
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_1
       rect:
         serializedVersion: 2
-        x: 158
+        x: 152
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_2
       rect:
         serializedVersion: 2
-        x: 280
+        x: 276
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_3
       rect:
         serializedVersion: 2
-        x: 402
+        x: 400
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,10 +186,10 @@ TextureImporter:
         serializedVersion: 2
         x: 524
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_5
       rect:
         serializedVersion: 2
-        x: 646
+        x: 648
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,12 +226,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 772
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_7
       rect:
         serializedVersion: 2
-        x: 890
+        x: 896
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_8
       rect:
         serializedVersion: 2
-        x: 1012
+        x: 1020
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_9
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 1144
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,12 +310,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_10
       rect:
         serializedVersion: 2
-        x: 1256
+        x: 1268
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,12 +331,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_11
       rect:
         serializedVersion: 2
-        x: 1378
+        x: 1392
         y: 392
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,12 +352,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_12
       rect:
         serializedVersion: 2
-        x: 36
+        x: 28
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -373,12 +373,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_13
       rect:
         serializedVersion: 2
-        x: 158
+        x: 152
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_14
       rect:
         serializedVersion: 2
-        x: 280
+        x: 276
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -415,12 +415,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_15
       rect:
         serializedVersion: 2
-        x: 402
+        x: 400
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,10 +438,10 @@ TextureImporter:
         serializedVersion: 2
         x: 524
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,12 +457,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_17
       rect:
         serializedVersion: 2
-        x: 646
+        x: 648
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,12 +478,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_18
       rect:
         serializedVersion: 2
-        x: 768
+        x: 772
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -499,12 +499,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_19
       rect:
         serializedVersion: 2
-        x: 890
+        x: 896
         y: 343
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -520,12 +520,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_20
       rect:
         serializedVersion: 2
-        x: 36
+        x: 28
         y: 294
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -541,12 +541,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_21
       rect:
         serializedVersion: 2
-        x: 158
+        x: 152
         y: 294
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -562,12 +562,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_22
       rect:
         serializedVersion: 2
-        x: 280
+        x: 276
         y: 294
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,12 +583,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_23
       rect:
         serializedVersion: 2
-        x: 402
+        x: 400
         y: 294
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -604,12 +604,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_24
       rect:
         serializedVersion: 2
-        x: 524
-        y: 294
-        width: 112.5
+        x: 28
+        y: 245
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -625,12 +625,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_25
       rect:
         serializedVersion: 2
-        x: 646
-        y: 294
-        width: 112.5
+        x: 152
+        y: 245
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -646,12 +646,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_26
       rect:
         serializedVersion: 2
-        x: 890
-        y: 294
-        width: 112.5
+        x: 276
+        y: 245
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -667,12 +667,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_27
       rect:
         serializedVersion: 2
-        x: 36
+        x: 400
         y: 245
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -688,12 +688,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_28
       rect:
         serializedVersion: 2
-        x: 158
-        y: 245
-        width: 112.5
+        x: 28
+        y: 196
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -709,12 +709,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_29
       rect:
         serializedVersion: 2
-        x: 280
-        y: 245
-        width: 112.5
+        x: 152
+        y: 196
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -730,12 +730,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_30
       rect:
         serializedVersion: 2
-        x: 402
-        y: 245
-        width: 112.5
+        x: 276
+        y: 196
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -751,12 +751,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_31
       rect:
         serializedVersion: 2
-        x: 36
+        x: 400
         y: 196
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,12 +772,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_32
       rect:
         serializedVersion: 2
-        x: 158
-        y: 196
-        width: 112.5
+        x: 28
+        y: 147
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -793,12 +793,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_33
       rect:
         serializedVersion: 2
-        x: 280
-        y: 196
-        width: 112.5
+        x: 152
+        y: 147
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -814,12 +814,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_34
       rect:
         serializedVersion: 2
-        x: 402
-        y: 196
-        width: 112.5
+        x: 276
+        y: 147
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -835,12 +835,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_35
       rect:
         serializedVersion: 2
-        x: 36
+        x: 400
         y: 147
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -856,12 +856,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_36
       rect:
         serializedVersion: 2
-        x: 158
+        x: 524
         y: 147
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -877,12 +877,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_37
       rect:
         serializedVersion: 2
-        x: 280
+        x: 648
         y: 147
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -898,12 +898,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_38
       rect:
         serializedVersion: 2
-        x: 402
-        y: 147
-        width: 112.5
+        x: 28
+        y: 98
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,12 +919,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_39
       rect:
         serializedVersion: 2
-        x: 524
-        y: 147
-        width: 112.5
+        x: 152
+        y: 98
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -940,12 +940,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_40
       rect:
         serializedVersion: 2
-        x: 646
-        y: 147
-        width: 112.5
+        x: 276
+        y: 98
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -961,12 +961,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_41
       rect:
         serializedVersion: 2
-        x: 1622
-        y: 147
-        width: 112.5
+        x: 400
+        y: 98
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -982,12 +982,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_42
       rect:
         serializedVersion: 2
-        x: 1744
-        y: 147
-        width: 112.5
+        x: 524
+        y: 98
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1003,12 +1003,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_43
       rect:
         serializedVersion: 2
-        x: 36
+        x: 648
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1024,12 +1024,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_44
       rect:
         serializedVersion: 2
-        x: 158
+        x: 772
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1045,12 +1045,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_45
       rect:
         serializedVersion: 2
-        x: 280
+        x: 896
         y: 98
-        width: 112.5
+        width: 60
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,12 +1066,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_46
       rect:
         serializedVersion: 2
-        x: 402
+        x: 1020
         y: 98
-        width: 112.5
+        width: 60
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1087,12 +1087,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_47
       rect:
         serializedVersion: 2
-        x: 524
+        x: 1144
         y: 98
-        width: 112.5
+        width: 60
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1108,12 +1108,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_48
       rect:
         serializedVersion: 2
-        x: 646
+        x: 1268
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1129,12 +1129,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_49
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1392
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1150,12 +1150,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_50
       rect:
         serializedVersion: 2
-        x: 890
+        x: 1516
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1171,12 +1171,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_51
       rect:
         serializedVersion: 2
-        x: 1012
+        x: 1640
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1192,12 +1192,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_52
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 1764
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1213,12 +1213,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_53
       rect:
         serializedVersion: 2
-        x: 1256
+        x: 1888
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1234,12 +1234,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_54
       rect:
         serializedVersion: 2
-        x: 1378
+        x: 2012
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1255,12 +1255,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_55
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 2136
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1276,12 +1276,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_56
       rect:
         serializedVersion: 2
-        x: 1622
+        x: 2260
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1297,12 +1297,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_57
       rect:
         serializedVersion: 2
-        x: 1744
+        x: 2384
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1318,12 +1318,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_58
       rect:
         serializedVersion: 2
-        x: 1866
+        x: 2508
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1339,12 +1339,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_59
       rect:
         serializedVersion: 2
-        x: 1988
+        x: 2632
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1360,12 +1360,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_60
       rect:
         serializedVersion: 2
-        x: 2110
+        x: 2756
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1381,12 +1381,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_61
       rect:
         serializedVersion: 2
-        x: 2232
+        x: 2880
         y: 98
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1402,12 +1402,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_62
       rect:
         serializedVersion: 2
-        x: 2354
-        y: 98
-        width: 112.5
+        x: 28
+        y: 49
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1423,12 +1423,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_63
       rect:
         serializedVersion: 2
-        x: 2476
-        y: 98
-        width: 112.5
+        x: 28
+        y: 0
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1444,12 +1444,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_64
       rect:
         serializedVersion: 2
-        x: 2598
-        y: 98
-        width: 112.5
+        x: 152
+        y: 0
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1465,12 +1465,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_65
       rect:
         serializedVersion: 2
-        x: 2720
-        y: 98
-        width: 112.5
+        x: 276
+        y: 0
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1486,12 +1486,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_66
       rect:
         serializedVersion: 2
-        x: 2842
-        y: 98
-        width: 112.5
+        x: 400
+        y: 0
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1507,12 +1507,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_67
       rect:
         serializedVersion: 2
-        x: 36
-        y: 49
-        width: 112.5
+        x: 524
+        y: 0
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1528,12 +1528,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_68
       rect:
         serializedVersion: 2
-        x: 36
+        x: 648
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1549,12 +1549,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_69
       rect:
         serializedVersion: 2
-        x: 158
+        x: 772
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1570,12 +1570,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_70
       rect:
         serializedVersion: 2
-        x: 280
+        x: 896
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1591,12 +1591,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_71
       rect:
         serializedVersion: 2
-        x: 402
+        x: 1020
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1612,12 +1612,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_72
       rect:
         serializedVersion: 2
-        x: 524
+        x: 1144
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1633,12 +1633,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_73
       rect:
         serializedVersion: 2
-        x: 646
+        x: 1268
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1654,12 +1654,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_74
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1392
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1675,12 +1675,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_75
       rect:
         serializedVersion: 2
-        x: 890
+        x: 1516
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1696,12 +1696,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_76
       rect:
         serializedVersion: 2
-        x: 1012
+        x: 1640
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1717,12 +1717,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_77
       rect:
         serializedVersion: 2
-        x: 1134
+        x: 1764
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1738,12 +1738,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_78
       rect:
         serializedVersion: 2
-        x: 1256
+        x: 1888
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1759,12 +1759,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_79
       rect:
         serializedVersion: 2
-        x: 1378
+        x: 2012
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1780,12 +1780,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_80
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 2136
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1801,12 +1801,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_81
       rect:
         serializedVersion: 2
-        x: 1622
+        x: 2260
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1822,12 +1822,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_82
       rect:
         serializedVersion: 2
-        x: 1744
+        x: 2384
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1843,12 +1843,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_83
       rect:
         serializedVersion: 2
-        x: 1866
+        x: 2508
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1864,12 +1864,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_84
       rect:
         serializedVersion: 2
-        x: 1988
+        x: 2632
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1885,12 +1885,12 @@ TextureImporter:
       name: Sci-fi Samurai with Sword 124x49_85
       rect:
         serializedVersion: 2
-        x: 2110
+        x: 2756
         y: 0
-        width: 112.5
+        width: 96
         height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1898,111 +1898,6 @@ TextureImporter:
       bones: []
       spriteID: d2b5a40513645cd40a7e06c74711ca26
       internalID: -1688002900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-fi Samurai with Sword 124x49_86
-      rect:
-        serializedVersion: 2
-        x: 2232
-        y: 0
-        width: 112.5
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e35dde3ced8c72244ab0da07dffd8796
-      internalID: -870617871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-fi Samurai with Sword 124x49_87
-      rect:
-        serializedVersion: 2
-        x: 2354
-        y: 0
-        width: 112.5
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a2d404ea29e46243beae85170c4b402
-      internalID: 111168719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-fi Samurai with Sword 124x49_88
-      rect:
-        serializedVersion: 2
-        x: 2476
-        y: 0
-        width: 112.5
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4984593ec0e44e64eaba26593c6ec1bf
-      internalID: -1036211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-fi Samurai with Sword 124x49_89
-      rect:
-        serializedVersion: 2
-        x: 2598
-        y: 0
-        width: 112.5
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc5725106f36adc48bd59eab2b57ec4f
-      internalID: -1385465333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sci-fi Samurai with Sword 124x49_90
-      rect:
-        serializedVersion: 2
-        x: 2720
-        y: 0
-        width: 112.5
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91ada86dbe32ac24bbee9d84d8227ec8
-      internalID: -1637108476
       vertices: []
       indices: 
       edges: []
@@ -2103,12 +1998,7 @@ TextureImporter:
       Sci-fi Samurai with Sword 124x49_83: 1093599844
       Sci-fi Samurai with Sword 124x49_84: -1178303726
       Sci-fi Samurai with Sword 124x49_85: -1688002900
-      Sci-fi Samurai with Sword 124x49_86: -870617871
-      Sci-fi Samurai with Sword 124x49_87: 111168719
-      Sci-fi Samurai with Sword 124x49_88: -1036211
-      Sci-fi Samurai with Sword 124x49_89: -1385465333
       Sci-fi Samurai with Sword 124x49_9: 18452650
-      Sci-fi Samurai with Sword 124x49_90: -1637108476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -43,6 +43,7 @@ abstract public class Entity : MonoBehaviour
 
     public void SetZeroVelocity()
     {
+        if(Rb.bodyType == RigidbodyType2D.Static) return;
         Rb.velocity = Vector2.zero;
     }
 

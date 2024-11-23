@@ -20,10 +20,8 @@ public class EnemyChaseDirect : BaseEnemyChaseSO
                 if (enemy.CanAttack())
                 {
                     enemy.StateMachine.ChangeState(enemy.Attack);
-                    Debug.Log("Attack");
                 }
 
-                // else stateMachine.ChangeState(enemy.ChaseIdle);
             }
         }
         else
