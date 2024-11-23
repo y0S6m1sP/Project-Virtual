@@ -32,9 +32,7 @@ public class Enemy : Entity
 
 
     public EnemyIdleState Idle { get; private set; }
-    // public EnemyMoveState Move { get; private set; }
     public EnemyChaseState Chase { get; private set; }
-    // public EnemyChaseIdleState ChaseIdle { get; private set; }
     public EnemyAttackState Attack { get; private set; }
     public EnemyDeadState Dead { get; private set; }
 
@@ -49,10 +47,8 @@ public class Enemy : Entity
         StateMachine = new EnemyStateMachine();
 
         Idle = new EnemyIdleState(this, StateMachine, "Idle");
-        // Move = new EnemyMoveState(this, StateMachine, "Move");
         Attack = new EnemyAttackState(this, StateMachine, "Attack");
         Chase = new EnemyChaseState(this, StateMachine, "Move");
-        // ChaseIdle = new EnemyChaseIdleState(this, StateMachine, "Idle");
         Dead = new EnemyDeadState(this, StateMachine, "Dead");
     }
 
