@@ -19,9 +19,9 @@ public class GameLevelManager : MonoBehaviour
             instance = this;
     }
 
-    public void NextLevel()
+    public void NextLevel(float delay)
     {
-        StartCoroutine(TransitionToNextLevel());
+        StartCoroutine(TransitionToNextLevel(delay));
     }
 
     private void ClearLevel()
@@ -36,8 +36,10 @@ public class GameLevelManager : MonoBehaviour
         }
     }
 
-    private IEnumerator TransitionToNextLevel()
+    private IEnumerator TransitionToNextLevel(float delay)
     {
+        yield return new WaitForSeconds(delay);
+
         Player player = PlayerManager.instance.player;
 
         player.Rb.bodyType = RigidbodyType2D.Static;

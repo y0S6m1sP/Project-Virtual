@@ -8,7 +8,7 @@ public class EnemyDeadNormal : BaseEnemyDeadSO
     public override void DoEnter()
     {
         base.DoEnter();
-        enemy.StartCoroutine(DestroyAfter(1f));
+        enemy.StartCoroutine(DestroyAfter(2f));
     }
 
     public override void DoUpdate()
