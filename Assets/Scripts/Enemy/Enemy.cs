@@ -19,10 +19,53 @@ public class Enemy : Entity
 
     public EnemyStateMachine StateMachine { get; private set; }
 
+    [Header("Behavior")]
+    [SerializeField] private BaseEnemyIdleSO BaseEnemyIdle;
+    [SerializeField] private BaseEnemyChaseSO BaseEnemyChase;
+    [SerializeField] private BaseEnemyAttackSO BaseEnemyAttack;
+    [SerializeField] private BaseEnemyDeadSO BaseEnemyDead;
+
+    public BaseEnemyIdleSO BaseEnemyIdleInstance { get; private set; }
+    public BaseEnemyChaseSO BaseEnemyChaseInstance { get; private set; }
+    public BaseEnemyAttackSO BaseEnemyAttackInstance { get; private set; }
+    public BaseEnemyDeadSO BaseEnemyDeadInstance { get; private set; }
+
+
+    public EnemyIdleState Idle { get; private set; }
+    // public EnemyMoveState Move { get; private set; }
+    public EnemyChaseState Chase { get; private set; }
+    // public EnemyChaseIdleState ChaseIdle { get; private set; }
+    public EnemyAttackState Attack { get; private set; }
+    public EnemyDeadState Dead { get; private set; }
+
     protected override void Awake()
     {
         base.Awake();
+        BaseEnemyIdleInstance = Instantiate(BaseEnemyIdle);
+        BaseEnemyChaseInstance = Instantiate(BaseEnemyChase);
+        BaseEnemyAttackInstance = Instantiate(BaseEnemyAttack);
+        BaseEnemyDeadInstance = Instantiate(BaseEnemyDead);
+
         StateMachine = new EnemyStateMachine();
+
+        Idle = new EnemyIdleState(this, StateMachine, "Idle");
+        // Move = new EnemyMoveState(this, StateMachine, "Move");
+        Attack = new EnemyAttackState(this, StateMachine, "Attack");
+        Chase = new EnemyChaseState(this, StateMachine, "Move");
+        // ChaseIdle = new EnemyChaseIdleState(this, StateMachine, "Idle");
+        Dead = new EnemyDeadState(this, StateMachine, "Dead");
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        BaseEnemyIdleInstance.Init(gameObject, this);
+        BaseEnemyChaseInstance.Init(gameObject, this);
+        BaseEnemyAttackInstance.Init(gameObject, this);
+        BaseEnemyDeadInstance.Init(gameObject, this);
+
+        StateMachine.Initialize(Idle);
     }
 
     protected override void Update()
@@ -82,6 +125,7 @@ public class Enemy : Entity
 
     public virtual void Die()
     {
+        StateMachine.ChangeState(Dead);
         GameLevelManager.instance.NextLevel();
     }
 

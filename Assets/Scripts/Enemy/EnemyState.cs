@@ -6,47 +6,36 @@ public class EnemyState
 {
 
     protected EnemyStateMachine stateMachine;
-    protected Enemy enemyBase;
+    protected Enemy enemy;
     protected Rigidbody2D rb;
 
     private readonly string animBoolName;
 
-    protected float stateTimer;
-    protected bool triggerCalled;
-
-    public EnemyState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
+    public EnemyState(Enemy _enemy, EnemyStateMachine _stateMachine, string _animBoolName)
     {
-        enemyBase = _enemyBase;
+        enemy = _enemy;
         stateMachine = _stateMachine;
         animBoolName = _animBoolName;
     }
 
     public virtual void Update()
     {
-        stateTimer -= Time.deltaTime;
+
     }
 
     public virtual void Enter()
     {
-        triggerCalled = false;
-        rb = enemyBase.Rb;
-        enemyBase.Anim.SetBool(animBoolName, true);
-
+        rb = enemy.Rb;
+        enemy.Anim.SetBool(animBoolName, true);
     }
 
     public virtual void Exit()
     {
-        enemyBase.Anim.SetBool(animBoolName, false);
+        enemy.Anim.SetBool(animBoolName, false);
     }
 
     public virtual void AnimationFinishTrigger()
     {
-        triggerCalled = true;
-    }
 
-    public IEnumerator DestroyAfter(float _seconds)
-    {
-        yield return new WaitForSeconds(_seconds);
-        Object.Destroy(enemyBase.gameObject);
     }
 }

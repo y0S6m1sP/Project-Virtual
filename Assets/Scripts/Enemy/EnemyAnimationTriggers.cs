@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamuraiSpearAnimationTriggers : MonoBehaviour
+public class EnemyAnimationTriggers : MonoBehaviour
 {
-    private SamuraiSpear Enemy => GetComponentInParent<SamuraiSpear>();
+    private Enemy Enemy => GetComponentInParent<Enemy>();
 
     private void AnimationFinishTrigger()
     {

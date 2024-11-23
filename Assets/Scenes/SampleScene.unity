@@ -1433,7 +1433,7 @@ MonoBehaviour:
   - {fileID: 1976511048}
   - {fileID: 685951493}
   level1Enemies:
-  - {fileID: 7831572999167070968, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+  - {fileID: 1749181434468836766, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
   spawnPoint: {fileID: 667685488}
   currentLevel: 0
 --- !u!1 &282809368

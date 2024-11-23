@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamuraiSpearGroundState : EnemyState
+public class EnemyGroundState : EnemyState
 {
-
-    protected SamuraiSpear enemy;
 
     protected Transform player;
 
-    public SamuraiSpearGroundState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, SamuraiSpear _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public EnemyGroundState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-        enemy = _enemy;
+
     }
 
     public override void Enter()

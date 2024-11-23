@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamuraiSpearChaseIdleState : EnemyState
+public class EnemyChaseIdleState : EnemyState
 {
-    private readonly SamuraiSpear enemy;
 
-    public SamuraiSpearChaseIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, SamuraiSpear _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public EnemyChaseIdleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-        enemy = _enemy;
+
     }
 
     public override void Update()
@@ -21,7 +20,7 @@ public class SamuraiSpearChaseIdleState : EnemyState
         {
             if (enemy.CanAttack())
                 stateMachine.ChangeState(enemy.Attack);
-            else stateMachine.ChangeState(enemy.ChaseIdle);
+            // else stateMachine.ChangeState(enemy.ChaseIdle);
         }
         else
         {

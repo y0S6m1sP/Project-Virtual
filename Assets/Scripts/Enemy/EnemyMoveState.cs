@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamuraiSpearMoveState : SamuraiSpearGroundState
+public class EnemyMoveState : EnemyGroundState
 {
-    public SamuraiSpearMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, SamuraiSpear _enemy) : base(_enemyBase, _stateMachine, _animBoolName, _enemy)
+    public EnemyMoveState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName) : base(_enemyBase, _stateMachine, _animBoolName)
     {
 
     }
@@ -12,7 +12,7 @@ public class SamuraiSpearMoveState : SamuraiSpearGroundState
     override public void Enter()
     {
         base.Enter();
-        stateTimer = enemy.moveTime;
+        // stateTimer = enemy.moveTime;
     }
 
     public override void Update()
@@ -24,8 +24,8 @@ public class SamuraiSpearMoveState : SamuraiSpearGroundState
         if (enemy.IsWallDetected() || !enemy.IsGroundDetected())
             enemy.Flip();
 
-        if (stateTimer < 0)
-            stateMachine.ChangeState(enemy.Idle);
+        // if (stateTimer < 0)
+        //     stateMachine.ChangeState(enemy.Idle);
     }
 
 }
