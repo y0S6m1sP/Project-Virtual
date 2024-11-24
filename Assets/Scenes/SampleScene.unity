@@ -1436,6 +1436,7 @@ MonoBehaviour:
   - {fileID: 1749181434468836766, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
   - {fileID: 4486361043229571149, guid: b005c555f32d4a5438468130a30a629b, type: 3}
   - {fileID: 2410396641675787559, guid: 0dcc88f2b1d87b2418fdebb9b2674d07, type: 3}
+  - {fileID: 1413949211259763087, guid: 16aee0fe5aff3e440ac1c268335b32d9, type: 3}
   spawnPoint: {fileID: 667685488}
   currentLevel: 0
 --- !u!1 &282809368
