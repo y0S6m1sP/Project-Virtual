@@ -3,6 +3,7 @@ using UnityEngine;
 public class ShadowOfStorm : Enemy
 {
     [SerializeField] private BaseEnemyAttackSO AttackChargeBeam;
+    public GameObject ChargeBeamPrefab;
 
     public BaseEnemyAttackSO ChargeBeamInstance { get; private set; }
 

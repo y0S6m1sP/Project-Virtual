@@ -19902,18 +19902,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1584002094376304349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053209429808198267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df3c21d8c58bb914aafc232d7b07d758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1602747283102547284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20827,7 +20815,7 @@ GameObject:
   - component: {fileID: 175952936430097288}
   - component: {fileID: 8168406317551241019}
   - component: {fileID: 8840532316496347718}
-  - component: {fileID: 1584002094376304349}
+  - component: {fileID: 8840532316496347719}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -21036,6 +21024,7 @@ MonoBehaviour:
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
   AttackChargeBeam: {fileID: 11400000, guid: e5ec61d3f3998d442b8e1f34c70b5bea, type: 2}
+  ChargeBeamPrefab: {fileID: 1823125300833516454, guid: 14f7fd9e249c1d040a8c72d2db84d177, type: 3}
   ChargeBeamCooldown: 5
   lastTimeChargeBeam: 0
 --- !u!95 &8840532316496347718
@@ -21059,6 +21048,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8840532316496347719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053209429808198267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63b9b0f80f2834fb7f2cbe432b4528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9148458483564410008
 MonoBehaviour:
   m_ObjectHideFlags: 0
