@@ -41,7 +41,7 @@ public class EntityStats : MonoBehaviour
         if (currentHealth <= 0 && !IsDead) Die();
     }
 
-    protected virtual void IncreaseHealthBy(int _amount)
+    public virtual void IncreaseHealthBy(int _amount)
     {
         currentHealth += _amount;
         onHealthChanged?.Invoke();
