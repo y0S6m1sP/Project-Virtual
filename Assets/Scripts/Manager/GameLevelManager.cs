@@ -7,16 +7,26 @@ public class GameLevelManager : MonoBehaviour
     public static GameLevelManager instance;
     [SerializeField] private GameObject level0;
     [SerializeField] private GameObject merchant;
+
+    [Header("Level 1")]
     [SerializeField] private GameObject[] level1;
+    [SerializeField] private GameObject Level1BossRoom;
     [SerializeField] private GameObject[] level1Enemies;
     [SerializeField] private GameObject[] level1Bosses;
+
+    [Header("Level 2")]
     [SerializeField] private GameObject[] level2;
     [SerializeField] private GameObject[] level2Enemies;
     [SerializeField] private GameObject[] level2Bosses;
+
+    [Header("Level 3")]
     [SerializeField] private GameObject[] level3;
     [SerializeField] private GameObject[] level3Enemies;
     [SerializeField] private GameObject[] level3Bosses;
+
+    [Header("Final Boss")]
     [SerializeField] private GameObject finalBoss;
+    
     [SerializeField] private GameObject spawnPoint;
     public int currentLevel = 0;
 
@@ -106,8 +116,7 @@ public class GameLevelManager : MonoBehaviour
                 }
             case 5:
                 {
-                    int randomIndex = Random.Range(0, level1.Length);
-                    level1[randomIndex].SetActive(true);
+                    Level1BossRoom.SetActive(true);
                     break;
                 }
             case >= 6 and <= 8:
