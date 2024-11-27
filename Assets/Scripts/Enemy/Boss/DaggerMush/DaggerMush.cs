@@ -35,7 +35,7 @@ public class DaggerMush : Enemy
 
     public bool CanUseAttackAir()
     {
-        if (Time.time >= lastTimeAttackAir + AttackAirCooldown)
+        if (Time.time >= lastTimeAttackAir + AttackAirCooldown && IsPlayerDetected().distance > attackDistance)
         {
             lastTimeAttackAir = Time.time;
             return true;

@@ -50,8 +50,8 @@ public class EnemyAnimationTriggers : MonoBehaviour
         {
             Vector3 offset = proxy.position - rootPrarent.position;
             offset.y = 0; // Ignore y position change
-            if (proxy.position.x > rightBoundary.position.x || proxy.position.x < leftBoundary.position.x)
-                return;
+            // if (proxy.position.x > rightBoundary.position.x || proxy.position.x < leftBoundary.position.x)
+            //     return;
             rootPrarent.position += offset;
         }
     }

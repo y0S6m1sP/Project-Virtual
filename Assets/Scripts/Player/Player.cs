@@ -84,11 +84,14 @@ public class Player : Entity
     {
         AudioManager.instance.PlaySFX(Random.Range(0, 2));
 
+        GetComponent<Entity>().SetupKnockbackDir(_enemyStats.transform);
+        GetComponent<Entity>().Knockback();
+
         if (impulseSource != null)
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
         Time.timeScale = 0.5f;
-        yield return new WaitForSecondsRealtime(0.1f); 
+        yield return new WaitForSecondsRealtime(0.2f); 
         Time.timeScale = 1f; 
 
         SwordManager.Instance.GenerateSword(transform, _enemyStats);

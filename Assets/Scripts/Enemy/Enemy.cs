@@ -17,6 +17,8 @@ public class Enemy : Entity
     [HideInInspector] public float lastTimeAttacked;
     [HideInInspector] public bool canBeParrried;
 
+    public float tooCloseDistance;
+
     public EnemyStateMachine StateMachine { get; private set; }
 
     [Header("Behavior")]
@@ -111,12 +113,19 @@ public class Enemy : Entity
         return IsPlayerDetected() && IsPlayerDetected().distance < attackDistance;
     }
 
+    public bool IsPlayerTooClose()
+    {
+        return IsPlayerDetected() && IsPlayerDetected().distance < tooCloseDistance;
+    }
+
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * FacingDir, transform.position.y));
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + tooCloseDistance * FacingDir, transform.position.y));
     }
 
     public virtual void Die()

@@ -14,6 +14,8 @@ public class PlayerParryState : PlayerState
         base.Enter();
 
         player.isParryActive = true;
+
+        stateTimer = .01f;
     }
 
     override public void Exit()
@@ -26,7 +28,11 @@ public class PlayerParryState : PlayerState
     {
         base.Update();
 
-        player.SetZeroVelocity();
+        if(stateTimer > 0)
+        {
+            player.SetZeroVelocity();
+        }
+        
 
         if (isTriggerCalled)
             stateMachine.ChangeState(player.Idle);

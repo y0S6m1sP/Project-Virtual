@@ -19,17 +19,25 @@ class DaggerMushChase : BaseEnemyChaseSO
     {
         base.DoUpdate();
 
+        if (stateTimer > 0)
+            return;
+
+
         if (enemy.IsPlayerDetected())
         {
-            stateTimer = enemy.chaseTime;
+            if (enemy.IsPlayerTooClose())
+            {
+                stateTimer = .1f;
+                enemy.SetVelocity(-enemy.moveSpeed * 2 * chaseDir, 0);
+                return;
+            }
 
             if (enemy is DaggerMush daggerMush)
             {
-                // TODO: complete the logic
-                if (player.position.x > RightBoundary.position.x || player.position.x < LeftBoundary.position.x)
-                {
-                    enemy.StateMachine.ChangeState(daggerMush.Throw);
-                }
+                // if (player.position.x > RightBoundary.position.x || player.position.x < LeftBoundary.position.x)
+                // {
+                //     enemy.StateMachine.ChangeState(daggerMush.Throw);
+                // }
 
                 if (daggerMush.CanUseAttackAir())
                 {
@@ -41,11 +49,6 @@ class DaggerMushChase : BaseEnemyChaseSO
                         enemy.StateMachine.ChangeState(enemy.Attack);
                 }
             }
-        }
-        else
-        {
-            if (stateTimer < 0)
-                enemy.StateMachine.ChangeState(enemy.Idle);
         }
 
         if (player.position.x > enemy.transform.position.x)

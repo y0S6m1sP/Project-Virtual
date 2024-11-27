@@ -12,12 +12,19 @@ abstract public class Entity : MonoBehaviour
     public EntityStats Stats { get; private set; }
     public CinemachineImpulseSource impulseSource { get; private set; }
 
+    [Header("Knockback info")]
+    [SerializeField] protected Vector2 knockbackPower = new(7, 12);
+    [SerializeField] protected float knockbackDuration = .07f;
+    protected bool isKnocked;
+
+    [Header("Collision info")]
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected float groundCheckDistance;
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask whatIsGround;
 
+    public int KnockbackDir { get; private set; }
     public int FacingDir { private set; get; } = 1;
 
     public System.Action onFlipped;
@@ -43,7 +50,7 @@ abstract public class Entity : MonoBehaviour
 
     public void SetZeroVelocity()
     {
-        if(Rb.bodyType == RigidbodyType2D.Static) return;
+        if (Rb.bodyType == RigidbodyType2D.Static) return;
         Rb.velocity = Vector2.zero;
     }
 
@@ -83,6 +90,37 @@ abstract public class Entity : MonoBehaviour
         {
             Flip();
         }
+    }
+
+    public virtual void Knockback() => StartCoroutine(nameof(HitKnockback));
+
+    public virtual void SetupKnockbackDir(Transform _damageDirection)
+    {
+        if (_damageDirection.position.x > transform.position.x)
+            KnockbackDir = -1;
+        else if (_damageDirection.position.x < transform.position.x)
+            KnockbackDir = 1;
+    }
+
+    public void SetupKnockbackPower(Vector2 _knockbackpower) => knockbackPower = _knockbackpower;
+    protected virtual IEnumerator HitKnockback()
+    {
+        isKnocked = true;
+
+        if (knockbackPower.x > 0 || knockbackPower.y > 0) // This line makes player immune to freeze effect when he takes hit
+        {
+            Vector2 knockbackVelocity = new(knockbackPower.x * KnockbackDir, knockbackPower.y);
+            Rb.velocity = Vector2.Lerp(Rb.velocity, knockbackVelocity, 0.5f);
+        }
+
+        yield return new WaitForSeconds(knockbackDuration);
+        isKnocked = false;
+        SetupZeroKnockbackPower();
+    }
+
+    protected virtual void SetupZeroKnockbackPower()
+    {
+
     }
 
 }
