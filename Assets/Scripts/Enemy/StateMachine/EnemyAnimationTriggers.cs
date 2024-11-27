@@ -6,6 +6,12 @@ public class EnemyAnimationTriggers : MonoBehaviour
 {
     private Enemy Enemy => GetComponentInParent<Enemy>();
 
+    [Header("Animation movement")]
+    public Transform proxy;
+    public Transform rootPrarent;
+    public Transform rightBoundary;
+    public Transform leftBoundary;
+
     private void AnimationFinishTrigger()
     {
         Enemy.AnimationFinishTrigger();
@@ -37,5 +43,17 @@ public class EnemyAnimationTriggers : MonoBehaviour
     private void OpenParryWindow() => Enemy.OpenParryWindow();
 
     private void CloseParryWindow() => Enemy.CloseParryWindow();
+
+    private void UpdateParentPosition()
+    {
+        if (proxy != null && rootPrarent != null)
+        {
+            Vector3 offset = proxy.position - rootPrarent.position;
+            offset.y = 0; // Ignore y position change
+            if (proxy.position.x > rightBoundary.position.x || proxy.position.x < leftBoundary.position.x)
+                return;
+            rootPrarent.position += offset;
+        }
+    }
 
 }

@@ -769,8 +769,8 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
-  attackDistance: 1
-  attackCooldown: 0
+  attackDistance: 1.5
+  attackCooldown: 2
   lastTimeAttacked: 0
   canBeParrried: 0
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}

@@ -922,7 +922,7 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
-  attackDistance: 1.5
+  attackDistance: 1
   attackCooldown: 0
   lastTimeAttacked: 0
   canBeParrried: 0

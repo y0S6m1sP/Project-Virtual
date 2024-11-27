@@ -35,6 +35,12 @@ public class EnemyChaseDirect : BaseEnemyChaseSO
         else if (player.position.x < enemy.transform.position.x)
             chaseDir = -1;
 
+        if(enemy.IsPlayerInAttackDistance())
+        {
+            enemy.SetZeroVelocity();
+            return;
+        }
+
         enemy.SetVelocity(enemy.moveSpeed * chaseDir, enemy.Rb.velocity.y);
     }
 }

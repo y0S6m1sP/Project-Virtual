@@ -1,9 +1,19 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Chase-ShadowOfStorm", menuName = "Enemy/Behavior/Chase/ShadowOfStorm")]
-class ShadowOfStormChase : BaseEnemyChaseSO
+[CreateAssetMenu(fileName = "Chase-DaggerMush", menuName = "Enemy/Behavior/Chase/DaggerMush")]
+class DaggerMushChase : BaseEnemyChaseSO
 {
+    private Transform RightBoundary;
+    private Transform LeftBoundary;
+
     private int chaseDir;
+
+    public override void Init(GameObject gameObject, Enemy enemy)
+    {
+        base.Init(gameObject, enemy);
+        RightBoundary = GameObject.Find("RightBoundary").transform;
+        LeftBoundary = GameObject.Find("LeftBoundary").transform;
+    }
 
     public override void DoUpdate()
     {
@@ -13,11 +23,17 @@ class ShadowOfStormChase : BaseEnemyChaseSO
         {
             stateTimer = enemy.chaseTime;
 
-            if (enemy is ShadowOfStorm shadowOfStorm)
+            if (enemy is DaggerMush daggerMush)
             {
-                if (shadowOfStorm.CanUseChargeBeam())
+                // TODO: complete the logic
+                if (player.position.x > RightBoundary.position.x || player.position.x < LeftBoundary.position.x)
                 {
-                    enemy.StateMachine.ChangeState(shadowOfStorm.ChargeBeam);
+                    enemy.StateMachine.ChangeState(daggerMush.Throw);
+                }
+
+                if (daggerMush.CanUseAttackAir())
+                {
+                    enemy.StateMachine.ChangeState(daggerMush.Air);
                 }
                 else if (enemy.CanAttack())
                 {
