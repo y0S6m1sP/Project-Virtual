@@ -93,7 +93,7 @@ public class Player : Entity
 
         SwordManager.Instance.GenerateSword(transform, _enemyStats);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         StateMachine.ChangeState(Idle);
     }
 
