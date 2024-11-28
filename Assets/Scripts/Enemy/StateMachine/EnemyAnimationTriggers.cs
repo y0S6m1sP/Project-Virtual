@@ -83,4 +83,12 @@ public class EnemyAnimationTriggers : MonoBehaviour
         Enemy.Anim.transform.position = defaultPosition;
     }
 
+    private void BurstFireTrigger()
+    {
+        var playerTransform = PlayerManager.instance.player.transform;
+        Vector3 initialPosition = playerTransform.position;
+        var burstFire = Instantiate(Enemy.projectilePrefab, new(initialPosition.x, -2.37f, 0), Quaternion.identity);
+        burstFire.GetComponent<ChargeBeamController>().Setup(Enemy.Stats);
+    }
+
 }

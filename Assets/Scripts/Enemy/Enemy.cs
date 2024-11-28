@@ -10,6 +10,9 @@ public class Enemy : Entity
     public float idleTime;
     public float moveTime;
     public float chaseTime;
+    [HideInInspector] public bool canBeParrried;
+    public float tooCloseDistance;
+
 
     [Header("Attack Stats")]
     public float attackDistance;
@@ -31,9 +34,9 @@ public class Enemy : Entity
     public float Special3Cooldown;
     [HideInInspector] public float lastTimeSpecial3Attacked;
 
-    [HideInInspector] public bool canBeParrried;
+    [Header("Projectile")]
+    public GameObject projectilePrefab;
 
-    public float tooCloseDistance;
 
     public EnemyStateMachine StateMachine { get; private set; }
 
