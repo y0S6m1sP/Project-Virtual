@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 3694617416290666092}
   - component: {fileID: 6022060089614894600}
   - component: {fileID: 6125985781728967222}
-  - component: {fileID: 127479020449263818}
+  - component: {fileID: 1779887875388329422}
   - component: {fileID: 4272015475218853861}
   - component: {fileID: 3674152621197873749}
   m_Layer: 7
@@ -849,7 +849,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.032575548, y: -0.31735557}
   m_Size: {x: 1.3204545, y: 1.373195}
   m_Direction: 0
---- !u!114 &127479020449263818
+--- !u!114 &1779887875388329422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3250778710545198842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ae282d926b6f243a198384d3db93ab, type: 3}
+  m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: {x: 7, y: 12}
@@ -880,16 +880,24 @@ MonoBehaviour:
   attackDistance: 5.5
   attackCooldown: 1
   lastTimeAttacked: 0
+  Special1Distance: 0
+  Special1Cooldown: 5
+  lastTimeSpecial1Attacked: 0
+  Special2Distance: 0
+  Special2Cooldown: 0
+  lastTimeSpecial2Attacked: 0
+  Special3Distance: 0
+  Special3Cooldown: 0
+  lastTimeSpecial3Attacked: 0
   canBeParrried: 0
-  tooCloseDistance: 2.5
+  tooCloseDistance: 1.5
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 1fb464491ec59fc49a7b13d3f794e75d, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial1: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial2: {fileID: 0}
+  BaseEnemyAttackSpecial3: {fileID: 0}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
-  AttackAir: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
-  AttackThrow: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
-  AttackAirCooldown: 5
-  lastTimeAttackAir: 0
 --- !u!114 &4272015475218853861
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,16 +24,13 @@ class DarkArcherChase : BaseEnemyChaseSO
             enemy.transform.position = new Vector3((LeftBoundary.position.x + RightBoundary.position.x) / 2, enemy.transform.position.y, enemy.transform.position.z);
         }
 
-        if (enemy is DarkArcher darkArcher)
+        if (enemy.CanAttackSpecial1() && enemy.IsPlayerTooClose())
         {
-            if (darkArcher.CanUseAttackSpecial() && darkArcher.IsPlayerTooClose())
-            {
-                enemy.StateMachine.ChangeState(darkArcher.Special);
-            }
-            else if (enemy.IsPlayerInAttackDistance() && enemy.CanAttack())
-            {
-                enemy.StateMachine.ChangeState(enemy.Attack);
-            }
+            enemy.StateMachine.ChangeState(enemy.Special1);
+        }
+        else if (enemy.IsPlayerInAttackDistance() && enemy.CanAttack())
+        {
+            enemy.StateMachine.ChangeState(enemy.Attack);
         }
 
         if (player.position.x > enemy.transform.position.x)

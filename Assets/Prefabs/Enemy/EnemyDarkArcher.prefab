@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 2431283375835373217}
   - component: {fileID: 3136920935114348434}
   - component: {fileID: 2680190004011216714}
-  - component: {fileID: 7885652538119516293}
+  - component: {fileID: 3979375284653716723}
   - component: {fileID: 4869546276528894926}
   - component: {fileID: 3448076941263116693}
   m_Layer: 7
@@ -802,7 +802,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.027742863, y: -0.33145726}
   m_Size: {x: 0.50854635, y: 1.4303951}
   m_Direction: 0
---- !u!114 &7885652538119516293
+--- !u!114 &3979375284653716723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5558943945213464125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ea3c1884b14cd438ca7d2b1ff887cd, type: 3}
+  m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackPower: {x: 7, y: 12}
@@ -829,19 +829,28 @@ MonoBehaviour:
   moveSpeed: 4
   idleTime: 0
   moveTime: 0
-  chaseTime: 10
+  chaseTime: 0
   attackDistance: 5.8
   attackCooldown: 1
   lastTimeAttacked: 0
+  Special1Distance: 0
+  Special1Cooldown: 0
+  lastTimeSpecial1Attacked: 0
+  Special2Distance: 0
+  Special2Cooldown: 0
+  lastTimeSpecial2Attacked: 0
+  Special3Distance: 0
+  Special3Cooldown: 0
+  lastTimeSpecial3Attacked: 0
   canBeParrried: 0
   tooCloseDistance: 2
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 256baabfa427b2247a5cf1a9862d74dc, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial1: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial2: {fileID: 0}
+  BaseEnemyAttackSpecial3: {fileID: 0}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
-  AttackSpecial: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
-  AttackSpecialCooldown: 0
-  lastTimeAttackSpecial: 0
 --- !u!114 &4869546276528894926
 MonoBehaviour:
   m_ObjectHideFlags: 0
