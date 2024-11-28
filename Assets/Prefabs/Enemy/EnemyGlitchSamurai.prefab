@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6702537937420057992}
   - component: {fileID: 6130018052841462721}
   - component: {fileID: 2789298231963539093}
-  - component: {fileID: 8398922820974062669}
+  - component: {fileID: 339362783100496671}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 137403043446558389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.38, y: -0.19, z: 0}
+  m_LocalPosition: {x: 0.58, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 1084090297
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -546442033, guid: 51da21fcc2dabd8439059557dcb673e3, type: 3}
+  m_Sprite: {fileID: 2009388481, guid: acbed80a4d74aaa45aa8f09f63dc1a10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.625, y: 2.0625}
+  m_Size: {x: 12, y: 3.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -108,7 +108,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8398922820974062669
+--- !u!114 &339362783100496671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,9 +117,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 137403043446558389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df3c21d8c58bb914aafc232d7b07d758, type: 3}
+  m_Script: {fileID: 11500000, guid: c49e1315d764c494ca4b59b830662e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proxy: {fileID: 0}
+  rootPrarent: {fileID: 0}
+  rightBoundary: {fileID: 0}
+  leftBoundary: {fileID: 0}
 --- !u!1 &734555533986677186
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackPower: {x: 7, y: 12}
+  knockbackDuration: 0.07
   groundCheck: {fileID: 4965342816708313008}
   groundCheckDistance: 1
   wallCheck: {fileID: 4723353060453813547}
@@ -493,13 +499,26 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
-  attackDistance: 1.5
-  attackCooldown: 2
+  attackDistance: 2
+  attackCooldown: 1
   lastTimeAttacked: 0
+  Special1Distance: 0
+  Special1Cooldown: 5
+  lastTimeSpecial1Attacked: 0
+  Special2Distance: 0
+  Special2Cooldown: 0
+  lastTimeSpecial2Attacked: 0
+  Special3Distance: 0
+  Special3Cooldown: 0
+  lastTimeSpecial3Attacked: 0
   canBeParrried: 0
+  tooCloseDistance: 0
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
-  BaseEnemyChase: {fileID: 11400000, guid: 49b0283a6c7519644bdcdde642329ff2, type: 2}
+  BaseEnemyChase: {fileID: 11400000, guid: 04434fbf55cab0341afd727ab3594b7f, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial1: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial2: {fileID: 0}
+  BaseEnemyAttackSpecial3: {fileID: 0}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
 --- !u!114 &8172754301015022372
 MonoBehaviour:

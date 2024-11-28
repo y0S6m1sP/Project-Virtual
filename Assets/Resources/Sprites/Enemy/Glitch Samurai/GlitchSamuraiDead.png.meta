@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3aec17dbdd207b84fbd0926a6488666e
+guid: 9723afb698e844049bf1e0b5aed205e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_0
+      name: GlitchSamuraiDead_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 140
-        height: 46
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c404c7d32dcb046997b44f50c0eefd
-      internalID: 698738355
+      spriteID: 6d616c9dc6dbce9419262edde6056fa6
+      internalID: -294178255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_1
+      name: GlitchSamuraiDead_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 0
-        width: 140
-        height: 46
+        x: 192
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d891d2cefaf6b24db83c88fb7727442
-      internalID: 470017410
+      spriteID: 5099d781b218da34bb27675c0ca23f71
+      internalID: -1437033019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_2
+      name: GlitchSamuraiDead_2
       rect:
         serializedVersion: 2
-        x: 280
-        y: 0
-        width: 140
-        height: 46
+        x: 384
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 942ae186d3d466b48b7a2bb279b59772
-      internalID: -1701945337
+      spriteID: aedc19ab4f4cce54b9d0850cc307cc92
+      internalID: 2037546621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_3
+      name: GlitchSamuraiDead_3
       rect:
         serializedVersion: 2
-        x: 420
-        y: 0
-        width: 140
-        height: 46
+        x: 576
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c82418b4e7d5a3b4995279c96fb00f2b
-      internalID: -1975842191
+      spriteID: 4517dc360adb0b24ab807b77585f8c8f
+      internalID: -1065784365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_4
+      name: GlitchSamuraiDead_4
       rect:
         serializedVersion: 2
-        x: 560
-        y: 0
-        width: 140
-        height: 46
+        x: 768
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e81dcf928572155439368c3ebe2cf3e3
-      internalID: 928201770
+      spriteID: 269fa859ec499614483f89c28227e7c2
+      internalID: 807539336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_5
+      name: GlitchSamuraiDead_5
       rect:
         serializedVersion: 2
-        x: 700
-        y: 0
-        width: 140
-        height: 46
+        x: 960
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f4705f7e3126864cb217b0d9aa890d4
-      internalID: 13634048
+      spriteID: 5acdb74213679144ea35a11a43814fc6
+      internalID: 58552338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_6
+      name: GlitchSamuraiDead_6
       rect:
         serializedVersion: 2
-        x: 840
-        y: 0
-        width: 140
-        height: 46
+        x: 1152
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f2ce86faaa4f4646a013558d6172b60
-      internalID: 2121754782
+      spriteID: cdfbb45a404b49247a83b29d1d2518cf
+      internalID: 486181810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_7
+      name: GlitchSamuraiDead_7
       rect:
         serializedVersion: 2
-        x: 980
-        y: 0
-        width: 140
-        height: 46
+        x: 1344
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac483b952524b4d4cb3121a9a3cd5e75
-      internalID: -1562102970
+      spriteID: 716b4baf6c14e314bb1c70009414b5bb
+      internalID: -1386234557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Slices_8
+      name: GlitchSamuraiDead_8
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 0
-        width: 140
-        height: 46
+        x: 1536
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c78b49df65b17409b235340f18135f
-      internalID: -1204515867
+      spriteID: 39b770b823784784e84fbec5232d5bb9
+      internalID: -1507289231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlitchSamuraiDead_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 80
+        width: 192
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9d021c320a8434499c794fb7945a3b
+      internalID: -1290258909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlitchSamuraiDead_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 80
+        width: 192
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4515ae915332a74abcd90d191f31dd7
+      internalID: -720784413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GlitchSamuraiDead_11
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 80
+        width: 192
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1295eb833ef73fe479d48c359616a7a8
+      internalID: 1288791684
       vertices: []
       indices: 
       edges: []
@@ -296,15 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Glitch Samurai-Glitch Slices_0: 698738355
-      Glitch Samurai-Glitch Slices_1: 470017410
-      Glitch Samurai-Glitch Slices_2: -1701945337
-      Glitch Samurai-Glitch Slices_3: -1975842191
-      Glitch Samurai-Glitch Slices_4: 928201770
-      Glitch Samurai-Glitch Slices_5: 13634048
-      Glitch Samurai-Glitch Slices_6: 2121754782
-      Glitch Samurai-Glitch Slices_7: -1562102970
-      Glitch Samurai-Glitch Slices_8: -1204515867
+      GlitchSamuraiDead_0: -294178255
+      GlitchSamuraiDead_1: -1437033019
+      GlitchSamuraiDead_10: -720784413
+      GlitchSamuraiDead_11: 1288791684
+      GlitchSamuraiDead_2: 2037546621
+      GlitchSamuraiDead_3: -1065784365
+      GlitchSamuraiDead_4: 807539336
+      GlitchSamuraiDead_5: 58552338
+      GlitchSamuraiDead_6: 486181810
+      GlitchSamuraiDead_7: -1386234557
+      GlitchSamuraiDead_8: -1507289231
+      GlitchSamuraiDead_9: -1290258909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

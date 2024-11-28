@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3638ea7e2c563ec419c70f1f7bcb0498
+guid: 074b3a01c6dda6542bd39a923a68ce83
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Out_0
+      name: GlitchSamuraiOut_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 140
-        height: 46
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7af7aa65b7faf0488d30c1d70e07492
-      internalID: -344460155
+      spriteID: ec8bcc0af651c6b4f91ed9cdfa00bd6d
+      internalID: 2143205437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Out_1
+      name: GlitchSamuraiOut_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 0
-        width: 140
-        height: 46
+        x: 192
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6b3955b40d3214f90f8e9d3eb546c0
-      internalID: 1954619854
+      spriteID: de8500fdd0eb0a148993e3d95a958e78
+      internalID: -126003815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Out_2
+      name: GlitchSamuraiOut_2
       rect:
         serializedVersion: 2
-        x: 280
-        y: 0
-        width: 140
-        height: 46
+        x: 384
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcb377dcd1b1a144b47263f9a05df18
-      internalID: -1940585576
+      spriteID: 88311684e2b02a94282e44e3ea247145
+      internalID: -703349070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Out_3
+      name: GlitchSamuraiOut_3
       rect:
         serializedVersion: 2
-        x: 420
-        y: 0
-        width: 140
-        height: 46
+        x: 576
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b51f14c1b0faad240bf851422e3cfc88
-      internalID: -258680378
+      spriteID: 71e749f3dee0fea41bec022347d1cd08
+      internalID: -244364345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Glitch Samurai-Glitch Out_4
+      name: GlitchSamuraiOut_4
       rect:
         serializedVersion: 2
-        x: 560
-        y: 0
-        width: 140
-        height: 46
+        x: 768
+        y: 80
+        width: 192
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7a7c0971b0c0e9488defe705b03e99c
-      internalID: 617506738
+      spriteID: 7ddc6ae4c5c5daa46be10ecdfbd0547b
+      internalID: -12676890
       vertices: []
       indices: 
       edges: []
@@ -212,11 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Glitch Samurai-Glitch Out_0: -344460155
-      Glitch Samurai-Glitch Out_1: 1954619854
-      Glitch Samurai-Glitch Out_2: -1940585576
-      Glitch Samurai-Glitch Out_3: -258680378
-      Glitch Samurai-Glitch Out_4: 617506738
+      GlitchSamuraiOut_0: 2143205437
+      GlitchSamuraiOut_1: -126003815
+      GlitchSamuraiOut_2: -703349070
+      GlitchSamuraiOut_3: -244364345
+      GlitchSamuraiOut_4: -12676890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

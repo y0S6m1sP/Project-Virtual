@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAnimationTriggers : MonoBehaviour
 {
-    private Enemy Enemy => GetComponentInParent<Enemy>();
+    protected Enemy Enemy => GetComponentInParent<Enemy>();
 
     [Header("Animation movement")]
     public Transform proxy;
