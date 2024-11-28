@@ -802,7 +802,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -877,10 +877,11 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
-  attackDistance: 3.12
+  attackDistance: 5.5
   attackCooldown: 1
   lastTimeAttacked: 0
   canBeParrried: 0
+  tooCloseDistance: 2.5
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 1fb464491ec59fc49a7b13d3f794e75d, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
