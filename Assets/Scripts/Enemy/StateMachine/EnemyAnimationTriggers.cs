@@ -6,6 +6,8 @@ public class EnemyAnimationTriggers : MonoBehaviour
 {
     protected Enemy Enemy => GetComponentInParent<Enemy>();
 
+    private Vector3 defaultPosition;
+
     [Header("Animation movement")]
     public Transform proxy;
     public Transform rootPrarent;
@@ -54,6 +56,31 @@ public class EnemyAnimationTriggers : MonoBehaviour
             //     return;
             rootPrarent.position += offset;
         }
+    }
+
+    private void StartActualTeleportToPlayer()
+    {
+        rootPrarent.position = PlayerManager.instance.player.transform.position;
+    }
+
+    private void StartAnimTeleportToPlayer()
+    {
+        defaultPosition = new Vector3(Enemy.Anim.transform.position.x, Enemy.Anim.transform.position.y, Enemy.Anim.transform.position.z);
+
+        Enemy.Anim.transform.position = PlayerManager.instance.player.transform.position;
+    }
+
+    private void StartTeleportToPlayerWithOffset()
+    {
+        defaultPosition = new Vector3(Enemy.Anim.transform.position.x, Enemy.Anim.transform.position.y, Enemy.Anim.transform.position.z);
+
+        Enemy.Anim.transform.position = PlayerManager.instance.player.transform.position + new Vector3(3 * Enemy.FacingDir, 0, 0);
+    }
+
+
+    private void EndTeleportToPlayer()
+    {
+        Enemy.Anim.transform.position = defaultPosition;
     }
 
 }

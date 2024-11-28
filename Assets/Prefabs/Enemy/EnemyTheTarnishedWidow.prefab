@@ -843,6 +843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackPower: {x: 7, y: 12}
+  knockbackDuration: 0.07
   groundCheck: {fileID: 7095675183121802157}
   groundCheckDistance: 1
   wallCheck: {fileID: 7548383405586346696}
@@ -858,12 +860,25 @@ MonoBehaviour:
   moveTime: 0
   chaseTime: 10
   attackDistance: 2.5
-  attackCooldown: 2
+  attackCooldown: 1
   lastTimeAttacked: 0
+  Special1Distance: 0
+  Special1Cooldown: 5
+  lastTimeSpecial1Attacked: 0
+  Special2Distance: 0
+  Special2Cooldown: 10
+  lastTimeSpecial2Attacked: 0
+  Special3Distance: 0
+  Special3Cooldown: 0
+  lastTimeSpecial3Attacked: 0
   canBeParrried: 0
+  tooCloseDistance: 0
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
-  BaseEnemyChase: {fileID: 11400000, guid: 49b0283a6c7519644bdcdde642329ff2, type: 2}
+  BaseEnemyChase: {fileID: 11400000, guid: 5fca00ebcccb6534eacdab4a6f575533, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial1: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial2: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial3: {fileID: 0}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
 --- !u!114 &3099802493617895269
 MonoBehaviour:
@@ -1090,6 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c21d8c58bb914aafc232d7b07d758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proxy: {fileID: 0}
+  rootPrarent: {fileID: 5260167764589309124}
+  rightBoundary: {fileID: 0}
+  leftBoundary: {fileID: 0}
 --- !u!1 &8869885677721258604
 GameObject:
   m_ObjectHideFlags: 0
