@@ -15,6 +15,22 @@ public class Enemy : Entity
     public float attackDistance;
     public float attackCooldown;
     [HideInInspector] public float lastTimeAttacked;
+
+    [Header("Special1 Attack Stats")]
+    public float Special1Distance;
+    public float Special1Cooldown;
+    [HideInInspector] public float lastTimeSpecial1Attacked;
+
+    [Header("Special2 Attack Stats")]
+    public float Special2Distance;
+    public float Special2Cooldown;
+    [HideInInspector] public float lastTimeSpecial2Attacked;
+
+    [Header("Special3 Attack Stats")]
+    public float Special3Distance;
+    public float Special3Cooldown;
+    [HideInInspector] public float lastTimeSpecial3Attacked;
+
     [HideInInspector] public bool canBeParrried;
 
     public float tooCloseDistance;
@@ -25,17 +41,25 @@ public class Enemy : Entity
     [SerializeField] private BaseEnemyIdleSO BaseEnemyIdle;
     [SerializeField] private BaseEnemyChaseSO BaseEnemyChase;
     [SerializeField] private BaseEnemyAttackSO BaseEnemyAttack;
+    [SerializeField] private BaseEnemyAttackSO BaseEnemyAttackSpecial1;
+    [SerializeField] private BaseEnemyAttackSO BaseEnemyAttackSpecial2;
+    [SerializeField] private BaseEnemyAttackSO BaseEnemyAttackSpecial3;
     [SerializeField] private BaseEnemyDeadSO BaseEnemyDead;
 
     public BaseEnemyIdleSO BaseEnemyIdleInstance { get; private set; }
     public BaseEnemyChaseSO BaseEnemyChaseInstance { get; private set; }
     public BaseEnemyAttackSO BaseEnemyAttackInstance { get; private set; }
+    public BaseEnemyAttackSO BaseEnemyAttackSpecial1Instance { get; private set; }
+    public BaseEnemyAttackSO BaseEnemyAttackSpecial2Instance { get; private set; }
+    public BaseEnemyAttackSO BaseEnemyAttackSpecial3Instance { get; private set; }
     public BaseEnemyDeadSO BaseEnemyDeadInstance { get; private set; }
-
 
     public EnemyIdleState Idle { get; private set; }
     public EnemyChaseState Chase { get; private set; }
     public EnemyAttackState Attack { get; private set; }
+    public EnemyAttackSpecial1State Special1 { get; private set; }
+    public EnemyAttackSpecial2State Special2 { get; private set; }
+    public EnemyAttackSpecial3State Special3 { get; private set; }
     public EnemyDeadState Dead { get; private set; }
 
     protected override void Awake()
@@ -46,10 +70,20 @@ public class Enemy : Entity
         BaseEnemyAttackInstance = Instantiate(BaseEnemyAttack);
         BaseEnemyDeadInstance = Instantiate(BaseEnemyDead);
 
+        if (BaseEnemyAttackSpecial1 != null)
+            BaseEnemyAttackSpecial1Instance = Instantiate(BaseEnemyAttackSpecial1);
+        if (BaseEnemyAttackSpecial2 != null)
+            BaseEnemyAttackSpecial2Instance = Instantiate(BaseEnemyAttackSpecial2);
+        if (BaseEnemyAttackSpecial3 != null)
+            BaseEnemyAttackSpecial3Instance = Instantiate(BaseEnemyAttackSpecial3);
+
         StateMachine = new EnemyStateMachine();
 
         Idle = new EnemyIdleState(this, StateMachine, "Idle");
         Attack = new EnemyAttackState(this, StateMachine, "Attack");
+        Special1 = new EnemyAttackSpecial1State(this, StateMachine, "Special1");
+        Special2 = new EnemyAttackSpecial2State(this, StateMachine, "Special2");
+        Special3 = new EnemyAttackSpecial3State(this, StateMachine, "Special3");
         Chase = new EnemyChaseState(this, StateMachine, "Move");
         Dead = new EnemyDeadState(this, StateMachine, "Dead");
     }
@@ -62,6 +96,12 @@ public class Enemy : Entity
         BaseEnemyChaseInstance.Init(gameObject, this);
         BaseEnemyAttackInstance.Init(gameObject, this);
         BaseEnemyDeadInstance.Init(gameObject, this);
+        if (BaseEnemyAttackSpecial1 != null)
+            BaseEnemyAttackSpecial1Instance.Init(gameObject, this);
+        if (BaseEnemyAttackSpecial2 != null)
+            BaseEnemyAttackSpecial2Instance.Init(gameObject, this);
+        if (BaseEnemyAttackSpecial3 != null)
+            BaseEnemyAttackSpecial3Instance.Init(gameObject, this);
 
         StateMachine.Initialize(Idle);
     }
@@ -77,6 +117,39 @@ public class Enemy : Entity
         if (Time.time >= lastTimeAttacked + attackCooldown)
         {
             lastTimeAttacked = Time.time;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CanAttackSpecial1()
+    {
+        if (Time.time >= lastTimeSpecial1Attacked + Special1Cooldown)
+        {
+            lastTimeSpecial1Attacked = Time.time;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CanAttackSpecial2()
+    {
+        if (Time.time >= lastTimeSpecial2Attacked + Special2Cooldown)
+        {
+            lastTimeSpecial2Attacked = Time.time;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CanAttackSpecial3()
+    {
+        if (Time.time >= lastTimeSpecial3Attacked + Special3Cooldown)
+        {
+            lastTimeSpecial3Attacked = Time.time;
             return true;
         }
 
