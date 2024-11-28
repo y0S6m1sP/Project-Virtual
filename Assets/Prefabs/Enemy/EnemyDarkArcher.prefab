@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 2431283375835373217}
   - component: {fileID: 3136920935114348434}
   - component: {fileID: 2680190004011216714}
-  - component: {fileID: 5792828769213057035}
+  - component: {fileID: 7885652538119516293}
   - component: {fileID: 4869546276528894926}
   - component: {fileID: 3448076941263116693}
   m_Layer: 7
@@ -802,7 +802,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.027742863, y: -0.33145726}
   m_Size: {x: 0.50854635, y: 1.4303951}
   m_Direction: 0
---- !u!114 &5792828769213057035
+--- !u!114 &7885652538119516293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,9 +811,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5558943945213464125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
+  m_Script: {fileID: 11500000, guid: 27ea3c1884b14cd438ca7d2b1ff887cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackPower: {x: 7, y: 12}
+  knockbackDuration: 0.07
   groundCheck: {fileID: 2139383584374484020}
   groundCheckDistance: 1
   wallCheck: {fileID: 4659890848874890980}
@@ -828,14 +830,18 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
-  attackDistance: 4.5
+  attackDistance: 5.8
   attackCooldown: 1
   lastTimeAttacked: 0
   canBeParrried: 0
+  tooCloseDistance: 2
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
-  BaseEnemyChase: {fileID: 11400000, guid: 49b0283a6c7519644bdcdde642329ff2, type: 2}
+  BaseEnemyChase: {fileID: 11400000, guid: 256baabfa427b2247a5cf1a9862d74dc, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
+  AttackSpecial: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  AttackSpecialCooldown: 0
+  lastTimeAttackSpecial: 0
 --- !u!114 &4869546276528894926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,11 +1154,12 @@ Transform:
   m_GameObject: {fileID: 8761498022739025463}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.53, y: -0.28, z: 0}
+  m_LocalPosition: {x: 0.02, y: -1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3702713439603908076}
+  - {fileID: 257546830539466299}
   m_Father: {fileID: 2431283375835373217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &390009099453003145
@@ -1196,7 +1203,7 @@ SpriteRenderer:
   m_SortingLayerID: 1084090297
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 266160225, guid: 123c98e20cd31144c854bb6f3b796783, type: 3}
+  m_Sprite: {fileID: -1551584942, guid: 40647dc0eec707546b095ff83fa703c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1240,3 +1247,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c21d8c58bb914aafc232d7b07d758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proxy: {fileID: 257546830539466299}
+  rootPrarent: {fileID: 2431283375835373217}
+  rightBoundary: {fileID: 0}
+  leftBoundary: {fileID: 0}
+--- !u!1 &8829024427504863984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257546830539466299}
+  m_Layer: 7
+  m_Name: Proxy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257546830539466299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8829024427504863984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9096662226378395898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
