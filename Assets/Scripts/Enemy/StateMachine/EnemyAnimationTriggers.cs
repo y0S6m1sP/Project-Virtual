@@ -70,7 +70,7 @@ public class EnemyAnimationTriggers : MonoBehaviour
         Enemy.Anim.transform.position = PlayerManager.instance.player.transform.position;
     }
 
-    private void StartTeleportToPlayerWithOffset()
+    private void StartAnimTeleportToPlayerWithOffset()
     {
         defaultPosition = new Vector3(Enemy.Anim.transform.position.x, Enemy.Anim.transform.position.y, Enemy.Anim.transform.position.z);
 
