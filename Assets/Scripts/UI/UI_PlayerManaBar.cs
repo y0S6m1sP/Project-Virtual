@@ -18,6 +18,6 @@ public class UI_PlayerManaBar : MonoBehaviour
 
     private void Update()
     {
-        manaSlider.value = stats.currentMana;
+        manaSlider.value = Mathf.Lerp(manaSlider.value, stats.currentMana, Time.deltaTime * 10f);
     }
 }

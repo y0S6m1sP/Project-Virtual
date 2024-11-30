@@ -61,9 +61,16 @@ public class EntityStats : MonoBehaviour
         onHealthChanged?.Invoke();
     }
 
+    public virtual void IncreaseManaBy(float _amount)
+    {
+        currentMana += _amount;
+        onManaChanged?.Invoke();
+    }
+
     public virtual void DecreaseManaBy(float _amount)
     {
         currentMana -= _amount;
+        if(currentMana < 0) currentMana = 0;
         onManaChanged?.Invoke();
     }
 
