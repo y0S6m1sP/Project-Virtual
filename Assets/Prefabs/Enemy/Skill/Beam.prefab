@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3412802562087688692}
   - component: {fileID: 4660634505138097563}
   - component: {fileID: 6960268601229241013}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062199593, y: 0.77478075}
+  m_Offset: {x: -0.029116154, y: 0.77478075}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2348328, y: 4.7547874}
+  m_Size: {x: 1.3009996, y: 4.7547874}
   m_EdgeRadius: 0
 --- !u!114 &6960268601229241013
 MonoBehaviour:
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 7547665768592443544}
   - component: {fileID: 2578995584477997552}
   - component: {fileID: 4003757768223568213}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

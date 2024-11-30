@@ -83,12 +83,28 @@ public class EnemyAnimationTriggers : MonoBehaviour
         Enemy.Anim.transform.position = defaultPosition;
     }
 
+    // TODO: yPosition is hardcoded, need to be changed
     private void BurstFireTrigger()
     {
         var playerTransform = PlayerManager.instance.player.transform;
         Vector3 initialPosition = playerTransform.position;
-        var burstFire = Instantiate(Enemy.projectilePrefab, new(initialPosition.x, -2.37f, 0), Quaternion.identity);
+        var burstFire = Instantiate(Enemy.SkillPrefab, new(initialPosition.x, -2.37f, 0), Quaternion.identity);
         burstFire.GetComponent<ChargeBeamController>().Setup(Enemy.Stats);
+    }
+
+    private void ChargeBeamTrigger()
+    {
+        StartCoroutine(ChargeBeamPreStart());
+    }
+
+    // TODO: yPosition is hardcoded, need to be changed
+    private IEnumerator ChargeBeamPreStart()
+    {
+        var playerTransform = PlayerManager.instance.player.transform;
+        Vector3 initialPosition = playerTransform.position;
+        yield return new WaitForSeconds(.1f);
+        var beam = Instantiate(Enemy.SkillPrefab, new(initialPosition.x, -1.38f, 0), Quaternion.identity);
+        beam.GetComponent<ChargeBeamController>().Setup(Enemy.Stats);
     }
 
 }

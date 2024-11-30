@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Chase-GlitchSamurai", menuName = "Enemy/Behavior/Chase/GlitchSamurai")]
-public class EnemyChaseGlitchSamurai : BaseEnemyChaseSO
+public class GlitchSamuraiChase : BaseEnemyChaseSO
 {
     private int chaseDir;
 

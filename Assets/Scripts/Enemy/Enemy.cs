@@ -34,9 +34,8 @@ public class Enemy : Entity
     public float Special3Cooldown;
     [HideInInspector] public float lastTimeSpecial3Attacked;
 
-    [Header("Projectile")]
-    public GameObject projectilePrefab;
-
+    [Header("Skill")]
+    public GameObject SkillPrefab;
 
     public EnemyStateMachine StateMachine { get; private set; }
 

@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 3406889728587358940}
   - component: {fileID: 2740700773204181811}
   - component: {fileID: 291980951412914175}
-  - component: {fileID: 4299396313102301879}
+  - component: {fileID: 208855523756052690}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -707,7 +707,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4299396313102301879
+--- !u!114 &208855523756052690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -716,9 +716,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5757446073833722461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee63b9b0f80f2834fb7f2cbe432b4528, type: 3}
+  m_Script: {fileID: 11500000, guid: df3c21d8c58bb914aafc232d7b07d758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proxy: {fileID: 0}
+  rootPrarent: {fileID: 0}
+  rightBoundary: {fileID: 0}
+  leftBoundary: {fileID: 0}
 --- !u!1 &6177179544932281348
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +809,7 @@ GameObject:
   - component: {fileID: 6562488461363832402}
   - component: {fileID: 5311453789332284047}
   - component: {fileID: 5508685154234247772}
-  - component: {fileID: 6651310084871220116}
+  - component: {fileID: 1456235892385573239}
   - component: {fileID: 7615542312987024193}
   - component: {fileID: 3239755317468546570}
   m_Layer: 7
@@ -896,7 +900,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.013653755, y: -0.18412662}
   m_Size: {x: 0.8549924, y: 1.4817612}
   m_Direction: 0
---- !u!114 &6651310084871220116
+--- !u!114 &1456235892385573239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -905,9 +909,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6570630743967653989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4589a11fa1d2124daba055f32b04fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: d1103a6ecf8f3f94ca3b0d99f2fa5073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackPower: {x: 7, y: 12}
+  knockbackDuration: 0.07
   groundCheck: {fileID: 6312734262522324974}
   groundCheckDistance: 1
   wallCheck: {fileID: 5801279207845899930}
@@ -922,18 +928,28 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
+  canBeParrried: 0
+  tooCloseDistance: 0
   attackDistance: 1
   attackCooldown: 0
   lastTimeAttacked: 0
-  canBeParrried: 0
+  Special1Distance: 0
+  Special1Cooldown: 5
+  lastTimeSpecial1Attacked: 0
+  Special2Distance: 0
+  Special2Cooldown: 0
+  lastTimeSpecial2Attacked: 0
+  Special3Distance: 0
+  Special3Cooldown: 0
+  lastTimeSpecial3Attacked: 0
+  SkillPrefab: {fileID: 1823125300833516454, guid: 14f7fd9e249c1d040a8c72d2db84d177, type: 3}
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 3ca8cb0fa2ab50e4591849285d0fb823, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial1: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
+  BaseEnemyAttackSpecial2: {fileID: 0}
+  BaseEnemyAttackSpecial3: {fileID: 0}
   BaseEnemyDead: {fileID: 11400000, guid: ed63b039da422ae4fb14566d4d610b68, type: 2}
-  AttackChargeBeam: {fileID: 11400000, guid: e5ec61d3f3998d442b8e1f34c70b5bea, type: 2}
-  ChargeBeamPrefab: {fileID: 1823125300833516454, guid: 14f7fd9e249c1d040a8c72d2db84d177, type: 3}
-  ChargeBeamCooldown: 5
-  lastTimeChargeBeam: 0
 --- !u!114 &7615542312987024193
 MonoBehaviour:
   m_ObjectHideFlags: 0
