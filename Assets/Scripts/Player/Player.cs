@@ -15,6 +15,8 @@ public class Player : Entity
     public float rollDuration;
     public float rollSpeed;
     public bool isParryActive;
+    [SerializeField] private LayerMask whatIsEnemy;
+    [SerializeField] private float closestEnemyCheckRadius = 25;
 
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerIdleState Idle { get; private set; }
@@ -55,6 +57,8 @@ public class Player : Entity
         base.Start();
         Skill = SkillManager.instance;
         StateMachine.Initialize(Idle);
+
+        AutoAttack();
     }
 
     protected override void Update()
@@ -91,10 +95,10 @@ public class Player : Entity
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
         Time.timeScale = 0.5f;
-        yield return new WaitForSecondsRealtime(0.2f); 
-        Time.timeScale = 1f; 
+        yield return new WaitForSecondsRealtime(0.2f);
+        Time.timeScale = 1f;
 
-        SwordManager.Instance.GenerateSword(transform, _enemyStats);
+        // SwordManager.Instance.GenerateSword(transform, _enemyStats);
 
         yield return new WaitForSeconds(0.05f);
         StateMachine.ChangeState(Idle);
@@ -113,6 +117,49 @@ public class Player : Entity
     public void Die()
     {
         StateMachine.ChangeState(Dead);
+    }
+
+    private Transform FindClosestEnemy()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, closestEnemyCheckRadius, whatIsEnemy);
+
+        float closestDistance = Mathf.Infinity;
+        Transform closestEnemy = null;
+
+        foreach (var hit in colliders)
+        {
+            EntityStats enemyStats = hit.GetComponent<EntityStats>();
+            if (enemyStats != null && !enemyStats.IsDead)
+            {
+                float distanceToEnemy = Vector2.Distance(transform.position, hit.transform.position);
+
+                if (distanceToEnemy < closestDistance)
+                {
+                    closestDistance = distanceToEnemy;
+                    closestEnemy = hit.transform;
+                }
+            }
+        }
+
+        return closestEnemy;
+    }
+
+    private void AutoAttack()
+    {
+        StartCoroutine(AutoAttackRoutine());
+    }
+
+    private IEnumerator AutoAttackRoutine()
+    {
+        while (!Stats.IsDead)
+        {
+            SwordManager.Instance.GenerateSword(transform, FindClosestEnemy());
+
+            // Check the player's mana and adjust the wait time accordingly
+            float waitTime = GetComponent<EntityStats>().currentMana > 0 ? 1f : 2f;
+
+            yield return new WaitForSeconds(waitTime);
+        }
     }
 
 }

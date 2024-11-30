@@ -859,6 +859,8 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
+  canBeParrried: 0
+  tooCloseDistance: 0
   attackDistance: 2.5
   attackCooldown: 1
   lastTimeAttacked: 0
@@ -871,8 +873,7 @@ MonoBehaviour:
   Special3Distance: 0
   Special3Cooldown: 0
   lastTimeSpecial3Attacked: 0
-  canBeParrried: 0
-  tooCloseDistance: 0
+  SkillPrefab: {fileID: 0}
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 5fca00ebcccb6534eacdab4a6f575533, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
@@ -893,8 +894,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: The Tarnished Widow
-  maxHealth:
+  health:
     baseValue: 100
+    modifiers: 
+  mana:
+    baseValue: 0
     modifiers: 
   damage:
     baseValue: 1
@@ -904,6 +908,7 @@ MonoBehaviour:
     modifiers: 
   currentHealth: 0
   currentArmor: 0
+  currentMana: 0
 --- !u!114 &6728140050124065576
 MonoBehaviour:
   m_ObjectHideFlags: 0

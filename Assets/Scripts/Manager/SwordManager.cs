@@ -100,8 +100,10 @@ public class SwordManager : MonoBehaviour
         }
     }
 
-    public void GenerateSword(Transform player, EntityStats enemy)
+    public void GenerateSword(Transform player, Transform enemy)
     {
+        if(enemy == null) return;
+
         foreach (var slot in swordSlotDict)
         {
             if (slot.Value != null)

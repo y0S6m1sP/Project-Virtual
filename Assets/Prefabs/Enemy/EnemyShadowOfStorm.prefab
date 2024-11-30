@@ -963,8 +963,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Shadow Of Storm
-  maxHealth:
+  health:
     baseValue: 100
+    modifiers: 
+  mana:
+    baseValue: 0
     modifiers: 
   damage:
     baseValue: 1
@@ -974,6 +977,7 @@ MonoBehaviour:
     modifiers: 
   currentHealth: 0
   currentArmor: 0
+  currentMana: 0
 --- !u!114 &3239755317468546570
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -877,6 +877,8 @@ MonoBehaviour:
   idleTime: 0
   moveTime: 0
   chaseTime: 10
+  canBeParrried: 0
+  tooCloseDistance: 1.5
   attackDistance: 5.5
   attackCooldown: 1
   lastTimeAttacked: 0
@@ -889,8 +891,7 @@ MonoBehaviour:
   Special3Distance: 0
   Special3Cooldown: 0
   lastTimeSpecial3Attacked: 0
-  canBeParrried: 0
-  tooCloseDistance: 1.5
+  SkillPrefab: {fileID: 0}
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: 1fb464491ec59fc49a7b13d3f794e75d, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
@@ -911,8 +912,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Dagger Mush
-  maxHealth:
+  health:
     baseValue: 100
+    modifiers: 
+  mana:
+    baseValue: 0
     modifiers: 
   damage:
     baseValue: 1
@@ -922,6 +926,7 @@ MonoBehaviour:
     modifiers: 
   currentHealth: 0
   currentArmor: 0
+  currentMana: 0
 --- !u!114 &3674152621197873749
 MonoBehaviour:
   m_ObjectHideFlags: 0

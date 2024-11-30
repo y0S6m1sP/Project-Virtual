@@ -1094,7 +1094,7 @@ MonoBehaviour:
   Special3Distance: 0
   Special3Cooldown: 10
   lastTimeSpecial3Attacked: 0
-  projectilePrefab: {fileID: 6437557108445952244, guid: 2b30d76f204d5574f99bc68a69a8a031, type: 3}
+  SkillPrefab: {fileID: 0}
   BaseEnemyIdle: {fileID: 11400000, guid: 00dede69ad3c1834081037d4b1013d31, type: 2}
   BaseEnemyChase: {fileID: 11400000, guid: c79124812977239489115cddb5ed1915, type: 2}
   BaseEnemyAttack: {fileID: 11400000, guid: 742933d0e4642054493ad3ce92758856, type: 2}
@@ -1115,8 +1115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Lord Of The Flames
-  maxHealth:
+  health:
     baseValue: 100
+    modifiers: 
+  mana:
+    baseValue: 0
     modifiers: 
   damage:
     baseValue: 1
@@ -1126,6 +1129,7 @@ MonoBehaviour:
     modifiers: 
   currentHealth: 0
   currentArmor: 0
+  currentMana: 0
 --- !u!114 &2979084772100712339
 MonoBehaviour:
   m_ObjectHideFlags: 0

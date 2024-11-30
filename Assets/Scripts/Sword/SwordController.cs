@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordController : MonoBehaviour
 {
-    [SerializeField] private EntityStats targetStats;
+    [SerializeField] private Transform enemy;
     [SerializeField] private SwordStats swordStats;
     [SerializeField] private float speed;
     public float trackingStrength = 5f;
@@ -16,7 +16,7 @@ public class SwordController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Setup(EntityStats _targetStats, ItemDataSword _swordData)
+    public void Setup(Transform _enemy, ItemDataSword _swordData)
     {
         var sr = GetComponentInChildren<SpriteRenderer>();
         sr.sprite = _swordData.itemIcon;
@@ -24,7 +24,7 @@ public class SwordController : MonoBehaviour
         var swordStats = GetComponent<SwordStats>();
         swordStats.damage.SetDefaultValue(_swordData.damage);
 
-        targetStats = _targetStats;
+        enemy = _enemy;
 
         Vector2 initialVelocity = new Vector2(-5f * PlayerManager.instance.player.FacingDir, Random.Range(0f, 10f)).normalized * speed;
 
@@ -34,9 +34,9 @@ public class SwordController : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (!targetStats) return;
+        if (!enemy) return;
 
-        Vector2 directionToTarget = (targetStats.transform.position - transform.position).normalized;
+        Vector2 directionToTarget = (enemy.position - transform.position).normalized;
 
         Vector2 desiredVelocity = directionToTarget * speed;
         Vector2 steeringForce = (desiredVelocity - rb.velocity) * trackingStrength;
