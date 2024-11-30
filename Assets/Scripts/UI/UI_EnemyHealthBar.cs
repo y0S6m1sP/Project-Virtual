@@ -18,8 +18,8 @@ public class UI_EnemyHealthBar : MonoBehaviour
         entity = GetComponentInParent<Entity>();
         stats = GetComponentInParent<EntityStats>();
 
-        healthSlider.maxValue = stats.maxHealth.GetValue();
-        easeHealthSlider.maxValue = stats.maxHealth.GetValue();
+        healthSlider.maxValue = stats.health.GetValue();
+        easeHealthSlider.maxValue = stats.health.GetValue();
         entity.onFlipped += FlipUI;
     }
 

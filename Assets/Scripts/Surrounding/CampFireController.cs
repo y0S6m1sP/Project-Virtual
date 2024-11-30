@@ -10,7 +10,7 @@ public class CampFireController : MonoBehaviour
         if (canInteract && Input.GetKeyDown(KeyCode.E))
         {
             var playerStats = PlayerManager.instance.player.Stats;
-            playerStats.IncreaseHealthBy(playerStats.maxHealth.GetValue() - playerStats.currentHealth);
+            playerStats.IncreaseHealthBy(playerStats.health.GetValue() - playerStats.currentHealth);
         }
     }
 

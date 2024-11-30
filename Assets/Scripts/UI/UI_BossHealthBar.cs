@@ -15,8 +15,8 @@ public class UI_BossHealthBar : MonoBehaviour
     {
         stats = GetComponentInParent<EntityStats>();
 
-        healthSlider.maxValue = stats.maxHealth.GetValue();
-        easeHealthSlider.maxValue = stats.maxHealth.GetValue();
+        healthSlider.maxValue = stats.health.GetValue();
+        easeHealthSlider.maxValue = stats.health.GetValue();
         bossName.text = stats.entityName;
     }
 

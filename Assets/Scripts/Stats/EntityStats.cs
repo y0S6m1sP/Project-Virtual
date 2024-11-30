@@ -7,20 +7,27 @@ public class EntityStats : MonoBehaviour
 
     public string entityName;
 
-    public Stat maxHealth;
+    public Stat health;
+    public Stat mana;
     public Stat damage;
     public Stat armor;
+
     public int currentHealth;
     public int currentArmor;
+    public float currentMana;
 
     public System.Action onHealthChanged;
+    public System.Action onManaChanged;
     public System.Action onArmorChanged;
     public bool IsDead { get; private set; }
 
     protected virtual void Start()
     {
-        currentHealth = maxHealth.GetValue();
+        currentHealth = health.GetValue();
         currentArmor = armor.GetValue();
+        currentMana = mana.GetValue();
+
+        StartCoroutine(DecreaseManaOverTime());
     }
 
     public virtual void DoDamage(EntityStats _entityStats)
@@ -53,6 +60,22 @@ public class EntityStats : MonoBehaviour
         Fx.CreatePopupText(_damage.ToString());
         onHealthChanged?.Invoke();
     }
+
+    public virtual void DecreaseManaBy(float _amount)
+    {
+        currentMana -= _amount;
+        onManaChanged?.Invoke();
+    }
+
+    private IEnumerator DecreaseManaOverTime()
+    {
+        while (!IsDead)
+        {
+            DecreaseManaBy(Time.deltaTime);
+            yield return null; // Wait for the next frame
+        }
+    }
+
 
     protected virtual void IncreaseArmorBy(int _amount)
     {
