@@ -58,7 +58,7 @@ public class Player : Entity
         Skill = SkillManager.instance;
         StateMachine.Initialize(Idle);
 
-        AutoAttack();
+        // AutoAttack();
     }
 
     protected override void Update()
@@ -98,7 +98,7 @@ public class Player : Entity
         yield return new WaitForSecondsRealtime(0.2f);
         Time.timeScale = 1f;
 
-        // SwordManager.Instance.GenerateSword(transform, _enemyStats);
+        SwordManager.Instance.GenerateSword(transform, _enemyStats.transform);
 
         yield return new WaitForSeconds(0.05f);
         StateMachine.ChangeState(Idle);
@@ -149,6 +149,7 @@ public class Player : Entity
         StartCoroutine(AutoAttackRoutine());
     }
 
+    
     private IEnumerator AutoAttackRoutine()
     {
         while (!Stats.IsDead)

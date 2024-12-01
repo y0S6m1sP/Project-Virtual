@@ -34,6 +34,8 @@ public class GameLevelManager : MonoBehaviour
 
     public int currentLevel = 0;
 
+    private Coroutine manaSpawnCoroutine;
+
     private void Awake()
     {
         if (instance != null)
@@ -45,6 +47,7 @@ public class GameLevelManager : MonoBehaviour
     public void NextLevel(float delay)
     {
         StopSpawnMana();
+        DestroyAllMana();
         StartCoroutine(TransitionToNextLevel(delay));
     }
 
@@ -205,8 +208,6 @@ public class GameLevelManager : MonoBehaviour
 
     }
 
-    private Coroutine manaSpawnCoroutine;
-
     public void StartSpawnMana()
     {
         manaSpawnCoroutine ??= StartCoroutine(SpawnManaRoutine());
@@ -223,11 +224,19 @@ public class GameLevelManager : MonoBehaviour
 
     private IEnumerator SpawnManaRoutine()
     {
-        SpawnMana();
         while (true)
         {
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(5f);
             SpawnMana();
+        }
+    }
+
+    private void DestroyAllMana()
+    {
+        GameObject[] manaObjects = GameObject.FindGameObjectsWithTag("Mana");
+        foreach (GameObject manaObject in manaObjects)
+        {
+            Destroy(manaObject);
         }
     }
 
