@@ -22,8 +22,8 @@ public class PlayerGroundState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            stateMachine.ChangeState(player.Attack1);
+        // if (Input.GetKeyDown(KeyCode.Mouse0))
+        //     stateMachine.ChangeState(player.Attack1);
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
             stateMachine.ChangeState(player.Parry);

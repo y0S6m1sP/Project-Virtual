@@ -5817,8 +5817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e049bae74f63d9f40a7831e732c020ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackPower: {x: 20, y: 0}
-  knockbackDuration: 0.1
+  knockbackDuration: 0.5
+  isKnocked: 0
   groundCheck: {fileID: 1245797905}
   groundCheckDistance: 0.8
   wallCheck: {fileID: 949851233}
@@ -5946,6 +5946,7 @@ MonoBehaviour:
   currentHealth: 11
   currentArmor: 0
   currentMana: 0
+  knockbackPower: {x: 7, y: 12}
 --- !u!114 &288253041
 MonoBehaviour:
   m_ObjectHideFlags: 0

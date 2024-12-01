@@ -13,9 +13,9 @@ abstract public class Entity : MonoBehaviour
     public CinemachineImpulseSource impulseSource { get; private set; }
 
     [Header("Knockback info")]
-    [SerializeField] protected Vector2 knockbackPower = new(7, 12);
-    [SerializeField] protected float knockbackDuration = .07f;
-    protected bool isKnocked;
+    [HideInInspector] protected Vector2 knockbackPower;
+    [SerializeField] protected float knockbackDuration = 1f;
+    public bool isKnocked;
 
     [Header("Collision info")]
     [SerializeField] protected Transform groundCheck;
@@ -103,9 +103,10 @@ abstract public class Entity : MonoBehaviour
     }
 
     public void SetupKnockbackPower(Vector2 _knockbackpower) => knockbackPower = _knockbackpower;
+
     protected virtual IEnumerator HitKnockback()
     {
-        isKnocked = true;
+        isKnocked = true;  
 
         if (knockbackPower.x > 0 || knockbackPower.y > 0) // This line makes player immune to freeze effect when he takes hit
         {

@@ -88,17 +88,23 @@ public class Player : Entity
     {
         AudioManager.instance.PlaySFX(Random.Range(0, 2));
 
-        GetComponent<Entity>().SetupKnockbackDir(_enemyStats.transform);
-        GetComponent<Entity>().Knockback();
+        SetupKnockbackDir(_enemyStats.transform);
+        SetupKnockbackPower(_enemyStats.knockbackPower);
+        Knockback();
 
         if (impulseSource != null)
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
+        _enemyStats.TakeDamage(Stats.damage.GetValue());
+
         Time.timeScale = 0.5f;
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSecondsRealtime(0.3f);
         Time.timeScale = 1f;
 
-        SwordManager.Instance.GenerateSword(transform, _enemyStats.transform);
+        // if(Stats.currentMana > 0) {
+        //     Stats.DecreaseManaBy(1);
+        //     SwordManager.Instance.GenerateSword(transform, _enemyStats.transform);
+        // }
 
         yield return new WaitForSeconds(0.05f);
         StateMachine.ChangeState(Idle);
@@ -149,7 +155,7 @@ public class Player : Entity
         StartCoroutine(AutoAttackRoutine());
     }
 
-    
+
     private IEnumerator AutoAttackRoutine()
     {
         while (!Stats.IsDead)

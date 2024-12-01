@@ -7,14 +7,19 @@ public class EntityStats : MonoBehaviour
 
     public string entityName;
 
+    [Space]
     public Stat health;
     public Stat mana;
     public Stat damage;
     public Stat armor;
 
+    [Space]
     public int currentHealth;
     public int currentArmor;
     public float currentMana;
+
+    [Space]
+    public Vector2 knockbackPower = new(7, 0);
 
     public System.Action onHealthChanged;
     public System.Action onManaChanged;
@@ -27,7 +32,7 @@ public class EntityStats : MonoBehaviour
         currentArmor = armor.GetValue();
         currentMana = mana.GetValue();
 
-        StartCoroutine(DecreaseManaOverTime());
+        // StartCoroutine(DecreaseManaOverTime());
     }
 
     public virtual void DoDamage(EntityStats _entityStats)
