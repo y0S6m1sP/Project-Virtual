@@ -26,8 +26,12 @@ public class GameLevelManager : MonoBehaviour
 
     [Header("Final Boss")]
     [SerializeField] private GameObject finalBoss;
-    
+
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private Transform leftBoundary;
+    [SerializeField] private Transform rightBoundary;
+    [SerializeField] private GameObject mana;
+
     public int currentLevel = 0;
 
     private void Awake()
@@ -40,6 +44,7 @@ public class GameLevelManager : MonoBehaviour
 
     public void NextLevel(float delay)
     {
+        StopSpawnMana();
         StartCoroutine(TransitionToNextLevel(delay));
     }
 
@@ -101,6 +106,7 @@ public class GameLevelManager : MonoBehaviour
         if (currentLevel != 0)
         {
             SpawnRandomEnemy(currentLevel);
+            StartSpawnMana();
         }
     }
 
@@ -158,26 +164,26 @@ public class GameLevelManager : MonoBehaviour
         switch (currentLevel)
         {
             case >= 1 and <= 3:
-            enemiesArray = level1Enemies;
-            break;
+                enemiesArray = level1Enemies;
+                break;
             case 5:
-            enemiesArray = level1Bosses;
-            break;
+                enemiesArray = level1Bosses;
+                break;
             case >= 6 and <= 8:
-            enemiesArray = level2Enemies;
-            break;
+                enemiesArray = level2Enemies;
+                break;
             case 10:
-            enemiesArray = level2Bosses;
-            break;
+                enemiesArray = level2Bosses;
+                break;
             case >= 11 and <= 13:
-            enemiesArray = level3Enemies;
-            break;
+                enemiesArray = level3Enemies;
+                break;
             case 15:
-            enemiesArray = level3Bosses;
-            break;
+                enemiesArray = level3Bosses;
+                break;
             case 16:
-            enemiesArray = new GameObject[] { finalBoss };
-            break;
+                enemiesArray = new GameObject[] { finalBoss };
+                break;
         }
 
         if (enemiesArray != null && enemiesArray.Length > 0)
@@ -197,6 +203,40 @@ public class GameLevelManager : MonoBehaviour
         if (playerPosition.x < enemyPosition.x)
             enemy.GetComponent<Enemy>().Flip();
 
+    }
+
+    private Coroutine manaSpawnCoroutine;
+
+    public void StartSpawnMana()
+    {
+        manaSpawnCoroutine ??= StartCoroutine(SpawnManaRoutine());
+    }
+
+    public void StopSpawnMana()
+    {
+        if (manaSpawnCoroutine != null)
+        {
+            StopCoroutine(manaSpawnCoroutine);
+            manaSpawnCoroutine = null;
+        }
+    }
+
+    private IEnumerator SpawnManaRoutine()
+    {
+        SpawnMana();
+        while (true)
+        {
+            yield return new WaitForSeconds(4f);
+            SpawnMana();
+        }
+    }
+
+    private void SpawnMana()
+    {
+        float randomX = Random.Range(leftBoundary.position.x, rightBoundary.position.x);
+        float randomY = Random.Range(0, -2);
+        Vector3 spawnPosition = new(randomX, randomY, spawnPoint.transform.position.z);
+        Instantiate(mana, spawnPosition, Quaternion.identity);
     }
 
 }
