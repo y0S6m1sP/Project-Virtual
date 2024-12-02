@@ -18,7 +18,7 @@ public class SwordStats : MonoBehaviour
         }
 
         var playerStats = PlayerManager.instance.player.Stats;
-        _entityStats.TakeDamage(damage.GetValue() + playerStats.damage.GetValue());
+        _entityStats.TakeDamage(damage.GetValue() + playerStats.physicDamage.GetValue());
     }
 
 }

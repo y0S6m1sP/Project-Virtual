@@ -10,7 +10,8 @@ public class EntityStats : MonoBehaviour
     [Space]
     public Stat health;
     public Stat mana;
-    public Stat damage;
+    public Stat physicDamage;
+    public Stat magicDamage;
     public Stat armor;
 
     [Space]
@@ -42,7 +43,7 @@ public class EntityStats : MonoBehaviour
 
     public virtual void DoDamage(EntityStats _entityStats)
     {
-        _entityStats.TakeDamage(damage.GetValue());
+        _entityStats.TakeDamage(physicDamage.GetValue());
     }
 
     public virtual void TakeDamage(int _damage)
@@ -67,7 +68,6 @@ public class EntityStats : MonoBehaviour
     protected virtual void DecreaseHealthBy(int _damage)
     {
         currentHealth -= _damage;
-        Fx.CreatePopupText(_damage.ToString());
         onHealthChanged?.Invoke();
     }
 
@@ -110,6 +110,23 @@ public class EntityStats : MonoBehaviour
     protected virtual void Die()
     {
         IsDead = true;
+    }
+
+    public void TakePhysicalDamage(EntityStats stats)
+    {
+        
+        int damage = stats.physicDamage.GetValue();
+        int critChance = stats.brutal.GetValue() * 5;
+        int critDamage = stats.brutal.GetValue() * 10;
+
+        if (Random.Range(0, 100) < critChance)
+        {
+            damage += damage * critDamage / 100;
+            Fx.CreatePopupText(damage.ToString());
+        }
+
+        Fx.CreatePopupText(damage.ToString());
+        TakeDamage(damage);
     }
 
 }

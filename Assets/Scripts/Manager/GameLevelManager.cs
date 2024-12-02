@@ -92,7 +92,7 @@ public class GameLevelManager : MonoBehaviour
         if (currentLevel != 4 && currentLevel != 9 && currentLevel != 14)
         {
             bool swordSelected = false;
-            UIManager.instance.swordSelect.ShowSwordSelect(() => swordSelected = true);
+            UIManager.instance.runeSelect.ShowRuneSelect(() => swordSelected = true);
             yield return new WaitUntil(() => swordSelected);
         }
 

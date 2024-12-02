@@ -96,7 +96,7 @@ public class Player : Entity
         if (impulseSource != null)
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
-        _enemyStats.TakeDamage(Stats.damage.GetValue());
+        _enemyStats.TakePhysicalDamage(Stats);
 
         Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(0.3f);

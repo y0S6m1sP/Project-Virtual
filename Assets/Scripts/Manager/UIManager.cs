@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject swordPanel;
 
-    public UI_SwordSelect swordSelect;
+    public UI_RuneSelect runeSelect;
     public UI_SwordToolTip swordTooltip;
     public UI_RuneToolTip runeTooltip;
 

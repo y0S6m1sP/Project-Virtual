@@ -10,7 +10,7 @@ public class Stat
     public List<int> modifiers;
     public int GetValue()
     {
-        int finalValue = baseValue; 
+        int finalValue = baseValue;
 
         foreach (int modifier in modifiers)
         {

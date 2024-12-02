@@ -3366,6 +3366,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a22271df6f21faa4aa76a8c8963cbe94, type: 2}
   runes: []
   runeParent: {fileID: 1054140235}
+  runesPool:
+  - {fileID: 11400000, guid: 5b664c96013de4e45a2daf072e27b617, type: 2}
+  - {fileID: 11400000, guid: 48dd43b1ab79e67478f4b68222058dce, type: 2}
+  - {fileID: 11400000, guid: a22271df6f21faa4aa76a8c8963cbe94, type: 2}
 --- !u!1 &120203629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5760,7 +5764,10 @@ MonoBehaviour:
   mana:
     baseValue: 10
     modifiers: 
-  damage:
+  physicDamage:
+    baseValue: 0
+    modifiers: 
+  magicDamage:
     baseValue: 0
     modifiers: 
   armor:
@@ -5775,7 +5782,7 @@ MonoBehaviour:
   mystic:
     baseValue: 0
     modifiers: 
-  currentHealth: 11
+  currentHealth: 0
   currentArmor: 0
   currentMana: 0
   knockbackPower: {x: 7, y: 12}
@@ -20046,9 +20053,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordPanel: {fileID: 1062616365}
-  swordSelect: {fileID: 1375953587}
+  runeSelect: {fileID: 1375953587}
   swordTooltip: {fileID: 1106869988}
-  relicTooltip: {fileID: 1434966677}
+  runeTooltip: {fileID: 1434966677}
 --- !u!1 &1106869984
 GameObject:
   m_ObjectHideFlags: 0
@@ -25964,7 +25971,7 @@ GameObject:
   - component: {fileID: 1375953588}
   - component: {fileID: 1375953587}
   m_Layer: 5
-  m_Name: SwordSelect
+  m_Name: RuneSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26387,7 +26394,7 @@ GameObject:
   - component: {fileID: 1434966672}
   - component: {fileID: 1434966677}
   m_Layer: 5
-  m_Name: RelicToolTip
+  m_Name: RuneToolTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

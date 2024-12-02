@@ -19,6 +19,10 @@ MonoBehaviour:
   itemId: 5b664c96013de4e45a2daf072e27b617
   itemCooldown: 0
   itemEffects: []
-  brutal: 0
+  health: 0
+  mana: 0
+  physicDamage: 5
+  magicDamage: 0
+  brutal: 1
   survive: 0
   mystic: 0

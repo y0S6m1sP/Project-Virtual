@@ -15,7 +15,7 @@ public class ItemDataRelic : ItemData
         PlayerStats playerStats = PlayerManager.instance.player.GetComponent<PlayerStats>();
 
         playerStats.health.AddModifier(maxHealth);
-        playerStats.damage.AddModifier(damage);
+        playerStats.physicDamage.AddModifier(damage);
         playerStats.armor.AddModifier(armor);
     }
 
@@ -23,7 +23,7 @@ public class ItemDataRelic : ItemData
         PlayerStats playerStats = PlayerManager.instance.player.GetComponent<PlayerStats>();
         
         playerStats.health.RemoveModifier(maxHealth);
-        playerStats.damage.RemoveModifier(damage);
+        playerStats.physicDamage.RemoveModifier(damage);
         playerStats.armor.RemoveModifier(armor);
     }
 
