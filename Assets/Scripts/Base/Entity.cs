@@ -10,6 +10,7 @@ abstract public class Entity : MonoBehaviour
     public Rigidbody2D Rb { private set; get; }
     public SpriteRenderer Sr { private set; get; }
     public EntityStats Stats { get; private set; }
+    public EntityFX Fx { get; private set; }
     public CinemachineImpulseSource impulseSource { get; private set; }
 
     [Header("Knockback info")]
@@ -40,6 +41,7 @@ abstract public class Entity : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         Rb = GetComponent<Rigidbody2D>();
         Stats = GetComponent<EntityStats>();
+        Fx = GetComponent<EntityFX>();
         impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 

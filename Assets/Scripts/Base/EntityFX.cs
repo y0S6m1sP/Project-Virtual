@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class EntityFX : MonoBehaviour
 {
-    [Header("Popup Text")]
     [SerializeField] private GameObject popUpTextPrefab;
-
-    [Header("Hit FX")]
     [SerializeField] private GameObject hitFXPrefab;
+    [SerializeField] private GameObject parryFXPrefab;
 
     public void CreatePopupText(string _text)
     {
@@ -43,5 +41,16 @@ public class EntityFX : MonoBehaviour
         hitFX.transform.Rotate(rotation);
 
         Destroy(hitFX, .5f);
+    }
+
+    public void CreateParryFX(Transform _target)
+    {
+        if (parryFXPrefab == null) return;
+
+        var facingDir = GetComponent<Entity>().FacingDir;
+
+        GameObject parryFX = Instantiate(parryFXPrefab, _target.position + new Vector3(.5f * facingDir, 1f), Quaternion.identity);
+
+        Destroy(parryFX, .5f);
     }
 }

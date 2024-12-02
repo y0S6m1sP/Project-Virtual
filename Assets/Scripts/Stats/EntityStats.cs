@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
-    protected EntityFX Fx => GetComponent<EntityFX>();
+    private EntityFX Fx => GetComponent<EntityFX>();
 
     public string entityName;
 

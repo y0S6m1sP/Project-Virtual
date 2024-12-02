@@ -14,7 +14,7 @@ public class PlayerStats : EntityStats
     public override void DoDamage(EntityStats _entityStats)
     {
         base.DoDamage(_entityStats);
-        Fx.CreateHitFX(_entityStats.transform);
+        player.Fx.CreateHitFX(_entityStats.transform);
     }
 
     protected override void Die()
