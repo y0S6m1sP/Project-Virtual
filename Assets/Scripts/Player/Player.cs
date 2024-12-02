@@ -96,6 +96,8 @@ public class Player : Entity
         if (impulseSource != null)
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
+        ExecuteOffensiveEffect(_enemyStats);
+        
         _enemyStats.TakePhysicalDamage(Stats);
 
         Time.timeScale = 0.5f;
@@ -167,6 +169,16 @@ public class Player : Entity
             float waitTime = GetComponent<EntityStats>().currentMana > 0 ? 1f : 2f;
 
             yield return new WaitForSeconds(waitTime);
+        }
+    }
+
+    private void ExecuteOffensiveEffect(EntityStats target)
+    {
+        var runeEffects = RuneManager.Instance.GetItemEffects(EffectType.Offensive);
+
+        foreach (ItemEffect effects in runeEffects)
+        {
+            effects.ExecuteEffect(target);
         }
     }
 
