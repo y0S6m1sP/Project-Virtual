@@ -153,6 +153,8 @@ public class Player : Entity
 
     private void ExecuteOffensiveEffect(EntityStats target)
     {
+        if(Stats.currentMana <= 0) return;
+
         var runeEffects = RuneManager.Instance.GetItemEffects(EffectType.Offensive);
 
         foreach (ItemEffect effects in runeEffects)

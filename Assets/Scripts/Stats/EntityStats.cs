@@ -36,9 +36,9 @@ public class EntityStats : MonoBehaviour
     {
         currentHealth = health.GetValue();
         currentArmor = armor.GetValue();
-        currentMana = mana.GetValue();
+        currentMana = 0;
 
-        // StartCoroutine(DecreaseManaOverTime());
+        StartCoroutine(DecreaseManaOverTime());
     }
 
     public virtual void DoDamage(EntityStats _entityStats)
