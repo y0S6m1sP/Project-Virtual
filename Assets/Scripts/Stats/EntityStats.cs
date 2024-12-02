@@ -14,6 +14,11 @@ public class EntityStats : MonoBehaviour
     public Stat armor;
 
     [Space]
+    public Stat brutal;
+    public Stat survive;
+    public Stat mystic;
+
+    [Space]
     public int currentHealth;
     public int currentArmor;
     public float currentMana;
@@ -75,7 +80,7 @@ public class EntityStats : MonoBehaviour
     public virtual void DecreaseManaBy(float _amount)
     {
         currentMana -= _amount;
-        if(currentMana < 0) currentMana = 0;
+        if (currentMana < 0) currentMana = 0;
         onManaChanged?.Invoke();
     }
 

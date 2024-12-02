@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0296e7496b5ec3f428b55a4e75573cd1, type: 3}
+  m_Name: BrutalRune
+  m_EditorClassIdentifier: 
+  itemType: 0
+  rarity: 0
+  itemName: Brutal Rune
+  itemIcon: {fileID: -335007489, guid: 55e6faca2842e4044825baa443573eb8, type: 3}
+  itemId: 5b664c96013de4e45a2daf072e27b617
+  itemCooldown: 0
+  itemEffects: []
+  brutal: 0
+  survive: 0
+  mystic: 0

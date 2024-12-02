@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0296e7496b5ec3f428b55a4e75573cd1, type: 3}
+  m_Name: SurviveRune
+  m_EditorClassIdentifier: 
+  itemType: 0
+  rarity: 0
+  itemName: Survive Rune
+  itemIcon: {fileID: -563106506, guid: 55e6faca2842e4044825baa443573eb8, type: 3}
+  itemId: a22271df6f21faa4aa76a8c8963cbe94
+  itemCooldown: 0
+  itemEffects: []
+  brutal: 0
+  survive: 1
+  mystic: 0

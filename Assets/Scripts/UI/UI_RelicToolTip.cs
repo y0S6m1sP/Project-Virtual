@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UI_RelicToolTip : UI_ToolTip
+public class UI_RuneToolTip : UI_ToolTip
 {
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private TextMeshProUGUI itemRarityText;
     [SerializeField] private TextMeshProUGUI itemDescription;
 
-    public void ShowToolTip(ItemDataRelic item)
+    public void ShowToolTip(ItemDataRune item)
     {
         if (item == null)
             return;
@@ -25,7 +25,6 @@ public class UI_RelicToolTip : UI_ToolTip
 
     public void HideToolTip()
     {
-        Debug.Log("Hiding tooltip");
         gameObject.SetActive(false);
     }
 }

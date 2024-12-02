@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     public UI_SwordSelect swordSelect;
     public UI_SwordToolTip swordTooltip;
-    public UI_RelicToolTip relicTooltip;
+    public UI_RuneToolTip runeTooltip;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     private void Start() {
         swordTooltip.gameObject.SetActive(false);
-        relicTooltip.gameObject.SetActive(false);
+        runeTooltip.gameObject.SetActive(false);
     }
 
     private void Update()

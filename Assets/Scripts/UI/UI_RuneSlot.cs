@@ -4,33 +4,33 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_RelicSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UI_RuneSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Image icon;
 
-    private ItemData relic;
+    private ItemData rune;
 
-    public void AddRelic(ItemData _relic)
+    public void AddRune(ItemData _rune)
     {
-        relic = _relic;
-        icon.sprite = relic.itemIcon;
+        rune = _rune;
+        icon.sprite = rune.itemIcon;
         icon.color = Color.white;
     }
 
     public void CleanUpSlot()
     {
-        relic = null;
+        rune = null;
         icon.sprite = null;
         icon.color = Color.clear;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        UIManager.instance.relicTooltip.ShowToolTip((ItemDataRelic)relic);
+        UIManager.instance.runeTooltip.ShowToolTip((ItemDataRune)rune);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        UIManager.instance.relicTooltip.HideToolTip();
+        UIManager.instance.runeTooltip.HideToolTip();
     }
 }
