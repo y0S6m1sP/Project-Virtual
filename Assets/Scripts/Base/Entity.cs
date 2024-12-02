@@ -111,7 +111,8 @@ abstract public class Entity : MonoBehaviour
         if (knockbackPower.x > 0 || knockbackPower.y > 0) // This line makes player immune to freeze effect when he takes hit
         {
             Vector2 knockbackVelocity = new(knockbackPower.x * KnockbackDir, knockbackPower.y);
-            Rb.velocity = Vector2.Lerp(Rb.velocity, knockbackVelocity, 0.5f);
+            Rb.AddForce(knockbackVelocity, ForceMode2D.Impulse);
+            // Rb.velocity = Vector2.Lerp(Rb.velocity, knockbackVelocity, 0.5f);
         }
 
         yield return new WaitForSeconds(knockbackDuration);
