@@ -114,7 +114,7 @@ public class EntityStats : MonoBehaviour
 
     public void TakePhysicalDamage(EntityStats stats)
     {
-        
+
         int damage = stats.physicDamage.GetValue();
         int critChance = stats.brutal.GetValue() * 5;
         int critDamage = stats.brutal.GetValue() * 10;
@@ -127,6 +127,11 @@ public class EntityStats : MonoBehaviour
 
         Fx.CreatePopupText(damage.ToString());
         TakeDamage(damage);
+    }
+
+    public string GetHealthText()
+    {
+        return currentHealth + "/" + health.GetValue();
     }
 
 }

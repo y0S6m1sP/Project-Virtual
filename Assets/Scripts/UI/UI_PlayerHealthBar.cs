@@ -1,39 +1,24 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_PlayerHealthBar : MonoBehaviour
 {
-    [SerializeField] private GameObject healthPrefab;
-    [SerializeField] private GameObject armorPrefab;
-    [SerializeField] private EntityStats playerStats;
-    private GridLayoutGroup healthBar;
-
-    void Start()
+    [SerializeField] private EntityStats stats;
+    [SerializeField] private Slider healthSlider;
+    [SerializeField] private Slider easeHealthSlider;
+    [SerializeField] private TextMeshProUGUI healthText;
+    private void Start()
     {
-        healthBar = GetComponentInChildren<GridLayoutGroup>();
-        playerStats.onHealthChanged += UpdateHealthBar;
-        playerStats.onArmorChanged += UpdateHealthBar;
-        UpdateHealthBar();
+        healthSlider.maxValue = stats.health.GetValue();
+        easeHealthSlider.maxValue = stats.health.GetValue();
+        healthText.text = stats.GetHealthText();
     }
 
-    private void UpdateHealthBar()
+    private void Update()
     {
-        int currentHearts = playerStats.currentHealth;
-        int currentArmor = playerStats.currentArmor;
-
-        foreach (Transform child in healthBar.transform)
-        {
-            Destroy(child.gameObject);
-        }
-
-        for (int i = 0; i < currentHearts; i++)
-        {
-            Instantiate(healthPrefab, healthBar.transform);
-        }
-
-        for (int i = 0; i < currentArmor; i++)
-        {
-            Instantiate(armorPrefab, healthBar.transform);
-        }
+        healthSlider.value = stats.currentHealth;
+        easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, stats.currentHealth, 0.05f);
+        healthText.text = stats.GetHealthText();
     }
 }
