@@ -57,8 +57,6 @@ public class Player : Entity
         base.Start();
         Skill = SkillManager.instance;
         StateMachine.Initialize(Idle);
-
-        // AutoAttack();
     }
 
     protected override void Update()
@@ -97,7 +95,7 @@ public class Player : Entity
             CameraShakeManager.Instance.CameraShake(impulseSource);
 
         ExecuteOffensiveEffect(_enemyStats);
-        
+
         _enemyStats.TakePhysicalDamage(Stats);
 
         Time.timeScale = 0.5f;
@@ -151,25 +149,6 @@ public class Player : Entity
         }
 
         return closestEnemy;
-    }
-
-    private void AutoAttack()
-    {
-        StartCoroutine(AutoAttackRoutine());
-    }
-
-
-    private IEnumerator AutoAttackRoutine()
-    {
-        while (!Stats.IsDead)
-        {
-            SwordManager.Instance.GenerateSword(transform, FindClosestEnemy());
-
-            // Check the player's mana and adjust the wait time accordingly
-            float waitTime = GetComponent<EntityStats>().currentMana > 0 ? 1f : 2f;
-
-            yield return new WaitForSeconds(waitTime);
-        }
     }
 
     private void ExecuteOffensiveEffect(EntityStats target)

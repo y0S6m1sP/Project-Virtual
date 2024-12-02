@@ -18,7 +18,8 @@ MonoBehaviour:
   itemIcon: {fileID: -335007489, guid: 55e6faca2842e4044825baa443573eb8, type: 3}
   itemId: 5b664c96013de4e45a2daf072e27b617
   itemCooldown: 0
-  itemEffects: []
+  itemEffects:
+  - {fileID: 11400000, guid: d1a99abdcbdd1a34da958b724d4f3fae, type: 2}
   health: 0
   mana: 0
   physicDamage: 5

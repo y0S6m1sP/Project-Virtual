@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectType: 0
   effectDescription: 
-  darkFlamePrefab: {fileID: 0}
+  darkFlamePrefab: {fileID: 2244471527721348796, guid: 37671ade4f4d01240bdb9da939ed7d7a, type: 3}
