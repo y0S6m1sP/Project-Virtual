@@ -36,6 +36,8 @@ public class GameLevelManager : MonoBehaviour
 
     public List<List<MapNode>> pathMap = new();
 
+    private MapNode currentNode;
+
     private Coroutine manaSpawnCoroutine;
 
     private void Awake()
@@ -412,6 +414,21 @@ public class GameLevelManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool IsSelectNodeValid(MapNode node)
+    {
+        if (currentNode == null)
+            return pathMap[0].Contains(node);
+
+        return currentNode.Connections.Contains(node);
+    }
+
+    public void SetCurrentNode(MapNode node)
+    {
+        Debug.Log(IsSelectNodeValid(node));
+        if (IsSelectNodeValid(node))
+            currentNode = node;
     }
 
 }

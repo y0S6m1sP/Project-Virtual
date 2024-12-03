@@ -31,6 +31,11 @@ public class UIManager : MonoBehaviour
         {
             pathMap.RenderMap();
         }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            pathMap.parent.gameObject.SetActive(!pathMap.parent.gameObject.activeSelf);
+        }
     }
 
 }

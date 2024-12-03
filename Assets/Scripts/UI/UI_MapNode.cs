@@ -2,20 +2,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_MapNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UI_MapNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     [SerializeField] private Image icon;
 
     private MapNode node;
 
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        GameLevelManager.Instance.SetCurrentNode(node);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Node Type: " + node.Type);
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        
+
     }
 
     public void SetNode(MapNode _node)
@@ -28,5 +33,11 @@ public class UI_MapNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
     }
 
-    
+    public void ResetNode()
+    {
+        node = null;
+        icon.color = Color.black;
+    }
+
+
 }

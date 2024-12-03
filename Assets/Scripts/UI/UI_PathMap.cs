@@ -5,7 +5,7 @@ public class UI_PathMap : MonoBehaviour
 {
 
     [SerializeField] private RectTransform linePrefab;
-    [SerializeField] private Transform parent;
+    public Transform parent;
 
     [SerializeField] private Transform stage1;
     [SerializeField] private Transform stage2;
@@ -21,6 +21,8 @@ public class UI_PathMap : MonoBehaviour
     private UI_MapNode[] stage5Nodes;
     private UI_MapNode[] stage6Nodes;
 
+    private List<RectTransform> Lines = new();
+
     private void Start()
     {
         stage1Nodes = stage1.GetComponentsInChildren<UI_MapNode>();
@@ -33,6 +35,8 @@ public class UI_PathMap : MonoBehaviour
 
     public void RenderMap()
     {
+        ResetNodes();
+        ClearMapLines();
         GameLevelManager.Instance.GeneratePathMap();
 
         List<List<MapNode>> pathMap = GameLevelManager.Instance.pathMap;
@@ -61,7 +65,7 @@ public class UI_PathMap : MonoBehaviour
         }
     }
 
-    void DrawLine(Vector3 start, Vector3 end)
+    private void DrawLine(Vector3 start, Vector3 end)
     {
         RectTransform line = Instantiate(linePrefab, parent);
 
@@ -75,5 +79,45 @@ public class UI_PathMap : MonoBehaviour
             zRotation = -45;
 
         line.localRotation = Quaternion.Euler(0, 0, zRotation);
+
+        Lines.Add(line);
     }
+
+    private void ResetNodes()
+    {
+        foreach (UI_MapNode node in stage1Nodes)
+        {
+            node.ResetNode();
+        }
+        foreach (UI_MapNode node in stage2Nodes)
+        {
+            node.ResetNode();
+        }
+        foreach (UI_MapNode node in stage3Nodes)
+        {
+            node.ResetNode();
+        }
+        foreach (UI_MapNode node in stage4Nodes)
+        {
+            node.ResetNode();
+        }
+        foreach (UI_MapNode node in stage5Nodes)
+        {
+            node.ResetNode();
+        }
+        foreach (UI_MapNode node in stage6Nodes)
+        {
+            node.ResetNode();
+        }
+    }
+
+    private void ClearMapLines()
+    {
+        foreach (RectTransform line in Lines)
+        {
+            Destroy(line.gameObject);
+        }
+        Lines.Clear();
+    }
+
 }
