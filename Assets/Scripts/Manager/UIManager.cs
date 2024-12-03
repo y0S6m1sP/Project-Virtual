@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 
     public UI_RuneSelect runeSelect;
     public UI_RuneToolTip runeTooltip;
+    public UI_PathMap pathMap;
 
     private void Awake()
     {
@@ -19,8 +20,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Start() {
+    private void Start()
+    {
         runeTooltip.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            pathMap.RenderMap();
+        }
     }
 
 }

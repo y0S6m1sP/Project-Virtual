@@ -10,7 +10,7 @@ public class StartDeviceController : TriggerableSurroundingController
     {
         if (canStart && Input.GetKeyDown(KeyCode.E))
         {
-            GameLevelManager.instance.NextLevel(0f);
+            GameLevelManager.Instance.NextLevel(0f);
         }
     }
 
