@@ -41,7 +41,10 @@ public class GameLevelManager : MonoBehaviour
         if (instance != null)
             Destroy(instance.gameObject);
         else
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void NextLevel(float delay)

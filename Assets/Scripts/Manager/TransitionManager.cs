@@ -12,6 +12,9 @@ public class TransitionManager : MonoBehaviour
         if (instance != null)
             Destroy(instance.gameObject);
         else
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

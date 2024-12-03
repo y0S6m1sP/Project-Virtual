@@ -16,7 +16,10 @@ public class SkillManager : MonoBehaviour
         if (instance != null)
             Destroy(instance.gameObject);
         else
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Start()
