@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLevelManager : MonoBehaviour
 {
@@ -428,7 +429,10 @@ public class GameLevelManager : MonoBehaviour
     {
         Debug.Log(IsSelectNodeValid(node));
         if (IsSelectNodeValid(node))
+        {
             currentNode = node;
+            SceneManager.LoadScene("Battle1");
+        }
     }
 
 }
