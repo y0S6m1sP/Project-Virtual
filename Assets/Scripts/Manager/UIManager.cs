@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     public UI_RuneToolTip runeTooltip;
     public UI_PathMap pathMap;
 
+    private bool isMapRender = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -35,6 +37,20 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             pathMap.parent.gameObject.SetActive(!pathMap.parent.gameObject.activeSelf);
+        }
+    }
+
+    public void ShowMap(bool isShow)
+    {
+        if (pathMap.parent != null)
+        {
+            pathMap.parent.gameObject.SetActive(isShow);
+        }
+
+        if (!isMapRender)
+        {
+            pathMap.RenderMap();
+            isMapRender = true;
         }
     }
 

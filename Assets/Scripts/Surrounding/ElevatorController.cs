@@ -16,7 +16,7 @@ public class ElevatorController : MonoBehaviour
     {
         if (canStart && Input.GetKeyDown(KeyCode.E))
         {
-            GameLevelManager.Instance.NextLevel(0f);
+            UIManager.instance.ShowMap(true);
         }
     }
 
@@ -30,5 +30,6 @@ public class ElevatorController : MonoBehaviour
     {
         Sr.material = new Material(Shader.Find("Sprites/Default"));
         canStart = false;
+        UIManager.instance.ShowMap(false);
     }
 }

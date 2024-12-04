@@ -21,9 +21,14 @@ public class UI_PathMap : MonoBehaviour
     private UI_MapNode[] stage5Nodes;
     private UI_MapNode[] stage6Nodes;
 
-    private List<RectTransform> Lines = new();
+    private readonly List<RectTransform> lines = new();
 
     private void Start()
+    {
+        // InitNodes();
+    }
+
+    private void InitNodes()
     {
         stage1Nodes = stage1.GetComponentsInChildren<UI_MapNode>();
         stage2Nodes = stage2.GetComponentsInChildren<UI_MapNode>();
@@ -35,6 +40,7 @@ public class UI_PathMap : MonoBehaviour
 
     public void RenderMap()
     {
+        InitNodes();
         ResetNodes();
         ClearMapLines();
         GameLevelManager.Instance.GeneratePathMap();
@@ -80,11 +86,14 @@ public class UI_PathMap : MonoBehaviour
 
         line.localRotation = Quaternion.Euler(0, 0, zRotation);
 
-        Lines.Add(line);
+        lines.Add(line);
     }
 
     private void ResetNodes()
     {
+        if (stage1Nodes == null || stage2Nodes == null || stage3Nodes == null || stage4Nodes == null || stage5Nodes == null || stage6Nodes == null)
+            return;
+
         foreach (UI_MapNode node in stage1Nodes)
         {
             node.ResetNode();
@@ -113,11 +122,11 @@ public class UI_PathMap : MonoBehaviour
 
     private void ClearMapLines()
     {
-        foreach (RectTransform line in Lines)
+        foreach (RectTransform line in lines)
         {
             Destroy(line.gameObject);
         }
-        Lines.Clear();
+        lines.Clear();
     }
 
 }
