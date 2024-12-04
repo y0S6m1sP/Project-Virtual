@@ -33,6 +33,8 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private Transform rightBoundary;
     [SerializeField] private GameObject mana;
 
+    [SerializeField] Animator transition;
+
     public int currentLevel = 0;
 
     public List<List<MapNode>> pathMap = new();
@@ -431,8 +433,16 @@ public class GameLevelManager : MonoBehaviour
         if (IsSelectNodeValid(node))
         {
             currentNode = node;
-            SceneManager.LoadScene("Battle1");
+            StartCoroutine(LoadScene());
         }
+    }
+
+    private IEnumerator LoadScene()
+    {
+        transition.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadSceneAsync("Battle1");
+        transition.SetTrigger("Start");
     }
 
 }
