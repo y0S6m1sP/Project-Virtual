@@ -15,6 +15,13 @@ public class GameManager : MonoBehaviour
 
     private MapNode currentNode;
 
+    // TODO: if have time, refactor this to be more dynamic
+    private static Vector2 battle1StartPosition = new(-26.93f, -2.03f);
+    private static Vector2 rune2StartPosition = new(0, -13.99f);
+    private static Vector2 shop11StartPosition = new(-15.02f, -1.96f);
+    private static Vector2 boss1StartPosition = new(-10.04f, 0);
+    private Vector2 playerStartPosition;
+
     private void Awake()
     {
         if (Instance != null)
@@ -201,15 +208,41 @@ public class GameManager : MonoBehaviour
         if (IsSelectNodeValid(node))
         {
             currentNode = node;
-            StartCoroutine(LoadScene());
+            switch (node.Type)
+            {
+                case NodeType.Money:
+                case NodeType.Stats:
+                    StartCoroutine(nameof(LoadScene), "Battle1");
+                    playerStartPosition = battle1StartPosition;
+                    break;
+                case NodeType.Rune:
+                    StartCoroutine(nameof(LoadScene), "Rune2");
+                    playerStartPosition = rune2StartPosition;
+                    break;
+                case NodeType.Shop:
+                    StartCoroutine(nameof(LoadScene), "Shop1");
+                    playerStartPosition = shop11StartPosition;
+                    break;
+                case NodeType.Boss:
+                    StartCoroutine(nameof(LoadScene), "Boss1");
+                    playerStartPosition = boss1StartPosition;
+                    break;
+                
+            }
+            
         }
     }
 
-    private IEnumerator LoadScene()
+    private IEnumerator LoadScene(string sceneName)
     {
         transition.SetTrigger("End");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadSceneAsync("Battle1");
+        SceneManager.LoadSceneAsync(sceneName);
+        while (!SceneManager.GetActiveScene().name.Equals(sceneName))
+        {
+            yield return null;
+        }
+        PlayerManager.instance.player.transform.position = playerStartPosition;
         transition.SetTrigger("Start");
     }
 

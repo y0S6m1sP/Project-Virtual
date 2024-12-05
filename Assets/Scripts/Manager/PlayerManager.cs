@@ -14,5 +14,7 @@ public class PlayerManager : MonoBehaviour
         else {
             instance = this;
         }
+
+        player = FindObjectOfType<Player>();
     }
 }
