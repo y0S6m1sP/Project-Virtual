@@ -206,7 +206,7 @@ public class Enemy : Entity
     public virtual void Die()
     {
         StateMachine.ChangeState(Dead);
-        GameLevelManager.Instance.NextLevel(2f);
+        // GameManager.Instance.NextLevel(2f);
     }
 
 }

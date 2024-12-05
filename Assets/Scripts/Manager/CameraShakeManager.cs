@@ -16,7 +16,6 @@ public class CameraShakeManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
     }
 
