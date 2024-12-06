@@ -9309,7 +9309,7 @@ Transform:
   m_GameObject: {fileID: 6934853696945767322}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.16, y: -0.039999723, z: -10}
+  m_LocalPosition: {x: -5.1600037, y: -2.039978, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9375,7 +9375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpTextPrefab: {fileID: 0}
   hitFXPrefab: {fileID: 3140538583296492161, guid: 3114b41649c524640a7ac811d257264e, type: 3}
-  parryFXPrefab: {fileID: 3681506954546239942, guid: b4c175203bae7834db0af13582477a63, type: 3}
+  parryFXPrefab: {fileID: 6424612178896876183, guid: 113c9f641660bf640a67831f5f83bdeb, type: 3}
 --- !u!1 &2574436472840677385
 GameObject:
   m_ObjectHideFlags: 0
@@ -11010,7 +11010,7 @@ Transform:
   m_GameObject: {fileID: 4045460005558296504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.16, y: -0.039999723, z: -10}
+  m_LocalPosition: {x: -5.1634355, y: -1.45902, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13655,23 +13655,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 1, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
+  m_TrackedObjectOffset: {x: 1, y: 0, z: 0}
+  m_LookaheadTime: 0.05
+  m_LookaheadSmoothing: 1
   m_LookaheadIgnoreY: 0
-  m_XDamping: 0
-  m_YDamping: 0
+  m_XDamping: 0.75
+  m_YDamping: 2
   m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.6
+  m_ScreenY: 0.5
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 2
+  m_SoftZoneWidth: 0.2
+  m_SoftZoneHeight: 0.35
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -14298,7 +14298,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 6752272835828168158}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5

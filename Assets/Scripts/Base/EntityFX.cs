@@ -49,8 +49,8 @@ public class EntityFX : MonoBehaviour
 
         var facingDir = GetComponent<Entity>().FacingDir;
 
-        GameObject parryFX = Instantiate(parryFXPrefab, _target.position + new Vector3(.5f * facingDir, 1f), Quaternion.identity);
+        GameObject parryFX = Instantiate(parryFXPrefab, _target.position, Quaternion.identity);
 
-        Destroy(parryFX, .5f);
+        // Destroy(parryFX, .5f);
     }
 }
