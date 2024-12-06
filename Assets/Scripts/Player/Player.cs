@@ -96,7 +96,7 @@ public class Player : Entity
 
         ExecuteOffensiveEffect(_enemyStats);
 
-        _enemyStats.TakePhysicalDamage(Stats);
+        // _enemyStats.TakePhysicalDamage(Stats);
 
         Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(0.3f);

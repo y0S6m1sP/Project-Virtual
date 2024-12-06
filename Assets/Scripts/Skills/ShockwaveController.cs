@@ -40,4 +40,23 @@ public class ShockwaveController : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            EntityStats enemyStats = enemy.Stats;
+            if (enemyStats != null && !enemyStats.IsDead)
+            {
+                // knockback currently not working because enemy attack state set the velocity to zero
+                Player player = PlayerManager.instance.player;
+                enemy.SetupKnockbackDir(player.transform);
+                enemy.SetupKnockbackPower(player.Stats.knockbackPower);
+                enemy.Knockback();
+
+                enemyStats.TakePhysicalDamage(player.Stats);
+            }
+        }
+    }
 }
