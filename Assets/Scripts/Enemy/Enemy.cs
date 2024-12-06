@@ -41,6 +41,7 @@ public class Enemy : Entity
 
     [Header("Behavior")]
     [SerializeField] private BaseEnemyIdleSO BaseEnemyIdle;
+    [SerializeField] private BaseEnemyMoveSO BaseEnemyMove;
     [SerializeField] private BaseEnemyChaseSO BaseEnemyChase;
     [SerializeField] private BaseEnemyAttackSO BaseEnemyAttack;
     [SerializeField] private BaseEnemyAttackSO BaseEnemyAttackSpecial1;
@@ -49,6 +50,7 @@ public class Enemy : Entity
     [SerializeField] private BaseEnemyDeadSO BaseEnemyDead;
 
     public BaseEnemyIdleSO BaseEnemyIdleInstance { get; private set; }
+    public BaseEnemyMoveSO BaseEnemyMoveInstance { get; private set; }
     public BaseEnemyChaseSO BaseEnemyChaseInstance { get; private set; }
     public BaseEnemyAttackSO BaseEnemyAttackInstance { get; private set; }
     public BaseEnemyAttackSO BaseEnemyAttackSpecial1Instance { get; private set; }
@@ -57,6 +59,7 @@ public class Enemy : Entity
     public BaseEnemyDeadSO BaseEnemyDeadInstance { get; private set; }
 
     public EnemyIdleState Idle { get; private set; }
+    public EnemyMoveState Move { get; private set; }
     public EnemyChaseState Chase { get; private set; }
     public EnemyAttackState Attack { get; private set; }
     public EnemyAttackSpecial1State Special1 { get; private set; }
@@ -68,10 +71,11 @@ public class Enemy : Entity
     {
         base.Awake();
         BaseEnemyIdleInstance = Instantiate(BaseEnemyIdle);
+        if (BaseEnemyMove != null)
+            BaseEnemyMoveInstance = Instantiate(BaseEnemyMove);
         BaseEnemyChaseInstance = Instantiate(BaseEnemyChase);
         BaseEnemyAttackInstance = Instantiate(BaseEnemyAttack);
         BaseEnemyDeadInstance = Instantiate(BaseEnemyDead);
-
         if (BaseEnemyAttackSpecial1 != null)
             BaseEnemyAttackSpecial1Instance = Instantiate(BaseEnemyAttackSpecial1);
         if (BaseEnemyAttackSpecial2 != null)
@@ -82,6 +86,7 @@ public class Enemy : Entity
         StateMachine = new EnemyStateMachine();
 
         Idle = new EnemyIdleState(this, StateMachine, "Idle");
+        Move = new EnemyMoveState(this, StateMachine, "Move");
         Attack = new EnemyAttackState(this, StateMachine, "Attack");
         Special1 = new EnemyAttackSpecial1State(this, StateMachine, "Special1");
         Special2 = new EnemyAttackSpecial2State(this, StateMachine, "Special2");
@@ -95,6 +100,8 @@ public class Enemy : Entity
         base.Start();
 
         BaseEnemyIdleInstance.Init(gameObject, this);
+        if (BaseEnemyMove != null)
+            BaseEnemyMoveInstance.Init(gameObject, this);
         BaseEnemyChaseInstance.Init(gameObject, this);
         BaseEnemyAttackInstance.Init(gameObject, this);
         BaseEnemyDeadInstance.Init(gameObject, this);

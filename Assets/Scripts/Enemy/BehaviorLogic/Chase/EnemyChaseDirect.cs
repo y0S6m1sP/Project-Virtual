@@ -13,8 +13,6 @@ public class EnemyChaseDirect : BaseEnemyChaseSO
 
         if (enemy.IsPlayerDetected())
         {
-            stateTimer = enemy.chaseTime;
-
             if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
                 if (enemy.CanAttack())
@@ -24,10 +22,16 @@ public class EnemyChaseDirect : BaseEnemyChaseSO
 
             }
         }
-        else
+
+        if (enemy.IsPlayerInAttackDistance())
         {
-            if (stateTimer < 0)
-                enemy.StateMachine.ChangeState(enemy.Idle);
+            enemy.SetZeroVelocity();
+            return;
+        }
+
+        if (!enemy.IsGroundDetected())
+        {
+            enemy.StateMachine.ChangeState(enemy.Idle);
         }
 
         if (player.position.x > enemy.transform.position.x)
@@ -35,11 +39,6 @@ public class EnemyChaseDirect : BaseEnemyChaseSO
         else if (player.position.x < enemy.transform.position.x)
             chaseDir = -1;
 
-        if(enemy.IsPlayerInAttackDistance())
-        {
-            enemy.SetZeroVelocity();
-            return;
-        }
 
         enemy.SetVelocity(enemy.moveSpeed * chaseDir, enemy.Rb.velocity.y);
     }
