@@ -2862,7 +2862,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 150
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -3264,7 +3264,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 150
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -3414,7 +3414,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 150
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -6662,6 +6662,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c8cdc93bc061e84cafb7c4b3e7e5592, type: 3}
+--- !u!1 &1909812664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909812666}
+  - component: {fileID: 1909812665}
+  m_Layer: 0
+  m_Name: StageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1909812665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909812664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbe17fce557a5240afa1bce7e5e5e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1909812666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909812664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.819387, y: 1.8258153, z: -0.06920343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1979828454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,6 +6823,18 @@ PrefabInstance:
     - target: {fileID: 64508034300419414, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744246020362908676, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: moneyAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744246020362908676, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: moneyPrefab
+      value: 
+      objectReference: {fileID: 102739380119803466, guid: 295360f519dce6d46a48ab1bde188fe8, type: 3}
+    - target: {fileID: 1744246020362908676, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
+      propertyPath: health.baseValue
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1749181434468836766, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
       propertyPath: m_Name
@@ -7132,10 +7188,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -30, y: 6}
-      - {x: -30, y: -6}
-      - {x: -0.15, y: -6}
-      - {x: -0.15, y: 6}
+    - - {x: -30.5, y: 7}
+      - {x: -30.5, y: -5}
+      - {x: -0.2, y: -5}
+      - {x: -0.2, y: 7}
   m_UseDelaunayMesh: 0
 --- !u!114 &1936090107428020264
 MonoBehaviour:
@@ -7305,7 +7361,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4.375
+  orthographic size: 4.828125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7456,7 +7512,7 @@ Transform:
   m_GameObject: {fileID: 6376519042764544634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.107132, y: -0.029989999, z: -10}
+  m_LocalPosition: {x: -21.614876, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7592,4 +7648,5 @@ SceneRoots:
   - {fileID: 156256495259885428}
   - {fileID: 1514205579}
   - {fileID: 4729399254970148683}
+  - {fileID: 1909812666}
   - {fileID: 2026524136}

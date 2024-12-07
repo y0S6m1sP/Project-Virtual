@@ -18,7 +18,7 @@ TagManager:
   - Enemy
   - FX
   - Trap
-  - 
+  - Loot
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: FX
     uniqueID: 3980463777
+    locked: 0
+  - name: Loot
+    uniqueID: 3937099927
     locked: 0
