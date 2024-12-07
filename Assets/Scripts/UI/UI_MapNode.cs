@@ -10,7 +10,8 @@ public class UI_MapNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        GameManager.Instance.SetCurrentNode(node);
+        GameManager.instance.SetCurrentNode(node);
+        UIManager.instance.ShowMap(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

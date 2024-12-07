@@ -17,7 +17,7 @@ public class EnemyIdleStandStill : BaseEnemyIdleSO
     public override void DoUpdate()
     {
         base.DoUpdate();
-        enemy.SetZeroVelocity();
+        enemy.SetVelocity(0, enemy.Rb.velocity.y);
 
         if (stateTimer < 0)
         {

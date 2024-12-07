@@ -23,6 +23,6 @@ public class StageManager : MonoBehaviour
 
     private void ShowReward()
     {
-        Debug.Log("Show reward");
+        UIManager.instance.ShowMap(true);
     }
 }

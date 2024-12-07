@@ -43,9 +43,9 @@ public class UI_PathMap : MonoBehaviour
         InitNodes();
         ResetNodes();
         ClearMapLines();
-        GameManager.Instance.GeneratePathMap();
+        GameManager.instance.GeneratePathMap();
 
-        List<List<MapNode>> pathMap = GameManager.Instance.pathMap;
+        List<List<MapNode>> pathMap = GameManager.instance.pathMap;
         UI_MapNode[][] stages = { stage1Nodes, stage2Nodes, stage3Nodes, stage4Nodes, stage5Nodes, stage6Nodes };
 
         for (int i = 0; i < pathMap.Count; i++)

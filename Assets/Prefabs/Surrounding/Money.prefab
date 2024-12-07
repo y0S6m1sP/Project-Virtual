@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  trackingStrength: 5
+  trackingStrength: 10
 --- !u!61 &2236457395976639535
 BoxCollider2D:
   m_ObjectHideFlags: 0

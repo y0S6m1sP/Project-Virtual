@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
 
     [SerializeField] Animator transition;
 
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public List<List<MapNode>> pathMap = new();
 
-    private MapNode currentNode;
+    public MapNode currentNode;
 
     // TODO: if have time, refactor this to be more dynamic
     private static Vector2 battle1StartPosition = new(-26.93f, -2.03f);
@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null)
-            Destroy(Instance.gameObject);
+        if (instance != null)
+            Destroy(instance.gameObject);
         else
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
