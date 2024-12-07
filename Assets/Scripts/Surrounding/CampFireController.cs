@@ -1,28 +1,20 @@
 using UnityEngine;
 
-public class CampFireController : MonoBehaviour
+public class CampFireController : InteractableController
 {
 
-    private bool canInteract = false;
-
-    private void Update()
+    protected override void Start()
     {
-        if (canInteract && Input.GetKeyDown(KeyCode.E))
+        Sr = GameObject.Find("Roaster").GetComponent<SpriteRenderer>();
+    }
+
+    protected override void Update()
+    {
+        if (isInteractable && Input.GetKeyDown(KeyCode.E))
         {
             var playerStats = PlayerManager.instance.player.Stats;
             playerStats.IncreaseHealthBy(playerStats.health.GetValue() - playerStats.currentHealth);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        canInteract = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        canInteract = false;
-    }
-
 
 }

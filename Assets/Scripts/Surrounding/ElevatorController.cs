@@ -2,34 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElevatorController : MonoBehaviour
+public class ElevatorController : InteractableController
 {
-    public SpriteRenderer Sr { private set; get; }
-
-    private void Start()
+    protected override void Update()
     {
-        Sr = GetComponentInChildren<SpriteRenderer>();
-    }
-
-    private bool canStart = false;
-    private void Update()
-    {
-        if (canStart && Input.GetKeyDown(KeyCode.E))
+        if (isInteractable && Input.GetKeyDown(KeyCode.E))
         {
             UIManager.instance.ShowMap(true);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override void OnTriggerExit2D(Collider2D other)
     {
-        Sr.material = Resources.Load<Material>("WhiteOutline");
-        canStart = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Sr.material = new Material(Shader.Find("Sprites/Default"));
-        canStart = false;
+        base.OnTriggerExit2D(other);
         UIManager.instance.ShowMap(false);
     }
 }
