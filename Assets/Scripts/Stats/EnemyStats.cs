@@ -30,7 +30,7 @@ public class EnemyStats : EntityStats
         for (int i = 0; i < moneyAmount / 10; i++)
         {
             GameObject money = Instantiate(moneyPrefab, transform.position, Quaternion.identity);
-            money.GetComponent<MoneyController>().Setup();
+            money.GetComponent<MoneyController>().Setup(moneyAmount / 10);
         }
 
         enemy.Die();

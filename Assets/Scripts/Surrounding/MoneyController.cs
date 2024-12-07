@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MoneyController : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private float stateTimer = 0;
+
     [SerializeField] private float speed;
     public float trackingStrength = 5f;
 
-    private float stateTimer = 0;
-
-    private Rigidbody2D rb;
+    private int amount;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Setup()
+    public void Setup(int amount)
     {
+        this.amount = amount;
+
         Vector2 initialVelocity = new Vector2(Random.Range(-5, 5), Random.Range(7f, 10f)).normalized * speed;
 
         rb.velocity = initialVelocity;
@@ -49,7 +52,7 @@ public class MoneyController : MonoBehaviour
     {
         if (hit.GetComponent<Player>() != null)
         {
-            Debug.Log("Player get money");
+            PlayerManager.instance.AddMoney(amount);
             Destroy(gameObject);
         }
     }
