@@ -8083,7 +8083,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8119,7 +8119,7 @@ MonoBehaviour:
   moveSpeed: 6
   jumpForce: 10
   wallJumpForce: 5
-  jumpCantMoveDuration: 0.2
+  jumpCantMoveDuration: 0.1
   rollDuration: 0.5
   rollSpeed: 10
   isParryActive: 0
@@ -11301,7 +11301,7 @@ Transform:
   m_GameObject: {fileID: 4045460005558296504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1660943, y: -1.0059, z: -10}
+  m_LocalPosition: {x: -5.1671124, y: -0.8340299, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12762,7 +12762,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4.828125
+  orthographic size: 4.953125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
