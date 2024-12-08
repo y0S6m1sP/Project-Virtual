@@ -8117,7 +8117,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   moveSpeed: 6
-  jumpForce: 10
+  jumpForce: 12
   wallJumpForce: 5
   jumpCantMoveDuration: 0.1
   rollDuration: 0.5
