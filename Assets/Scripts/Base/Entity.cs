@@ -71,7 +71,7 @@ abstract public class Entity : MonoBehaviour
     {
         Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
-        // Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
+        
     }
 
     public virtual void Flip()

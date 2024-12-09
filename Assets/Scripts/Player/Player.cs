@@ -14,6 +14,7 @@ public class Player : Entity
     public float jumpCantMoveDuration;
     public float rollDuration;
     public float rollSpeed;
+    public float manaRadius;
     public bool isParryActive;
     [SerializeField] private LayerMask whatIsEnemy;
     [SerializeField] private float closestEnemyCheckRadius = 25;
@@ -63,6 +64,18 @@ public class Player : Entity
     {
         base.Update();
         StateMachine.CurrentState.Update();
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, manaRadius);
+
+        foreach (var hit in colliders)
+        {
+            if (hit.GetComponent<ManaController>() != null)
+            {
+                var mana = hit.GetComponent<ManaController>();
+                if (!mana.isTrigger)
+                    mana.TriggerMana(this);
+            }
+        }
     }
 
     public IEnumerator BusyFor(float _seconds)
@@ -153,7 +166,7 @@ public class Player : Entity
 
     private void ExecuteOffensiveEffect(EntityStats target)
     {
-        if(Stats.currentMana <= 0) return;
+        if (Stats.currentMana <= 0) return;
 
         var runeEffects = RuneManager.Instance.GetItemEffects(EffectType.Offensive);
 
@@ -161,6 +174,12 @@ public class Player : Entity
         {
             effects.ExecuteEffect(target);
         }
+    }
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        Gizmos.DrawWireSphere(transform.position, manaRadius);
     }
 
 }

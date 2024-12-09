@@ -71,6 +71,11 @@ public class EntityStats : MonoBehaviour
         onHealthChanged?.Invoke();
     }
 
+    public virtual void IncreaseMana(){
+        currentMana += mana.GetValue() / 2;
+        onManaChanged?.Invoke();
+    }
+
     public virtual void IncreaseManaBy(float _amount)
     {
         currentMana += _amount;

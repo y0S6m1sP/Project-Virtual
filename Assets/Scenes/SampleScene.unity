@@ -8091,6 +8091,7 @@ MonoBehaviour:
   jumpCantMoveDuration: 0.1
   rollDuration: 0.5
   rollSpeed: 10
+  manaRadius: 1
   isParryActive: 0
   whatIsEnemy:
     serializedVersion: 2
@@ -11175,10 +11176,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3353097732067035174, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
+      propertyPath: orthographic size
+      value: 4.953125
+      objectReference: {fileID: 0}
     - target: {fileID: 5298160126253892699, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 6752272835828168158}
+    - target: {fileID: 7415377502626774598, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.86943996
+      objectReference: {fileID: 0}
     - target: {fileID: 8999182482303087686, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -15369,7 +15378,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 273108301}
   - {fileID: 4623786099084278042}
   - {fileID: 605916124}
   - {fileID: 5405205811225068936}
+  - {fileID: 273108301}
