@@ -25,7 +25,7 @@ public class MoneyController : MonoBehaviour
 
         rb.velocity = initialVelocity;
 
-        stateTimer = .5f;
+        stateTimer = .2f;
     }
 
     void FixedUpdate()

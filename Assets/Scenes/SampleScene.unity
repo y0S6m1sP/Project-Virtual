@@ -949,6 +949,7 @@ Transform:
   - {fileID: 970915914}
   - {fileID: 517150516251829527}
   - {fileID: 6752272835828168158}
+  - {fileID: 1739534451}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &273108302
@@ -6447,6 +6448,52 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1739534450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739534451}
+  - component: {fileID: 1739534452}
+  m_Layer: 0
+  m_Name: CameraFollowObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739534451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739534450}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -356.35553, y: -561.671, z: -4.4229918}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 273108301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739534452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739534450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b685568e2ede477438f41b751b8da28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 6752272835828168158}
+  _flipYRotationTime: 0.5
 --- !u!1 &1817366528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8097,6 +8144,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   closestEnemyCheckRadius: 25
+  cameraFollowObject: {fileID: 1739534452}
 --- !u!224 &871122860332457890
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11175,18 +11223,6 @@ PrefabInstance:
     - target: {fileID: 2435738444357406847, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3353097732067035174, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
-      propertyPath: orthographic size
-      value: 4.953125
-      objectReference: {fileID: 0}
-    - target: {fileID: 5298160126253892699, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 6752272835828168158}
-    - target: {fileID: 7415377502626774598, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.86943996
       objectReference: {fileID: 0}
     - target: {fileID: 8999182482303087686, guid: 2a350f4d562ee124d97700fd77da13f8, type: 3}
       propertyPath: m_Name

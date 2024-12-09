@@ -19,6 +19,10 @@ public class Player : Entity
     [SerializeField] private LayerMask whatIsEnemy;
     [SerializeField] private float closestEnemyCheckRadius = 25;
 
+    // Deprecated just use x damping
+    [Header("Camera")]
+    public CameraFollowObject cameraFollowObject;
+
     public PlayerStateMachine StateMachine { get; private set; }
     public PlayerIdleState Idle { get; private set; }
     public PlayerMoveState Move { get; private set; }
@@ -174,6 +178,12 @@ public class Player : Entity
         {
             effects.ExecuteEffect(target);
         }
+    }
+
+    public override void Flip()
+    {
+        base.Flip();
+        cameraFollowObject.CallTurn();
     }
 
     protected override void OnDrawGizmos()
