@@ -103,7 +103,13 @@ public class Player : Entity
     {
         AudioManager.instance.PlaySFX(Random.Range(0, 2));
 
-        Fx.CreateParryFX(transform);
+        var shockwaveCount = Stats.IncreaseFocusBy(1);
+
+        for (int i = 0; i < shockwaveCount; i++)
+        {
+            Fx.CreateParryFX(transform);
+        }
+
         SetupKnockbackDir(_enemyStats.transform);
         SetupKnockbackPower(_enemyStats.knockbackPower);
         Knockback();

@@ -13,6 +13,7 @@ public class EntityStats : MonoBehaviour
     public Stat physicDamage;
     public Stat magicDamage;
     public Stat armor;
+    public Stat focus;
 
     [Space]
     public Stat brutal;
@@ -23,6 +24,7 @@ public class EntityStats : MonoBehaviour
     public int currentHealth;
     public int currentArmor;
     public float currentMana;
+    public int currentFocus;
 
     [Space]
     public Vector2 knockbackPower = new(7, 0);
@@ -30,6 +32,7 @@ public class EntityStats : MonoBehaviour
     public System.Action onHealthChanged;
     public System.Action onManaChanged;
     public System.Action onArmorChanged;
+    public System.Action onFocusChanged;
     public bool IsDead { get; private set; }
 
     protected virtual void Start()
@@ -71,7 +74,8 @@ public class EntityStats : MonoBehaviour
         onHealthChanged?.Invoke();
     }
 
-    public virtual void IncreaseMana(){
+    public virtual void IncreaseMana()
+    {
         currentMana += mana.GetValue() / 2;
         onManaChanged?.Invoke();
     }
@@ -111,6 +115,31 @@ public class EntityStats : MonoBehaviour
         onArmorChanged?.Invoke();
     }
 
+    public virtual int IncreaseFocusBy(int _amount)
+    {
+        var maxFocus = focus.GetValue();
+        var newFocus = currentFocus + _amount;
+
+        if (newFocus > maxFocus)
+        {
+            currentFocus = (newFocus % maxFocus) - 1;
+            Debug.Log("Focus is full" + currentFocus);
+            onFocusChanged?.Invoke();
+            return newFocus / maxFocus;
+        }
+
+        currentFocus += _amount;
+        Debug.Log("Focus is " + currentFocus);
+        onFocusChanged?.Invoke();
+
+        return 0;
+    }
+
+    public virtual void DecreaseFocusBy(int _amount)
+    {
+        currentFocus -= _amount;
+        onFocusChanged?.Invoke();
+    }
 
     protected virtual void Die()
     {
