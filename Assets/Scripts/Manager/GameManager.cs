@@ -227,9 +227,9 @@ public class GameManager : MonoBehaviour
                     StartCoroutine(nameof(LoadScene), "Boss1");
                     playerStartPosition = boss1StartPosition;
                     break;
-                
+
             }
-            
+            UIManager.instance.ShowMap(false);
         }
     }
 
