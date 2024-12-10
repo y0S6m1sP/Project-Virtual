@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour
                     playerStartPosition = battle1StartPosition;
                     break;
                 case NodeType.Rune:
-                    StartCoroutine(nameof(LoadScene), "Rune2");
+                    StartCoroutine(nameof(LoadScene), "Rune1");
                     playerStartPosition = rune2StartPosition;
                     break;
                 case NodeType.Shop:
