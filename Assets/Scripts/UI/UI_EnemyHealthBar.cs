@@ -27,6 +27,11 @@ public class UI_EnemyHealthBar : MonoBehaviour
     {
         healthSlider.value = stats.currentHealth;
         easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, stats.currentHealth, 0.05f);
+
+        if (stats.currentHealth <= 0)
+        {
+            Destroy(gameObject, 0.3f);
+        }
     }
 
     private void FlipUI() => mTransform.Rotate(0, 180, 0);

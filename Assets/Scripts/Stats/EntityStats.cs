@@ -123,13 +123,11 @@ public class EntityStats : MonoBehaviour
         if (newFocus > maxFocus)
         {
             currentFocus = (newFocus % maxFocus) - 1;
-            Debug.Log("Focus is full" + currentFocus);
             onFocusChanged?.Invoke();
             return newFocus / maxFocus;
         }
 
         currentFocus += _amount;
-        Debug.Log("Focus is " + currentFocus);
         onFocusChanged?.Invoke();
 
         return 0;

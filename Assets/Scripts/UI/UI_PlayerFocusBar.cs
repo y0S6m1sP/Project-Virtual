@@ -14,7 +14,6 @@ public class UI_PlayerFocusBar : MonoBehaviour {
     public void SetFocus() {
         for (int i = 0; i < focusSlots.Length; i++) {
             if (i < stats.currentFocus) {
-                Debug.Log("Setting focus"+ i + " " + stats.currentFocus);
                 focusSlots[i].SetFocus(true);
             } else {
                 focusSlots[i].SetFocus(false);
