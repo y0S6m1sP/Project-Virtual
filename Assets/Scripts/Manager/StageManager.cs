@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class StageManager : MonoBehaviour
     private int enemyCount = 0;
     public List<List<StageNode>> path = new();
     public StageNode currentNode;
+    public Action<StageState> OnStageStateChange;
 
     public StageState CurrentState { get; private set; }
 
@@ -34,7 +36,7 @@ public class StageManager : MonoBehaviour
     {
         GeneratePath();
         PlayerManager.instance.player.transform.position = playerSpawnPoint.position;
-        CurrentState = StageState.Complete;
+        ChangeState(StageState.Complete);
     }
 
     public void CheckEnemyCount()
@@ -58,9 +60,16 @@ public class StageManager : MonoBehaviour
 
     private void SpawnRandomEnemy()
     {
-        int randomIndex = Random.Range(0, enemies.Length);
+        int randomIndex = UnityEngine.Random.Range(0, enemies.Length);
         GameObject enemy = Instantiate(enemies[randomIndex], enemySpawnPoint1.position, Quaternion.identity);
         enemyCount++;
+    }
+
+    public StageNode GetNextNode(int leftOrRight)
+    {
+        Debug.Log("Stage Level + 1: " + stageLevel +1);
+        if (stageLevel + 1 >= path.Count) return null;
+        return path[stageLevel + 1][leftOrRight];
     }
 
     #region Path Generation
@@ -100,17 +109,17 @@ public class StageManager : MonoBehaviour
             case 5:
             case 9:
                 randomCount = 1;
-                pool = new() { StageNode.ShopStage() };
+                nodes.Add(StageNode.ShopStage());
                 break;
             case 10:
                 randomCount = 0;
-                pool = new() { StageNode.BossStage() };
+                nodes.Add(StageNode.BossStage());
                 break;
         }
 
         for (int i = 0; i < randomCount; i++)
         {
-            int randomIndex = Random.Range(0, pool.Count);
+            int randomIndex = UnityEngine.Random.Range(0, pool.Count);
             nodes.Add(pool[randomIndex]);
             pool.RemoveAt(randomIndex);
         }
@@ -131,6 +140,7 @@ public class StageManager : MonoBehaviour
     public void ChangeState(StageState state)
     {
         CurrentState = state;
+        OnStageStateChange?.Invoke(CurrentState);
         HandleStateChange();
     }
 
