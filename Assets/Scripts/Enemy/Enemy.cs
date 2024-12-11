@@ -214,6 +214,7 @@ public class Enemy : Entity
     {
         StateMachine.ChangeState(Dead);
         // GameManager.Instance.NextLevel(2f);
+        StageManager.instance.CheckEnemyCount();
     }
 
 }

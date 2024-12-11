@@ -16,6 +16,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject[] enemies;
 
     private int stageLevel = 0;
+    private int enemyCount = 0;
     public List<List<StageNode>> path = new();
     public StageNode currentNode;
 
@@ -36,6 +37,15 @@ public class StageManager : MonoBehaviour
         CurrentState = StageState.Complete;
     }
 
+    public void CheckEnemyCount()
+    {
+        enemyCount--;
+        if (enemyCount == 0)
+        {
+            ChangeState(StageState.Complete);
+        }
+    }
+
     public void NextStage(int leftOrRight)
     {
         if (stageLevel < path.Count)
@@ -44,6 +54,13 @@ public class StageManager : MonoBehaviour
             currentNode = path[stageLevel][leftOrRight];
             ChangeState(StageState.Start);
         }
+    }
+
+    private void SpawnRandomEnemy()
+    {
+        int randomIndex = Random.Range(0, enemies.Length);
+        GameObject enemy = Instantiate(enemies[randomIndex], enemySpawnPoint1.position, Quaternion.identity);
+        enemyCount++;
     }
 
     #region Path Generation
@@ -122,7 +139,7 @@ public class StageManager : MonoBehaviour
         switch (CurrentState)
         {
             case StageState.Start:
-                StartCoroutine(StartStage()); 
+                StartCoroutine(StartStage());
                 break;
             case StageState.Reward:
                 StartCoroutine(RewardStage());
@@ -137,6 +154,7 @@ public class StageManager : MonoBehaviour
     {
         PlayerManager.instance.player.transform.position = playerSpawnPoint.position;
         yield return null;
+        SpawnRandomEnemy();
     }
 
     private IEnumerator RewardStage()

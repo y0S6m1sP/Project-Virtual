@@ -154,7 +154,8 @@ MonoBehaviour:
   playerSpawnPoint: {fileID: 1895090815}
   enemySpawnPoint1: {fileID: 1125178081}
   enemySpawnPoint2: {fileID: 940254339}
-  enemies: []
+  enemies:
+  - {fileID: 1749181434468836766, guid: 887aedca293d0e2488a1fce04027c380, type: 3}
 --- !u!4 &26377419
 Transform:
   m_ObjectHideFlags: 0
