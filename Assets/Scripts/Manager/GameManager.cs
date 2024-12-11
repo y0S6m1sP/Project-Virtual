@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // deprecated
+    #region Map Generation
+
     public void GeneratePathMap()
     {
         pathMap.Clear();
@@ -233,6 +236,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #endregion
+
+    public void StartGame(){
+        StartCoroutine(nameof(LoadScene), "Level1");
+    }
+
     private IEnumerator LoadScene(string sceneName)
     {
         transition.SetTrigger("End");
@@ -242,7 +251,7 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
-        PlayerManager.instance.player.transform.position = playerStartPosition;
+        // PlayerManager.instance.player.transform.position = playerStartPosition;
         transition.SetTrigger("Start");
     }
 

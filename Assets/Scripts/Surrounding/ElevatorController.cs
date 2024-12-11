@@ -8,13 +8,14 @@ public class ElevatorController : InteractableController
     {
         if (isInteractable && Input.GetKeyDown(KeyCode.E))
         {
-            UIManager.instance.ShowMap(true);
+            GameManager.instance.StartGame();
+            // UIManager.instance.ShowMap(true);
         }
     }
 
     protected override void OnTriggerExit2D(Collider2D other)
     {
         base.OnTriggerExit2D(other);
-        UIManager.instance.ShowMap(false);
+        // UIManager.instance.ShowMap(false);
     }
 }
