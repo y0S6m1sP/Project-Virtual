@@ -20,7 +20,7 @@ public class StageManager : MonoBehaviour
     private int enemyCount = 0;
     public List<List<StageNode>> path = new();
     public StageNode currentNode;
-    public Action<StageState> OnStageStateChange;
+    public Action<StageState, int> OnStageStateChange;
 
     public StageState CurrentState { get; private set; }
 
@@ -50,9 +50,16 @@ public class StageManager : MonoBehaviour
 
     public void NextStage(int leftOrRight)
     {
+        stageLevel++;
+
+        if (stageLevel == 11)
+        {
+            GameManager.instance.NextLevel();
+            return;
+        }
+
         if (stageLevel < path.Count)
         {
-            stageLevel++;
             currentNode = path[stageLevel][leftOrRight];
             ChangeState(StageState.Start);
         }
@@ -67,7 +74,6 @@ public class StageManager : MonoBehaviour
 
     public StageNode GetNextNode(int leftOrRight)
     {
-        Debug.Log("Stage Level + 1: " + stageLevel +1);
         if (stageLevel + 1 >= path.Count) return null;
         return path[stageLevel + 1][leftOrRight];
     }
@@ -78,7 +84,7 @@ public class StageManager : MonoBehaviour
     {
         path.Clear();
 
-        for (int i = 0; i <= 10; i++)
+        for (int i = 0; i <= 11; i++)
         {
             List<StageNode> stageNodes = GenerateStageNodes(i);
             path.Add(stageNodes);
@@ -114,6 +120,12 @@ public class StageManager : MonoBehaviour
             case 10:
                 randomCount = 0;
                 nodes.Add(StageNode.BossStage());
+                nodes.Add(StageNode.BossStage());
+                break;
+            case 11:
+                randomCount = 0;
+                nodes.Add(StageNode.BaseStage());
+                nodes.Add(StageNode.BaseStage());
                 break;
         }
 
@@ -140,7 +152,7 @@ public class StageManager : MonoBehaviour
     public void ChangeState(StageState state)
     {
         CurrentState = state;
-        OnStageStateChange?.Invoke(CurrentState);
+        OnStageStateChange?.Invoke(CurrentState, stageLevel);
         HandleStateChange();
     }
 

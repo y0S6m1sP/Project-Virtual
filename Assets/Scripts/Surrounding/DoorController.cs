@@ -11,6 +11,7 @@ public class DoorController : MonoBehaviour
 
     [SerializeField] private int leftOrRight;
 
+    private CanvasGroup infoParent;
     private Image image;
     private TextMeshProUGUI hintText;
 
@@ -23,11 +24,12 @@ public class DoorController : MonoBehaviour
         stageManager = StageManager.instance;
 
         anim = GetComponent<Animator>();
+        infoParent = GetComponentInChildren<CanvasGroup>();
         image = GetComponentInChildren<Image>();
         hintText = GetComponentInChildren<TextMeshProUGUI>();
 
         UpdateDoorInfo();
-        OnStageStateChange(stageManager.CurrentState);
+        OnStageStateChange(stageManager.CurrentState, 0);
 
         stageManager.OnStageStateChange += OnStageStateChange;
     }
@@ -40,35 +42,51 @@ public class DoorController : MonoBehaviour
         hintText.text = node.hint;
     }
 
+    private void HideDoorInfo()
+    {
+        infoParent.alpha = 0;
+    }
+
+    private void ShowDoorInfo()
+    {
+        infoParent.alpha = 1;
+    }
+
     private void OnDisable()
     {
         stageManager.OnStageStateChange -= OnStageStateChange;
     }
 
-    private void OnStageStateChange(StageManager.StageState state)
+    private void OnStageStateChange(StageManager.StageState state, int stageLevel)
     {
-        Debug.Log("Door State: " + state);
+
         switch (state)
         {
             case StageManager.StageState.Start:
                 isOpen = false;
                 anim.SetBool("Open", false);
                 UpdateDoorInfo();
+                HideDoorInfo();
                 break;
             case StageManager.StageState.Reward:
                 isOpen = false;
                 anim.SetBool("Open", false);
                 break;
             case StageManager.StageState.Complete:
-                Debug.Log("hello");
                 isOpen = true;
                 anim.SetBool("Open", true);
+                ShowDoorInfo();
                 break;
         }
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            Debug.Log("Next Stage" + isInteractable + " " + isOpen);
+        }
+
         if (isInteractable && isOpen && Input.GetKeyDown(KeyCode.W))
         {
             stageManager.NextStage(leftOrRight);
@@ -77,11 +95,17 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        isInteractable = true;
+        if (other.CompareTag("Player"))
+        {
+            isInteractable = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        isInteractable = false;
+        if (other.CompareTag("Player"))
+        {
+            isInteractable = false;
+        }
     }
 }

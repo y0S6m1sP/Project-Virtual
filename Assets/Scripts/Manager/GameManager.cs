@@ -239,7 +239,14 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public void StartGame(){
+        currentLevel = 1;
         StartCoroutine(nameof(LoadScene), "Level1");
+    }
+
+    public void NextLevel(){
+        currentLevel++;
+        StartCoroutine(nameof(LoadScene), "Level1");
+        // StartCoroutine(nameof(LoadScene), $"Level{currentLevel}");
     }
 
     private IEnumerator LoadScene(string sceneName)

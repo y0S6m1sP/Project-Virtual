@@ -56,4 +56,9 @@ public class StageNode
     {
         return new StageNode(StageType.Boss, "UI/Key", "Boss");
     }
+
+    public static StageNode BaseStage()
+    {
+        return new StageNode(StageType.Stats, "UI/Key", "Next Level");
+    }
 }
